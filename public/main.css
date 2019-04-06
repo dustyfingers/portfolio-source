@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css?family=Asap:500,700');
+
+* {
+  font-family: Asap, sans-serif;
+}
+ body {
+   background-color: #e7e7e7;
+ }
+
+
+.navbar-brand {
+  font-size: 2em;
+}
+
+
+ .main-content {
+   background-color: white;
+   text-align: center;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+ }
+
+ .center-align-div {
+   width: 90%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+ }
+
+.landing-area {
+  height: calc(100vh - 20px);
+  padding: 10px;
+}
+
+.project-carousel {
+  padding: 10px;
+}
+
+.skills {
+  padding: 30vh 10px 20vh 10px;
+}
+
+.card {
+  padding: 4px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-img-top {
+  width: 45%;
+}
+
+
+.skill-gallery-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+
+
+@media only screen and (max-width: 576px) {
+  .skills {
+    width: 80%;
+  }
+}
