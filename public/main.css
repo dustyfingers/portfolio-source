@@ -28,6 +28,7 @@
 .landing-area {
   height: calc(100vh - 20px);
   padding: 10px;
+  width: 75%;
 }
 
 .project-carousel {
