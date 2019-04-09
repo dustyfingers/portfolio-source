@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Asap:500,700');
+@import url('https://fonts.googleapis.com/css?family=Asap:400,500');
 
 * {
   font-family: Asap, sans-serif;
@@ -6,4 +6,12 @@
 
 body {
   background-color: #d2d2d2;
+}
+
+/* make caorusel controls black */
+.carousel-control-prev {
+    filter: invert(100%);
+}
+.carousel-control-next {
+    filter: invert(100%);
 }
