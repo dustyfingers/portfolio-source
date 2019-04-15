@@ -2,7 +2,7 @@
       <!-- main content div -->
         <div id="main-content" class="container d-flex text-center bg-light justify-content-center align-items-center flex-column shadow">
           <!--2) landing area -->
-          <div id="landing-area" class="d-flex flex-column w-75 vh-100">
+          <div id="landing-area" class="d-flex flex-column vh-100">
             <div class="container m-auto">
               <h1 class="mb-2">How are you? My name's Louie. </h1>
               <p class="mb-4">I'm a web developer currently based out of Colorado Springs, Colorado. I specialize in building custom websites for small and growing businesses in my area. I'd love to talk with you
@@ -17,13 +17,22 @@
             <h1 class="mb-4">Projects</h1>
             <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
               <div class="carousel-inner">
-                <% projects.forEach((project) => { %>
-                  <div class="carousel-item active">
-                    <img class="d-block w-75 mx-auto" src="<%= project.image %>" alt="First slide">
-                    <h5 class="card-title"><%= project.title %></h5>
-                    <p class="card-text"><%= project.text %></p>
-                    <a href="<%= project.link %>" class="btn btn-danger btn-lg mt-2">Go to <%= project.title %></a>
-                  </div>
+                <% projects.forEach((project, index) => { %>
+                  <% if (index === 0) { %>
+                    <div class="carousel-item active">
+                      <img class="d-block w-75 mx-auto" src="<%= project.image %>" alt="<%= project.title %>">
+                      <h5 class="card-title"><%= project.title %></h5>
+                      <p class="card-text"><%= project.text %></p>
+                      <a href="<%= project.link %>" class="btn btn-danger btn-lg mt-2">Go to <%= project.title %></a>
+                    </div>
+                  <% } else { %>
+                    <div class="carousel-item">
+                      <img class="d-block w-75 mx-auto" src="public/images/preview.jpg" alt="<%= project.title %>">
+                      <h5 class="card-title"><%= project.title %></h5>
+                      <p class="card-text"><%= project.text %></p>
+                      <a href="<%= project.link %>" class="btn btn-danger btn-lg mt-2">Go to <%= project.title %></a>
+                    </div>
+                  <% } %>
                 <% }); %>
               </div>
               <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
