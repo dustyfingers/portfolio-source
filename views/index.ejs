@@ -5,9 +5,9 @@
           <div id="landing-area" class="d-flex flex-column w-75 vh-100">
             <div class="container m-auto">
               <h1 class="mb-2">How are you? My name's Louie. </h1>
-              <p class="mb-4">I'm a web developer currently based out of Colorado Springs, Colorado. I specialize in building custom websites for small and growing businesses, mainly nonprofits, in my area. I'd love to talk with you
+              <p class="mb-4">I'm a web developer currently based out of Colorado Springs, Colorado. I specialize in building custom websites for small and growing businesses in my area. I'd love to talk with you
               about your web presence needs, so give me a call or fill out the email form below!</p>
-              <button class="btn btn-danger btn-lg mt-4" type="button" name="button">CHECK OUT MY LATEST WORK</button>
+              <button class="btn btn-danger btn-lg mt-4" type="button" name="button">CHECK OUT MY WORK</button>
             </div>
 
           </div>
@@ -17,24 +17,14 @@
             <h1 class="mb-4">Projects</h1>
             <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
               <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <img class="d-block w-75 mx-auto" src="/preview.jpg" alt="First slide">
-                  <h5 class="card-title">Project 1</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <a href="#" class="btn btn-danger btn-lg mt-2">Go somewhere</a>
-                </div>
-                <div class="carousel-item">
-                  <img class="d-block w-75 mx-auto"  src="/preview.jpg" alt="Second slide">
-                  <h5 class="card-title">Project 2</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <a href="#" class="btn btn-danger btn-lg mt-2">Go somewhere</a>
-                </div>
-                <div class="carousel-item">
-                  <img class="d-block w-75 mx-auto"  src="/preview.jpg" alt="Third slide">
-                  <h5 class="card-title">Project 3</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <a href="#" class="btn btn-danger btn-lg mt-2">Go somewhere</a>
-                </div>
+                <% projects.forEach((project) => { %>
+                  <div class="carousel-item active">
+                    <img class="d-block w-75 mx-auto" src="<%= project.image %>" alt="First slide">
+                    <h5 class="card-title"><%= project.title %></h5>
+                    <p class="card-text"><%= project.text %></p>
+                    <a href="<%= project.link %>" class="btn btn-danger btn-lg mt-2">Go to <%= project.title %></a>
+                  </div>
+                <% }); %>
               </div>
               <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -47,7 +37,7 @@
             </div>
           </div>
           <hr class="clearfix w-75">
-          <!--4) skills and knowledge area  -->
+          <!--4) skills area  -->
           <div class="skills d-flex clearfix w-75 m-5 flex-column ">
             <h1 class="mb-4">Skills</h1>
             <div class="skill-gallery-wrapper mt-4 d-flex flex-row flex-wrap">
@@ -95,6 +85,4 @@
             </div>
           </div>
         </div>
-      <!--5) footer w contact info  -->
-
 <% include partials/footer %>
