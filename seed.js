@@ -6,19 +6,19 @@ var seedProjects = [
   {
     title: 'Project 1',
     text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    image: '../public/images/preview.jpg',
+    image: '/images/preview.jpg',
     link: 'https://www.google.com'
   },
   {
     title: 'Project 2',
     text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    image: '../public/images/preview.jpg',
+    image: '/images/preview.jpg',
     link: 'https://www.google.com'
   },
   {
     title: 'Project 3',
     text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    image: '../public/images/preview.jpg',
+    image: '/images/preview.jpg',
     link: 'https://www.google.com'
   }
 ];
