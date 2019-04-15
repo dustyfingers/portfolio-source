@@ -2,7 +2,8 @@ var express = require('express'),
     router = express.Router(),
     passport = require('passport'),
     User = require('../models/user')
-    Project = require('../models/project');
+    Project = require('../models/project'),
+    Skill = require('../models/skill');
 
 // index route
 router.get('/', function(req, res) {
@@ -10,7 +11,14 @@ router.get('/', function(req, res) {
     if (err) {
       console.log(err);
     } else {
-      res.render('index', { projects: allProjects });
+      Skill.find({}, (err, allSkills) => {
+        if (err) {
+          console.log(err);
+        } else {
+          console.log(allSkills);
+          res.render('index', { projects: allProjects, skills: allSkills });
+        }
+      });
     }
   });
 });

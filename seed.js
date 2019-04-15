@@ -27,22 +27,41 @@ var seedProjects = [
 var seedSkills = [
   {
     title: 'Skill 1',
-    text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    icon: './public/icons/bootstrap-plain.svg',
+    text: 'Lorem ipsum dolor sit amet, sed do eiusmod tempor ut labore et dolore magna.',
+    icon: 'bootstrap-plain.svg',
     link: 'https://www.google.com'
   },
   {
     title: 'Skill 2',
-    text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    icon: './public/icons/bootstrap-plain.svg',
+    text: 'Lorem ipsum dolor sit amet, sed do eiusmod tempor ut labore et dolore magna.',
+    icon: 'bootstrap-plain.svg',
     link: 'https://www.google.com'
   },
   {
     title: 'Skill 3',
-    text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    icon: './public/icons/bootstrap-plain.svg',
+    text: 'Lorem ipsum dolor sit amet, sed do eiusmod tempor ut labore et dolore magna.',
+    icon: 'bootstrap-plain.svg',
     link: 'https://www.google.com'
-  }
+  },
+  {
+    title: 'Skill 4',
+    text: 'Lorem ipsum dolor sit amet, sed do eiusmod tempor ut labore et dolore magna.',
+    icon: 'bootstrap-plain.svg',
+    link: 'https://www.google.com'
+  },
+  {
+    title: 'Skill 5',
+    text: 'Lorem ipsum dolor sit amet, sed do eiusmod tempor ut labore et dolore magna.',
+    icon: 'bootstrap-plain.svg',
+    link: 'https://www.google.com'
+  },
+  {
+    title: 'Skill 6',
+    text: 'Lorem ipsum dolor sit amet, sed do eiusmod tempor ut labore et dolore magna.',
+    icon: 'bootstrap-plain.svg',
+    link: 'https://www.google.com'
+  },
+
 ];
 
 

@@ -1,7 +1,7 @@
 <% include partials/header %>
       <!-- main content div -->
         <div id="main-content" class="container d-flex text-center bg-light justify-content-center align-items-center flex-column shadow">
-          <!--2) landing area -->
+          <!--1) landing area -->
           <div id="landing-area" class="d-flex flex-column vh-100 w-75">
             <div class="container m-auto">
               <h1 class="mb-2">How are you? My name's Louie. </h1>
@@ -11,7 +11,7 @@
             </div>
           </div>
           <hr class="clearfix w-75">
-          <!--3) project carousel -->
+          <!--2) project carousel -->
           <div id="project-carousel" class="justify-content-center w-75 m-5">
             <h1 class="mb-4">Projects</h1>
             <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
@@ -45,51 +45,20 @@
             </div>
           </div>
           <hr class="clearfix w-75">
-          <!--4) skills area  -->
+          <!--3) skills area  -->
           <div class="skills d-flex clearfix w-75 m-5 flex-column ">
             <h1 class="mb-4">Skills</h1>
             <div class="skill-gallery-wrapper mt-4 d-flex flex-row flex-wrap">
-
-              <div class="card col-lg-3 my-2 align-items-center border-0">
-                <img src="/icons/javascript-plain.svg" class="card-img-top w-50" alt="...">
-                <div class="card-body d-flex flex-column">
-                  <h5 class="card-title">Javascript</h5>
-                  <p class="card-text">The programming language of the web!</p>
-                  <a href="#" class="btn btn-danger btn-lg mt-auto">My JS Projects</a>
+              <% skills.forEach((skill) => { %>
+                <div class="card col-lg-3 my-2 align-items-center border-0">
+                  <img src="/icons/<%= skill.icon %>" class="card-img-top w-50" alt="<%= skill.title %> Logo">
+                  <div class="card-body d-flex flex-column">
+                    <h5 class="card-title"><%= skill.title %></h5>
+                    <p class="card-text"><%= skill.text %></p>
+                    <a href="<%= skill.link %>" class="btn btn-danger btn-lg mt-auto">My <%= skill.title %> Projects</a>
+                  </div>
                 </div>
-              </div>
-              <div class="card col-lg-3 my-2 align-items-center border-0">
-                <img src="/icons/react-original.svg" class="card-img-top w-50" alt="...">
-                <div class="card-body d-flex flex-column">
-                  <h5 class="card-title">React</h5>
-                  <p class="card-text">An awesome front-end JS framework!</p>
-                  <a href="#" class="btn btn-danger btn-lg mt-auto">My React Projects</a>
-                </div>
-              </div>
-              <div class="card col-lg-3 my-2 align-items-center border-0">
-                <img src="/icons/express-original.svg" class="card-img-top w-50" alt="...">
-                <div class="card-body d-flex flex-column">
-                  <h5 class="card-title">Express</h5>
-                  <p class="card-text">A Node.js framework for building the back-end for web applications.</p>
-                  <a href="#" class="btn btn-danger btn-lg mt-auto">My Express Projects</a>
-                </div>
-              </div>
-              <div class="card col-lg-3 my-2 align-items-center border-0">
-                <img src="/icons/nodejs-plain.svg" class="card-img-top w-50" alt="...">
-                <div class="card-body d-flex flex-column">
-                  <h5 class="card-title">Node.js</h5>
-                  <p class="card-text">A server-side JS runtime.</p>
-                  <a href="#" class="btn btn-danger btn-lg mt-auto">My Node.js Projects</a>
-                </div>
-              </div>
-              <div class="card col-lg-3 my-2 align-items-center border-0">
-                <img src="/icons/bootstrap-plain.svg" class="card-img-top w-50" alt="...">
-                <div class="card-body d-flex flex-column">
-                  <h5 class="card-title">Bootstrap 4</h5>
-                  <p class="card-text">A light front-end framework that makes building UI a breeze.</p>
-                  <a href="#" class="btn btn-danger btn-lg mt-auto">My Bootstrap Projects</a>
-                </div>
-              </div>
+              <% }); %>
             </div>
           </div>
         </div>
