@@ -4,7 +4,6 @@ var skillSchema = new mongoose.Schema({
   title: String,
   text: String,
   icon: String,
-  link: String
 });
 
 
