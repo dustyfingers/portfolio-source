@@ -29,8 +29,8 @@ app.use(authRoutes);
 app.use('/projects', projectRoutes);
 app.use('/skills', skillRoutes);
 
-// delete & repop db
-seedDB();
+// // delete & repop db
+// seedDB();
 
 // passport config
 app.use(require('express-session')({

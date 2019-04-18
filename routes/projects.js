@@ -4,12 +4,11 @@ var Project = require('../models/project');
 
 
 // show individual project route
-router.get('/:id', (req, res) => {
-  Project.findById(req.params.id, (err, project) => {
+router.get('/:project_id', (req, res) => {
+  Project.findById(req.params.project_id).exec((err, project) => {
     if (err) {
       console.log(err);
     } else {
-      console.log(project);
       res.render('projects/show', { project: project });
     }
   });

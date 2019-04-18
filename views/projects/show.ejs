@@ -2,8 +2,9 @@
       <!-- main content div -->
           <!--1) landing area -->
           <div id="landing-area" class="d-flex flex-column vh-100 w-75">
-            <h1 class="mb-5">Project title goes here</h1>
-            <p>The show route is passing a null value as 'project' because it cannot match the id provided in the url to one in mongo.</p>
-          <hr class="clearfix w-75">
+            <img class="d-block w-75 mx-auto" src="<%= project.image %>" alt="<%= project.title %>">
+            <h5><%= project.title %></h5>
+            <p><%= project.text %></p>
           </div>
+
 <% include ../partials/footer %>
