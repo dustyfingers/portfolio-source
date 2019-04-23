@@ -15,7 +15,7 @@ router.get('/', function(req, res) {
         if (err) {
           console.log(err);
         } else {
-          res.render('index', { projects: allProjects, skills: allSkills });
+          res.render('landing', { projects: allProjects, skills: allSkills });
         }
       });
     }
