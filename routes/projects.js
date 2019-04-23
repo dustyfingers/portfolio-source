@@ -3,6 +3,17 @@ var router = express.Router();
 var Project = require('../models/project');
 
 
+// index project route
+router.get('/', (req, res) => {
+  Project.find({}, (err, allProjects) => {
+    if (err) {
+      req.flash('error', 'Something went wrong');
+    } else {
+      res.render('projects/index', { projects: allProjects });
+    }
+  })
+});
+
 // show individual project route
 router.get('/:project_id', (req, res) => {
   Project.findById(req.params.project_id).exec((err, project) => {
@@ -15,8 +26,7 @@ router.get('/:project_id', (req, res) => {
 });
 
 
-// new project get route
-
+// create project get route
 
 // create project post route
 router.post('/', (req, res) => {

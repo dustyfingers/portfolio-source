@@ -1,0 +1,25 @@
+<% include ../partials/header %>
+
+<div class="container">
+    <div class="container">
+      <h1>Welcome to My Projects!</h1>
+    </div>
+</div>
+<div class="skills d-flex clearfix w-75 m-5 flex-column">
+  <h1 class="mb-5">Welcome to My Projects!</h1>
+  <div class="mt-4 d-flex flex-row flex-wrap mb-5">
+    <% projects.forEach((project) => { %>
+      <div class="card col-lg-3 my-2 align-items-center border-0">
+        <img src="<%= project.image %>" class="card-img-top w-50" alt="<%= project.name %> Logo">
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title"><%= project.name %></h5>
+          <p class="card-text"><%= project.text %></p>
+          <p>
+            <a class="btn btn-primary" href="/projects/<%= project._id %>">More Info</a>
+          </p>
+        </div>
+      </div>
+    <% }); %>
+  </div>
+</div>
+<% include ../partials/footer %>

@@ -5,7 +5,7 @@ var express = require('express'),
     Project = require('../models/project'),
     Skill = require('../models/skill');
 
-// index route
+// root route
 router.get('/', function(req, res) {
   Project.find({}, (err, allProjects) => {
     if (err) {
