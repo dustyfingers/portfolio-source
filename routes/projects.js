@@ -32,6 +32,13 @@ router.get('/:project_id', (req, res) => {
 });
 
 
+//  edit project route
+router.get('/:id/edit', (req, res) => {
+  Project.findById(req.params.id, (err, foundProject) => {
+    res.render('projects/edit', { project: foundProject });
+  })
+});
+
 
 // // create project post route
 // router.post('/', (req, res) => {

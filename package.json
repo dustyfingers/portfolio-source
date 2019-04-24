@@ -17,6 +17,7 @@
     "ejs": "^2.6.1",
     "express": "^4.16.4",
     "express-session": "^1.16.1",
+    "locus": "^2.0.1",
     "mongoose": "^5.5.1",
     "passport": "^0.4.0",
     "passport-local": "^1.0.0",
