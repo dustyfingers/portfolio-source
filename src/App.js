@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
 import clsx from 'clsx';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
@@ -16,12 +16,17 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import Landing from './components/Landing';
 import Projects from './components/Projects';
+import Contact from './components/Contact';
+import Resume from './components/Resume';
+import './styles/App.css';
+
 
 const drawerWidth = 240;
 
 const useStyles = makeStyles(theme => ({
     root: {
         display: 'flex',
+        color: '#465362',
     },
     appBar: {
         transition: theme.transitions.create(['margin', 'width'], {
@@ -73,6 +78,14 @@ const useStyles = makeStyles(theme => ({
         }),
         marginRight: 0,
     },
+    navLink: {
+        textDecoration: 'none',
+        color: '#465362',
+        '&:focus, &:hover, &:visited, &:link, &:active': {
+            textDecoration: 'none',
+            color: '#465362'
+        }
+    }
 }));
 
 const App = () => {
@@ -101,8 +114,8 @@ const App = () => {
                 >
                     <Toolbar>
                         <Typography variant="h6" noWrap className={classes.title}>
-                            Louie Williford
-          </Typography>
+                            <Link to='/' className={classes.navLink}> Louie Williford </Link>
+                        </Typography>
                         <IconButton
                             color="inherit"
                             aria-label="Open drawer"
@@ -123,6 +136,7 @@ const App = () => {
                     <Switch>
                         <Route exact path='/' component={Landing} />
                         <Route exact path='/projects' component={Projects} />
+                        <Route exact path='/resume' component={Resume} />
                         <Route exact path='/contact' component={Contact} />
                     </Switch>
                 </main>
@@ -142,15 +156,25 @@ const App = () => {
                     </div>
                     <Divider />
                     <List>
-                        {['My Work', 'My Resume', 'Contact Me!'].map(text => (
-                            <ListItem button key={text}>
-                                <ListItemText primary={text} />
-                            </ListItem>
-                        ))}
+                        <ListItem button >
+                            <ListItemText>
+                                <Link to='/projects' className={classes.navLink}>My Portfolio</Link>
+                            </ListItemText>
+                        </ListItem>
+                        <ListItem button >
+                            <ListItemText>
+                                <Link to='/resume' className={classes.navLink}>My Resume</Link>
+                            </ListItemText>
+                        </ListItem>
+                        <ListItem button >
+                            <ListItemText>
+                                <Link to='/contact' className={classes.navLink}>Contact Me</Link>
+                            </ListItemText>
+                        </ListItem>
                     </List>
                 </Drawer>
             </div>
-        </Router>
+        </Router >
     );
 }
 
