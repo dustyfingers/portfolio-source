@@ -13,7 +13,6 @@ export default {
         },
     },
     header: {
-        fontSize: '3rem',
         [sizes.down('lg')]: {
             margin: '1rem auto'
         },
@@ -35,14 +34,6 @@ export default {
     paragraph2: {
         [sizes.down('xs')]: {
             display: 'none',
-        },
-    },
-    button: {
-        fontSize: '1.5rem',
-        padding: '0.5rem',
-        [sizes.down('sm')]: {
-            width: '90%',
-            padding: '0 0.5rem'
         },
     },
     buttonLink: {

@@ -9,7 +9,7 @@ import styles from '../styles/LandingStyles';
 const Landing = ({classes}) => {
     return (
         <section className={classes.landingSection}>
-            <Typography variant='h6' className={classes.header}>
+            <Typography variant='h1' className={classes.header}>
                 Hi! I'm Louie.
             </Typography>
             <Typography paragraph className={classes.paragraph}>
@@ -22,7 +22,7 @@ const Landing = ({classes}) => {
                 Colorado Springs, CO, but I am open to opportunities in any major city in the US.
             </Typography>
             <Link to='/projects' className={classes.buttonLink}>
-                <Button variant="outlined" color="primary" className={classes.button}>
+                <Button variant="outlined" color="primary" size='large' className={classes.button}>
                     My Projects
                 </Button>
             </Link>

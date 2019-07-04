@@ -87,7 +87,7 @@ const useStyles = makeStyles(theme => ({
         }
     },
     Logo: {
-        color: 'white !important'
+        color: 'white !important',
     }
 }));
 
@@ -115,7 +115,7 @@ const App = () => {
                     })}
                 >
                     <Toolbar>
-                        <Typography variant="h6" noWrap className={classes.title}>
+                        <Typography variant="h3" noWrap className={classes.title}>
                             <Link to='/' className={`${classes.navLink} ${classes.Logo}`}> Louie Williford </Link>
                         </Typography>
                         <IconButton
