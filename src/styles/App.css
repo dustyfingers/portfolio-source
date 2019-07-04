@@ -1,3 +1,7 @@
 html {
     color: '#465362';
 }
+
+main {
+    height: calc(100vh - 48px);
+}

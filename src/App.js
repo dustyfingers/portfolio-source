@@ -21,7 +21,7 @@ import Resume from './components/Resume';
 import './styles/App.css';
 
 
-const drawerWidth = 240;
+const drawerWidth = 150;
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -156,6 +156,11 @@ const App = () => {
                     </div>
                     <Divider />
                     <List>
+                        <ListItem button >
+                            <ListItemText>
+                                <Link to='/' className={classes.navLink}>Home</Link>
+                            </ListItemText>
+                        </ListItem>
                         <ListItem button >
                             <ListItemText>
                                 <Link to='/projects' className={classes.navLink}>My Portfolio</Link>
