@@ -83,8 +83,11 @@ const useStyles = makeStyles(theme => ({
         color: '#465362',
         '&:focus, &:hover, &:visited, &:link, &:active': {
             textDecoration: 'none',
-            color: '#465362'
+            color: '#465362',
         }
+    },
+    Logo: {
+        color: 'white !important'
     }
 }));
 
@@ -107,14 +110,13 @@ const App = () => {
                 <CssBaseline />
                 <AppBar
                     position="fixed"
-                    color='default'
                     className={clsx(classes.appBar, {
                         [classes.appBarShift]: open,
                     })}
                 >
                     <Toolbar>
                         <Typography variant="h6" noWrap className={classes.title}>
-                            <Link to='/' className={classes.navLink}> Louie Williford </Link>
+                            <Link to='/' className={`${classes.navLink} ${classes.Logo}`}> Louie Williford </Link>
                         </Typography>
                         <IconButton
                             color="inherit"
