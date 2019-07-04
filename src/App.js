@@ -1,4 +1,5 @@
 import React from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import clsx from 'clsx';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
@@ -13,7 +14,8 @@ import MenuIcon from '@material-ui/icons/Menu';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
-import MainContent from './components/MainContent';
+import Landing from './components/Landing';
+import Projects from './components/Projects';
 
 const drawerWidth = 240;
 
@@ -87,69 +89,68 @@ const App = () => {
     }
 
     return (
-        <div className={classes.root}>
-            <CssBaseline />
-            <AppBar
-                position="fixed"
-                color='default'
-                className={clsx(classes.appBar, {
-                    [classes.appBarShift]: open,
-                })}
-            >
-                <Toolbar>
-                    <Typography variant="h6" noWrap className={classes.title}>
-                        Louie Williford
+        <Router>
+            <div className={classes.root}>
+                <CssBaseline />
+                <AppBar
+                    position="fixed"
+                    color='default'
+                    className={clsx(classes.appBar, {
+                        [classes.appBarShift]: open,
+                    })}
+                >
+                    <Toolbar>
+                        <Typography variant="h6" noWrap className={classes.title}>
+                            Louie Williford
           </Typography>
-                    <IconButton
-                        color="inherit"
-                        aria-label="Open drawer"
-                        edge="end"
-                        onClick={handleDrawerOpen}
-                        className={clsx(open && classes.hide)}
-                    >
-                        <MenuIcon />
-                    </IconButton>
-                </Toolbar>
-            </AppBar>
-            <main
-                className={clsx(classes.content, {
-                    [classes.contentShift]: open,
-                })}
-            >
-                <div className={classes.drawerHeader} />
-                <MainContent>
-                    <Typography paragraph>
-                        Hi! I'm Louie. I'm a full stack web developer with a passion for learning about cutting edge technology.
-                        When I'm not building nimble, scalable web apps with React & Redux, Node.js, Express, MongoDB and AWS, you can
-                        find me at the park with my dogs or eating a home-cooked meal with my family! I currently live and work in
-                        Colorado Springs, CO, but I am open to opportunities in any major city in the US.
-                    </Typography>
-                </MainContent>
-            </main>
-            <Drawer
-                className={classes.drawer}
-                variant="persistent"
-                anchor="right"
-                open={open}
-                classes={{
-                    paper: classes.drawerPaper,
-                }}
-            >
-                <div className={classes.drawerHeader}>
-                    <IconButton onClick={handleDrawerClose}>
-                        <ChevronRightIcon />
-                    </IconButton>
-                </div>
-                <Divider />
-                <List>
-                    {['My Work', 'My Resume', 'Contact Me!'].map(text => (
-                        <ListItem button key={text}>
-                            <ListItemText primary={text} />
-                        </ListItem>
-                    ))}
-                </List>
-            </Drawer>
-        </div>
+                        <IconButton
+                            color="inherit"
+                            aria-label="Open drawer"
+                            edge="end"
+                            onClick={handleDrawerOpen}
+                            className={clsx(open && classes.hide)}
+                        >
+                            <MenuIcon />
+                        </IconButton>
+                    </Toolbar>
+                </AppBar>
+                <main
+                    className={clsx(classes.content, {
+                        [classes.contentShift]: open,
+                    })}
+                >
+                    <div className={classes.drawerHeader} />
+                    <Switch>
+                        <Route exact path='/' component={Landing} />
+                        <Route exact path='/projects' component={Projects} />
+                        <Route exact path='/contact' component={Contact} />
+                    </Switch>
+                </main>
+                <Drawer
+                    className={classes.drawer}
+                    variant="persistent"
+                    anchor="right"
+                    open={open}
+                    classes={{
+                        paper: classes.drawerPaper,
+                    }}
+                >
+                    <div className={classes.drawerHeader}>
+                        <IconButton onClick={handleDrawerClose}>
+                            <ChevronRightIcon />
+                        </IconButton>
+                    </div>
+                    <Divider />
+                    <List>
+                        {['My Work', 'My Resume', 'Contact Me!'].map(text => (
+                            <ListItem button key={text}>
+                                <ListItemText primary={text} />
+                            </ListItem>
+                        ))}
+                    </List>
+                </Drawer>
+            </div>
+        </Router>
     );
 }
 
