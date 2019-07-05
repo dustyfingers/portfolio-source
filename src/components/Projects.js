@@ -3,6 +3,7 @@ import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/styles';
 import ProjectCard from './ProjectCard';
 import sizes from '../styles/sizes';
+import data from '../data';
 
 const styles = {
     projectsSection: {
@@ -30,13 +31,17 @@ const styles = {
 const Projects = ({ classes }) => {
     return (
         <section className={classes.projectsSection}>
-            <Typography variant='h1' className={classes.projectsHeader}>My Projects</Typography>
+            <Typography variant='h1' className={classes.projectsHeader}>My Portfolio</Typography>
             <div className={classes.projectCards}>
-                <ProjectCard />
-                <ProjectCard />
-                <ProjectCard />
+                {data.map((item, index) => (
+                    <ProjectCard 
+                        title={item.title} 
+                        description={item.desc} 
+                        image={`../assets/img/${item.image}`}
+                        link={item.link}
+                        key={item.index} />
+                ))}
             </div>
-            
         </section>
     )
 }

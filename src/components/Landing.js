@@ -23,7 +23,7 @@ const Landing = ({classes}) => {
             </Typography>
             <Link to='/projects' className={classes.buttonLink}>
                 <Button variant="outlined" color="primary" size='large' className={classes.button}>
-                    My Projects
+                    My Portfolio
                 </Button>
             </Link>
         </section>
