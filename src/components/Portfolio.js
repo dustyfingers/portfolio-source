@@ -17,6 +17,11 @@ const styles = {
             marginTop: '1rem'
         },
     },
+    projectsHeader: {
+        [sizes.down('sm')]: {
+            fontSize: '2rem'
+        },
+    },
     projectCards: {
         width: '100%',
         display: 'flex',
@@ -24,14 +29,14 @@ const styles = {
         flexWrap: 'wrap',
         alignItems: 'space-between',
         justifyContent: 'center',
-        margin: '4rem auto 2rem auto'
+        margin: '1rem auto'
     }
 };
 
-const Projects = ({ classes }) => {
+const Portfolio = ({ classes }) => {
     return (
         <section className={classes.projectsSection}>
-            <Typography variant='h1' className={classes.projectsHeader}>My Portfolio</Typography>
+            <Typography variant='h3' className={classes.projectsHeader}>My Portfolio</Typography>
             <div className={classes.projectCards}>
                 {data.map((item, index) => (
                     <ProjectCard
@@ -51,4 +56,4 @@ const Projects = ({ classes }) => {
     )
 }
 
-export default withStyles(styles)(Projects);
+export default withStyles(styles)(Portfolio);

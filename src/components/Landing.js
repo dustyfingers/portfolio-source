@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import styles from '../styles/LandingStyles';
 
 
-const Landing = ({classes}) => {
+const Landing = ({ classes }) => {
     return (
         <section className={classes.landingSection}>
             <Typography variant='h1' className={classes.header}>
@@ -21,7 +21,7 @@ const Landing = ({classes}) => {
                 I currently live and work in
                 Colorado Springs, CO, but I am open to opportunities in any major city in the US.
             </Typography>
-            <Link to='/projects' className={classes.buttonLink}>
+            <Link to='/portfolio' className={classes.buttonLink}>
                 <Button variant="outlined" color="primary" size='large' className={classes.button}>
                     My Portfolio
                 </Button>

@@ -15,10 +15,11 @@ import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import Landing from './components/Landing';
-import Projects from './components/Projects';
+import Portfolio from './components/Portfolio';
 import Contact from './components/Contact';
 import Resume from './components/Resume';
 import './styles/App.css';
+import sizes from './styles/sizes';
 
 
 const drawerWidth = 150;
@@ -44,6 +45,9 @@ const useStyles = makeStyles(theme => ({
     },
     title: {
         flexGrow: 1,
+        [sizes.down('sm')]: {
+            fontSize: '2rem'
+        },
     },
     hide: {
         display: 'none',
@@ -137,7 +141,7 @@ const App = () => {
                     <div className={classes.drawerHeader} />
                     <Switch>
                         <Route exact path='/' component={Landing} />
-                        <Route exact path='/projects' component={Projects} />
+                        <Route exact path='/portfolio' component={Portfolio} />
                         <Route exact path='/resume' component={Resume} />
                         <Route exact path='/contact' component={Contact} />
                     </Switch>
@@ -165,7 +169,7 @@ const App = () => {
                         </ListItem>
                         <ListItem button >
                             <ListItemText>
-                                <Link to='/projects' className={classes.navLink}>My Portfolio</Link>
+                                <Link to='/portfolio' className={classes.navLink}>My Portfolio</Link>
                             </ListItemText>
                         </ListItem>
                         <ListItem button >

@@ -44,7 +44,7 @@ const data = [
         desc: 'My portfolio was created from scratch with react, and is hosted on a simple AWS Amplify backend.',
         image: 'portfolio-screencap.png',
         showSiteLink: false,
-        siteLink: '',
+        siteLink: '/',
         showRepoLink: true,
         repoLink: 'https://github.com/dustyfingers/portfolio-source',
         tags: [
