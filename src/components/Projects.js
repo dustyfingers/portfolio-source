@@ -14,7 +14,7 @@ const styles = {
         textAlign: 'center',
         flexDirection: 'column',
         [sizes.down('sm')]: {
-            marginTop: '4rem'
+            marginTop: '1rem'
         },
     },
     projectCards: {
@@ -34,12 +34,17 @@ const Projects = ({ classes }) => {
             <Typography variant='h1' className={classes.projectsHeader}>My Portfolio</Typography>
             <div className={classes.projectCards}>
                 {data.map((item, index) => (
-                    <ProjectCard 
-                        title={item.title} 
-                        description={item.desc} 
-                        image={`../assets/img/${item.image}`}
-                        link={item.link}
-                        key={item.index} />
+                    <ProjectCard
+                        title={item.title}
+                        description={item.desc}
+                        component='img'
+                        image={`/images/${item.image}`}
+                        alt={item.title}
+                        siteLink={item.siteLink}
+                        repoLink={item.repoLink}
+                        showSiteLink={item.showSiteLink}
+                        showRepoLink={item.showRepoLink}
+                        key={index} />
                 ))}
             </div>
         </section>
