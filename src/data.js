@@ -10,6 +10,7 @@ const data = [
         tags: [
             'Front End Development',
             'Back End Development',
+            'UI Design',
             'HTML',
             'CSS',
             'JavaScript',
@@ -40,7 +41,7 @@ const data = [
     },
     {
         title: 'Portfolio Site',
-        desc: 'My portfolio was created with react, hosted on a simple AWS Amplify backend.',
+        desc: 'My portfolio was created from scratch with react, and is hosted on a simple AWS Amplify backend.',
         image: 'portfolio-screencap.png',
         showSiteLink: false,
         siteLink: '',
@@ -53,7 +54,27 @@ const data = [
             'JavaScript',
             'React',
             'React Router',
+            'UI Design',
             'AWS'
+        ]
+    },
+    {
+        title: 'Stack Landing Page',
+        desc: 'I was tasked with building the landing page for a web app alongside a remote UI team. We built the about page and the landing page using Sass, Bootstrap 4 and Javascript.',
+        image: 'stack-screencap.png',
+        showSiteLink: true,
+        siteLink: 'https://stack-cards.netlify.com/',
+        showRepoLink: true,
+        repoLink: 'https://github.com/bw-business-card-organizer/business-card-organizer-UI',
+        tags: [
+            'Front End Development',
+            'HTML',
+            'CSS',
+            'JavaScript',
+            'UI Design',
+            'SASS',
+            'Bootstrap 4',
+            'Netlify'
         ]
     },
 ];
