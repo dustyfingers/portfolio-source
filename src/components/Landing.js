@@ -4,15 +4,16 @@ import { withStyles } from '@material-ui/styles';
 import Button from '@material-ui/core/Button';
 import { Link } from 'react-router-dom';
 import styles from '../styles/LandingStyles';
+import Footer from './Footer';
 
 
 const Landing = ({ classes }) => {
     return (
         <section className={classes.landingSection}>
-            <Typography variant='h1' className={classes.header}>
+            <Typography variant='h2' className={classes.header}>
                 Hi!
             </Typography>
-            <Typography variant='h1' className={classes.header}>
+            <Typography variant='h2' className={classes.header}>
                 I'm Louie.
             </Typography>
             <Typography paragraph className={classes.paragraph}>
@@ -36,6 +37,7 @@ const Landing = ({ classes }) => {
                     </Button>
                 </Link>
             </div>
+            <Footer />
         </section>
     )
 }

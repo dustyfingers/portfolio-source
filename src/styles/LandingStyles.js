@@ -1,13 +1,16 @@
 import sizes from './sizes';
+import {
+    bgImageUrl
+} from './variables';
 
 export default {
     landingSection: {
-        height: '100%',
+        height: '85vh',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
         textAlign: 'center',
-        flexDirection: 'column'
+        flexDirection: 'column',
     },
     header: {
         marginBottom: '1rem',
@@ -47,7 +50,7 @@ export default {
         display: 'flex',
         width: '25%',
         alignItems: 'center',
-        justifyContent: 'space-between',
+        justifyContent: 'space-around',
         [sizes.down('xl')]: {
             width: '35%'
         },

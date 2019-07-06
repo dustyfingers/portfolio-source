@@ -4,8 +4,8 @@ import { withStyles } from '@material-ui/styles';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
-import { Link } from 'react-router-dom';
 import sizes from '../styles/sizes';
+import Footer from './Footer';
 
 
 const styles = {
@@ -54,6 +54,9 @@ const styles = {
         padding: '4px 6px',
         margin: '1rem',
         cursor: 'pointer'
+    },
+    inline: {
+        color: 'white'
     }
 };
 
@@ -95,28 +98,25 @@ const Resume = ({ classes }) => {
                                     <Typography
                                         component="span"
                                         variant="body2"
-                                        className={classes.inline}
-                                        color="textPrimary">
-                                        Front End
+                                        className={classes.inline} >
+                                        Front End — picker.io is a small front end app built to create and organize color palettes on the fly. It is built with react.
                                     </Typography>
-                                    {" — picker.io is a small front end app built to create and organize color palettes on the fly. It is built with react. "}
                                 </React.Fragment>
                             } >
                         </ListItemText>
                     </ListItemLink>
                     <ListItemLink href='https://vast-retreat-30517.herokuapp.com/'>
                         <ListItemText
+                            className={classes.itemText}
                             primary='YelpCamp'
                             secondary={
                                 <React.Fragment>
                                     <Typography
                                         component="span"
                                         variant="body2"
-                                        className={classes.inline}
-                                        color="textPrimary">
-                                        Full Stack
+                                        className={classes.inline} >
+                                        Full Stack — YelpCamp is a full stack web app built to allow users to review campgrounds. It is built using HTML/CSS/Bootstrap 4 on the front end with an Express/MongoDB backend.
                                     </Typography>
-                                    {" — YelpCamp is a full stack web app built to allow users to review campgrounds. It is built using HTML/CSS/Bootstrap 4 on the front end with an Express/MongoDB backend."}
                                 </React.Fragment>
                             } >
                         </ListItemText>
@@ -131,9 +131,8 @@ const Resume = ({ classes }) => {
                                         variant="body2"
                                         className={classes.inline}
                                         color="textPrimary">
-                                        UI Design/Front End
+                                        UI Design/Front End — I designed and built the landing page and about page for a small app called 'Stack' alongside a distributed development team. I personally used HTML/SASS/Bootstrap 4/JS for this project.
                                     </Typography>
-                                    {" — I designed and built the landing page and about page for a small app called 'Stack' alongside a distributed development team. I personally used HTML/SASS/Bootstrap 4/JS for this project."}
                                 </React.Fragment>
                             } >
                         </ListItemText>
@@ -209,8 +208,12 @@ const Resume = ({ classes }) => {
                     <span className={classes.skill}>Express</span>
                     <span className={classes.skill}>Node.js</span>
                     <span className={classes.skill}>MongoDB</span>
+                    <span className={classes.skill}>Git</span>
+                    <span className={classes.skill}>Heroku</span>
+                    <span className={classes.skill}>AWS Amplify & Route53</span>
                 </div>
             </section>
+            <Footer padding='4rem' />
         </section>
     );
 }

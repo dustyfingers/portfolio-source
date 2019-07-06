@@ -16,24 +16,30 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import Landing from './components/Landing';
 import Portfolio from './components/Portfolio';
-import Contact from './components/Contact';
 import Resume from './components/Resume';
+import Footer from './components/Footer';
 import './styles/App.css';
-import sizes from './styles/sizes';
-
-
-const drawerWidth = 150;
+import {
+    standardTextColor,
+    navHeight,
+    drawerWidth,
+    bgImageUrl
+} from './styles/variables';
 
 const useStyles = makeStyles(theme => ({
     root: {
         display: 'flex',
-        color: '#465362',
+        color: standardTextColor,
+        height: '100vh',
+        color: 'white'
     },
     appBar: {
         transition: theme.transitions.create(['margin', 'width'], {
             easing: theme.transitions.easing.sharp,
             duration: theme.transitions.duration.leavingScreen,
         }),
+        height: navHeight,
+        backgroundColor: 'rgba(0, 0, 0, 0.2)'
     },
     appBarShift: {
         width: `calc(100% - ${drawerWidth}px)`,
@@ -45,9 +51,7 @@ const useStyles = makeStyles(theme => ({
     },
     title: {
         flexGrow: 1,
-        [sizes.down('sm')]: {
-            fontSize: '2rem'
-        },
+        fontSize: '2rem'
     },
     hide: {
         display: 'none',
@@ -74,6 +78,12 @@ const useStyles = makeStyles(theme => ({
             duration: theme.transitions.duration.leavingScreen,
         }),
         marginRight: -drawerWidth,
+        backgroundImage: bgImageUrl,
+        height: '100vh',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        backgroundSize: 'cover',
+        overflow: 'auto'
     },
     contentShift: {
         transition: theme.transitions.create('margin', {
@@ -133,19 +143,22 @@ const App = () => {
                         </IconButton>
                     </Toolbar>
                 </AppBar>
+
                 <main
                     className={clsx(classes.content, {
                         [classes.contentShift]: open,
                     })}
                 >
-                    <div className={classes.drawerHeader} />
-                    <Switch>
-                        <Route exact path='/' component={Landing} />
-                        <Route exact path='/portfolio' component={Portfolio} />
-                        <Route exact path='/resume' component={Resume} />
-                        <Route exact path='/contact' component={Contact} />
-                    </Switch>
+                    <div className={classes.contentContainer}>
+                        <div className={classes.drawerHeader} />
+                        <Switch>
+                            <Route exact path='/' component={Landing} />
+                            <Route exact path='/portfolio' component={Portfolio} />
+                            <Route exact path='/resume' component={Resume} />
+                        </Switch>
+                    </div>
                 </main>
+
                 <Drawer
                     className={classes.drawer}
                     variant="persistent"
@@ -175,11 +188,6 @@ const App = () => {
                         <ListItem button >
                             <ListItemText>
                                 <Link to='/resume' className={classes.navLink}>My Resume</Link>
-                            </ListItemText>
-                        </ListItem>
-                        <ListItem button >
-                            <ListItemText>
-                                <Link to='/contact' className={classes.navLink}>Contact Me</Link>
                             </ListItemText>
                         </ListItem>
                     </List>

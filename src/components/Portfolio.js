@@ -4,10 +4,11 @@ import { withStyles } from '@material-ui/styles';
 import ProjectCard from './ProjectCard';
 import sizes from '../styles/sizes';
 import data from '../data';
+import Footer from './Footer';
 
 const styles = {
     projectsSection: {
-        height: '100%',
+        height: '85vh',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'flex-start',
@@ -52,6 +53,7 @@ const Portfolio = ({ classes }) => {
                         key={index} />
                 ))}
             </div>
+            <Footer />
         </section>
     )
 }
