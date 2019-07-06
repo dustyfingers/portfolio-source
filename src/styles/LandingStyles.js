@@ -10,9 +10,7 @@ export default {
         flexDirection: 'column'
     },
     header: {
-        [sizes.down('lg')]: {
-            margin: '1rem auto'
-        },
+        marginBottom: '1rem',
         [sizes.down('lg')]: {
             margin: '0.5rem auto',
             fontSize: '3rem'
@@ -20,7 +18,7 @@ export default {
     },
     paragraph: {
         width: '60%',
-        padding: '1.5rem',
+        paddingBottom: '1rem',
         [sizes.down('sm')]: {
             width: '90%',
         },

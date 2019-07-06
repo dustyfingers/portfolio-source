@@ -37,8 +37,6 @@ const styles = {
     },
     skillsContainer: {
         display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'start',
         width: '75%',
         flexWrap: 'wrap',
         [sizes.down('sm')]: {
