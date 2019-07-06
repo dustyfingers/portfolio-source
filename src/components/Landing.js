@@ -10,7 +10,10 @@ const Landing = ({ classes }) => {
     return (
         <section className={classes.landingSection}>
             <Typography variant='h1' className={classes.header}>
-                Hi! I'm Louie.
+                Hi!
+            </Typography>
+            <Typography variant='h1' className={classes.header}>
+                I'm Louie.
             </Typography>
             <Typography paragraph className={classes.paragraph}>
                 I'm a full stack web developer with a passion for learning about cutting edge technology.
@@ -21,11 +24,18 @@ const Landing = ({ classes }) => {
                 I currently live and work in
                 Colorado Springs, CO, but I am open to opportunities in any major city in the US.
             </Typography>
-            <Link to='/portfolio' className={classes.buttonLink}>
-                <Button variant="outlined" color="primary" size='large' className={classes.button}>
-                    My Portfolio
-                </Button>
-            </Link>
+            <div className={classes.buttons}>
+                <Link to='/portfolio' className={classes.buttonLink}>
+                    <Button variant="outlined" color="primary" size='large' className={classes.button}>
+                        My Portfolio
+                    </Button>
+                </Link>
+                <Link to='/resume' className={classes.buttonLink}>
+                    <Button variant="outlined" color="primary" size='large' className={classes.button}>
+                        My Resume
+                    </Button>
+                </Link>
+            </div>
         </section>
     )
 }

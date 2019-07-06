@@ -1,4 +1,5 @@
 import sizes from './sizes';
+import { fontSize } from '@material-ui/system';
 
 export default {
     landingSection: {
@@ -7,17 +8,15 @@ export default {
         alignItems: 'center',
         justifyContent: 'center',
         textAlign: 'center',
-        flexDirection: 'column',
-        [sizes.down('sm')]: {
-            marginTop: '4rem'
-        },
+        flexDirection: 'column'
     },
     header: {
         [sizes.down('lg')]: {
             margin: '1rem auto'
         },
-        [sizes.down('sm')]: {
-            lineHeight: '2.5rem'
+        [sizes.down('lg')]: {
+            margin: '0.5rem auto',
+            fontSize: '3rem'
         },
     },
     paragraph: {
@@ -25,7 +24,6 @@ export default {
         padding: '1.5rem',
         [sizes.down('sm')]: {
             width: '90%',
-            padding: '0 0.5rem'
         },
         [sizes.down('xs')]: {
             width: '100%',
@@ -41,5 +39,33 @@ export default {
         '&:focus, &:hover, &:visited, &:link, &:active': {
             textDecoration: 'none',
         }
-    }
+    },
+    button: {
+        padding: '1.125rem 1.5rem',
+        [sizes.down('sm')]: {
+            padding: '0.5rem .75rem'
+        },
+    },
+    buttons: {
+        display: 'flex',
+        width: '25%',
+        alignItems: 'center',
+        justifyContent: 'space-between',
+        [sizes.down('xl')]: {
+            width: '35%'
+        },
+        [sizes.down('lg')]: {
+            width: '45%'
+        },
+        [sizes.down('md')]: {
+            width: '55%'
+        },
+        [sizes.down('sm')]: {
+            width: '65%'
+        },
+        [sizes.down('xs')]: {
+            width: '100%',
+
+        },
+    },
 };
