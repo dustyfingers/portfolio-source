@@ -23,7 +23,8 @@ const useStyles = makeStyles({
             width: '45%'
         },
         [sizes.down('sm')]: {
-            width: '80%'
+            width: '80%',
+            maxHeight: '400px'
         },
     },
     media: {
