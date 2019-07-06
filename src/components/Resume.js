@@ -1,10 +1,10 @@
 import React from 'react';
 import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/styles';
-import { Link } from 'react-router-dom';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
+import { Link } from 'react-router-dom';
 import sizes from '../styles/sizes';
 
 
@@ -81,9 +81,9 @@ const Resume = ({ classes }) => {
 
                 <List className={classes.contactInfo}>
                     <Typography>thereallouiew@gmail.com</Typography>
-                    <Typography>www.thereallouiew.com</Typography>
                     <Typography>www.github.com/dustyfingers</Typography>
                     <Typography>(719)-229-6613</Typography>
+                    <a href='/images/Louie-Williford.pdf'>Download my resume!</a>
                 </List>
             </section>
             <section className={classes.projects}>
