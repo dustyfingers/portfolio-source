@@ -1,5 +1,4 @@
 import sizes from './sizes';
-import { fontSize } from '@material-ui/system';
 
 export default {
     landingSection: {
