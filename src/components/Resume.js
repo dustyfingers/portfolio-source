@@ -61,9 +61,14 @@ const styles = {
     headerLink: {
         color: 'white',
         textDecoration: 'none',
+        dispay: 'block',
         '&:focus, &:hover, &:visited, &:link, &:active': {
             textDecoration: 'none',
         }
+    },
+    contactInfo: {
+        display: 'flex',
+        flexDirection: 'column'
     }
 };
 
@@ -88,10 +93,18 @@ const Resume = ({ classes }) => {
                 </List>
 
                 <List className={classes.contactInfo}>
-                    <Typography>thereallouiew@gmail.com</Typography>
-                    <a href='https://www.github.com/dustyfingers' className={classes.headerLink}>www.github.com/dustyfingers</a>
-                    <Typography>(719)-229-6613</Typography>
-                    <a href='/images/Louie-Williford.pdf' className={classes.headerLink}>Download my resume!</a>
+                    <a href="mailto:thereallouiew@gmail.com?subject=Let's%20work%20together!" className={classes.headerLink}>
+                        thereallouiew@gmail.com
+                    </a>
+                    <a href='https://www.github.com/dustyfingers' className={classes.headerLink}>
+                        www.github.com/dustyfingers
+                    </a>
+                    <Typography>
+                        (719)-229-6613
+                    </Typography>
+                    <a href='/images/Louie-Williford.pdf' className={classes.headerLink}>
+                        Download my resume!
+                    </a>
                 </List>
             </section>
             <section className={classes.projects}>
