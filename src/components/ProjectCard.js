@@ -11,7 +11,7 @@ import sizes from '../styles/sizes';
 
 const useStyles = makeStyles({
     card: {
-        width: '20%',
+        width: '22%',
         margin: '1rem',
         display: 'flex',
         flexDirection: 'column',

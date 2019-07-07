@@ -61,7 +61,6 @@ const styles = {
     headerLink: {
         color: 'white',
         textDecoration: 'none',
-        dispay: 'block',
         '&:focus, &:hover, &:visited, &:link, &:active': {
             textDecoration: 'none',
         }
@@ -69,6 +68,20 @@ const styles = {
     contactInfo: {
         display: 'flex',
         flexDirection: 'column'
+    },
+    contactIcons: {
+        borderRadius: '3px',
+        backgroundColor: 'rgba(255, 255, 255, 0.6)',
+        marginBottom: '4px',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'space-between'
+    },
+    contactIcon: {
+        width: '2rem',
+        height: '2rem',
+        margin: '4px',
+        cursor: 'pointer'
     }
 };
 
@@ -93,18 +106,27 @@ const Resume = ({ classes }) => {
                 </List>
 
                 <List className={classes.contactInfo}>
-                    <a href="mailto:thereallouiew@gmail.com?subject=Let's%20work%20together!" className={classes.headerLink}>
-                        thereallouiew@gmail.com
-                    </a>
-                    <a href='https://www.github.com/dustyfingers' className={classes.headerLink}>
-                        www.github.com/dustyfingers
-                    </a>
+                    <div className={classes.contactIcons}>
+                        <a href="mailto:thereallouiew@gmail.com?subject=Let's%20work%20together!" className={classes.headerLink} >
+                            <img src="/images/email.svg" className={classes.contactIcon} />
+                        </a>
+                        <a href='tel:719-229-6613' className={classes.headerLink}>
+                            <img src="/images/phonebook.svg" className={classes.contactIcon} />
+                        </a>
+                        <a href='https://www.github.com/dustyfingers' className={classes.headerLink}>
+                            <img src="/images/github.svg" className={classes.contactIcon} />
+                        </a>
+                        <a href='https://www.linkedin.com/in/louie-williford/' className={classes.headerLink}>
+                            <img src="/images/linkedin.svg" className={classes.contactIcon} />
+                        </a>
+
+                    </div>
                     <Typography>
-                        (719)-229-6613
+                        <a href='/images/Louie-Williford.pdf' className={classes.headerLink}>
+                            Download my Resume!
+                        </a>
                     </Typography>
-                    <a href='/images/Louie-Williford.pdf' className={classes.headerLink}>
-                        Download my resume!
-                    </a>
+
                 </List>
             </section>
             <section className={classes.projects}>
