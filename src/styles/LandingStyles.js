@@ -2,12 +2,17 @@ import sizes from './sizes';
 
 export default {
     landingSection: {
-        height: '85vh',
+        marginTop: '10vh',
+        height: '75vh',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
         textAlign: 'center',
         flexDirection: 'column',
+        [sizes.down('xs')]: {
+            marginTop: 0,
+            height: '85vh'
+        }
     },
     header: {
         marginBottom: '1rem',

@@ -26,6 +26,14 @@ const useStyles = makeStyles({
             width: '80%',
             maxHeight: '400px'
         },
+        [sizes.down('xs')]: {
+            width: '90%',
+        },
+    },
+    description: {
+        [sizes.down('xs')]: {
+            display: 'none'
+        },
     },
     media: {
         height: '12rem',
@@ -36,6 +44,9 @@ const useStyles = makeStyles({
         '&:focus, &:hover, &:visited, &:link, &:active': {
             textDecoration: 'none',
         }
+    },
+    buttons: {
+        size: 'small'
     }
 });
 
@@ -54,7 +65,7 @@ const ProjectCard = (props) => {
                         <Typography gutterBottom variant="h5" component="h3">
                             {title}
                         </Typography>
-                        <Typography variant="body2" color="textSecondary" component="p">
+                        <Typography variant="body2" color="textSecondary" component="p" className={classes.description}>
                             {description}
                         </Typography>
                     </CardContent>
