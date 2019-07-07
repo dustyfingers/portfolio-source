@@ -57,12 +57,19 @@ const styles = {
     },
     inline: {
         color: 'white'
+    },
+    headerLink: {
+        color: 'white',
+        textDecoration: 'none',
+        '&:focus, &:hover, &:visited, &:link, &:active': {
+            textDecoration: 'none',
+        }
     }
 };
 
 
 function ListItemLink(props) {
-    return <ListItem button component="a" {...props} />;
+    return <ListItem button component="a" {...props}>{props.children}</ListItem>;
 }
 
 
@@ -82,9 +89,9 @@ const Resume = ({ classes }) => {
 
                 <List className={classes.contactInfo}>
                     <Typography>thereallouiew@gmail.com</Typography>
-                    <Typography>www.github.com/dustyfingers</Typography>
+                    <a href='https://www.github.com/dustyfingers' className={classes.headerLink}>www.github.com/dustyfingers</a>
                     <Typography>(719)-229-6613</Typography>
-                    <a href='/images/Louie-Williford.pdf'>Download my resume!</a>
+                    <a href='/images/Louie-Williford.pdf' className={classes.headerLink}>Download my resume!</a>
                 </List>
             </section>
             <section className={classes.projects}>

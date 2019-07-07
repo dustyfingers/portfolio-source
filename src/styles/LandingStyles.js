@@ -1,7 +1,4 @@
 import sizes from './sizes';
-import {
-    bgImageUrl
-} from './variables';
 
 export default {
     landingSection: {

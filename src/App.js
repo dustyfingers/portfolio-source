@@ -8,16 +8,13 @@ import Toolbar from '@material-ui/core/Toolbar';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import List from '@material-ui/core/List';
 import Typography from '@material-ui/core/Typography';
-import Divider from '@material-ui/core/Divider';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import ListItem from '@material-ui/core/ListItem';
-import ListItemText from '@material-ui/core/ListItemText';
 import Landing from './components/Landing';
 import Portfolio from './components/Portfolio';
 import Resume from './components/Resume';
-import Footer from './components/Footer';
 import './styles/App.css';
 import {
     standardTextColor,
@@ -95,6 +92,7 @@ const useStyles = makeStyles(theme => ({
     navLink: {
         textDecoration: 'none',
         color: '#465362',
+        fontSize: '1.2rem',
         '&:focus, &:hover, &:visited, &:link, &:active': {
             textDecoration: 'none',
             color: '#465362',
@@ -105,9 +103,9 @@ const useStyles = makeStyles(theme => ({
     }
 }));
 
+
 const App = () => {
     const classes = useStyles();
-    const theme = useTheme();
     const [open, setOpen] = React.useState(false);
 
     function handleDrawerOpen() {
@@ -173,23 +171,16 @@ const App = () => {
                             <ChevronRightIcon />
                         </IconButton>
                     </div>
-                    <Divider />
                     <List>
-                        <ListItem button >
-                            <ListItemText>
-                                <Link to='/' className={classes.navLink}>Home</Link>
-                            </ListItemText>
-                        </ListItem>
-                        <ListItem button >
-                            <ListItemText>
-                                <Link to='/portfolio' className={classes.navLink}>My Portfolio</Link>
-                            </ListItemText>
-                        </ListItem>
-                        <ListItem button >
-                            <ListItemText>
-                                <Link to='/resume' className={classes.navLink}>My Resume</Link>
-                            </ListItemText>
-                        </ListItem>
+                        <Link to='/' className={classes.navLink}>
+                            <ListItem button>Home</ListItem>
+                        </Link>
+                        <Link to='/portfolio' className={classes.navLink}>
+                            <ListItem button>My Portfolio</ListItem>
+                        </Link>
+                        <Link to='/resume' className={classes.navLink}>
+                            <ListItem button>My Resume</ListItem>
+                        </Link>
                     </List>
                 </Drawer>
             </div>
