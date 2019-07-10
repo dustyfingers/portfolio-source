@@ -2,37 +2,10 @@ import React from 'react';
 import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/styles';
 import ProjectCard from './ProjectCard';
-import sizes from '../styles/sizes';
 import data from '../data';
 import Footer from './Footer';
+import styles from '../styles/PortfolioStyles';
 
-const styles = {
-    projectsSection: {
-        height: '85vh',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'flex-start',
-        textAlign: 'center',
-        flexDirection: 'column',
-        [sizes.down('sm')]: {
-            marginTop: '1rem'
-        },
-    },
-    projectsHeader: {
-        [sizes.down('sm')]: {
-            fontSize: '2rem'
-        },
-    },
-    projectCards: {
-        width: '100%',
-        display: 'flex',
-        flexDirection: 'row',
-        flexWrap: 'wrap',
-        alignItems: 'space-between',
-        justifyContent: 'center',
-        margin: '1rem auto'
-    }
-};
 
 const Portfolio = ({ classes }) => {
     return (
