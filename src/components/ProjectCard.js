@@ -10,7 +10,7 @@ import useStyles from '../styles/ProjectCardStyles';
 
 const ProjectCard = (props) => {
     const classes = useStyles();
-    const { description, title, image, siteLink, repoLink, showSiteLink, showRepoLink } = props;
+    const { description, title, image, siteLink, repoLink, showSiteLink, showRepoLink, open } = props;
     return (
         <Card className={classes.card}>
             <a href={siteLink} className={classes.links}>
@@ -32,14 +32,14 @@ const ProjectCard = (props) => {
             <CardActions>
                 {showSiteLink &&
                     <a href={siteLink} alt={`Live site for ${title}`} className={classes.links}>
-                        <Button variant="outlined" color="primary" size='medium' >
+                        <Button variant="outlined" color="primary" size={open ? 'small' : 'medium'} >
                             Website
                         </Button>
                     </a>
                 }
                 {showRepoLink &&
                     <a href={repoLink} alt={`Code for ${title}`} className={classes.links}>
-                        <Button variant="outlined" color="primary" size='medium' >
+                        <Button variant="outlined" color="primary" size={open ? 'small' : 'medium'} >
                             Code
                         </Button>
                     </a>

@@ -28,7 +28,7 @@ const App = () => {
                             <div className={classes.drawerHeader} />
                             <Switch>
                                 <Route exact path='/' component={Landing} />
-                                <Route exact path='/portfolio' component={Portfolio} />
+                                <Route exact path='/portfolio' component={() => <Portfolio open={open} />} />
                                 <Route exact path='/resume' component={Resume} />
                             </Switch>
                         </div>

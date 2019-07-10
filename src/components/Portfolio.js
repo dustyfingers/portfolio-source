@@ -7,7 +7,7 @@ import Footer from './Footer';
 import styles from '../styles/PortfolioStyles';
 
 
-const Portfolio = ({ classes }) => {
+const Portfolio = ({ classes, open }) => {
     return (
         <section className={classes.projectsSection}>
             <Typography variant='h3' className={classes.projectsHeader}>My Portfolio</Typography>
@@ -23,7 +23,8 @@ const Portfolio = ({ classes }) => {
                         repoLink={item.repoLink}
                         showSiteLink={item.showSiteLink}
                         showRepoLink={item.showRepoLink}
-                        key={index} />
+                        key={index}
+                        open={open} />
                 ))}
             </div>
             <Footer />
