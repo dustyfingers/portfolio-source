@@ -7,39 +7,41 @@ import styles from '../styles/LandingStyles';
 import Footer from './Footer';
 
 
-const Landing = ({ classes }) => {
+const Landing = props => {
+    let { classes } = props;
+
     return (
         <section className={classes.landingSection}>
-            <Typography variant='h2' className={classes.header}>
+            <Typography className={classes.header}>
                 Hi!
-            </Typography>
-            <Typography variant='h2' className={classes.header}>
+                </Typography>
+            <Typography className={classes.header}>
                 I'm Louie.
-            </Typography>
+                </Typography>
             <Typography paragraph className={classes.paragraph}>
                 I'm a full stack web developer with a passion for learning about cutting edge technology.
                 When I'm not building nimble, scalable web apps with React & Redux, Node.js, Express, MongoDB and AWS, you can
                 find me at the park with my dogs or eating a home-cooked meal with my family!
-            </Typography>
+                </Typography>
             <Typography paragraph className={`${classes.paragraph} ${classes.paragraph2}`}>
                 I currently live and work in
                 Colorado Springs, CO, but I am open to opportunities in any major city in the US.
-            </Typography>
+                </Typography>
             <div className={classes.buttons}>
                 <Link to='/portfolio' className={classes.buttonLink}>
-                    <Button variant="outlined" color="primary" size='large' className={classes.button}>
+                    <Button variant="outlined" size='large' className={classes.button}>
                         My Portfolio
-                    </Button>
+                </Button>
                 </Link>
                 <Link to='/resume' className={classes.buttonLink}>
-                    <Button variant="outlined" color="primary" size='large' className={classes.button}>
+                    <Button variant="outlined" size='large' className={classes.button}>
                         My Resume
-                    </Button>
+                </Button>
                 </Link>
             </div>
             <Footer />
-        </section>
-    )
+        </section >
+    );
 }
 
 

@@ -70,8 +70,6 @@ const styles = {
         flexDirection: 'column'
     },
     contactIcons: {
-        borderRadius: '3px',
-        backgroundColor: 'rgba(255, 255, 255, 0.6)',
         marginBottom: '4px',
         display: 'flex',
         alignItems: 'center',
@@ -108,18 +106,17 @@ const Resume = ({ classes }) => {
                 <List className={classes.contactInfo}>
                     <div className={classes.contactIcons}>
                         <a href="mailto:thereallouiew@gmail.com?subject=Let's%20work%20together!" className={classes.headerLink} >
-                            <img src="/images/email.svg" className={classes.contactIcon} />
+                            <img src="/images/email.svg" className={classes.contactIcon} alt='email icon' />
                         </a>
                         <a href='tel:719-229-6613' className={classes.headerLink}>
-                            <img src="/images/phonebook.svg" className={classes.contactIcon} />
+                            <img src="/images/phonebook.svg" className={classes.contactIcon} alt='phone icon' />
                         </a>
                         <a href='https://www.github.com/dustyfingers' className={classes.headerLink}>
-                            <img src="/images/github.svg" className={classes.contactIcon} />
+                            <img src="/images/github.svg" className={classes.contactIcon} alt='github icon' />
                         </a>
                         <a href='https://www.linkedin.com/in/louie-williford/' className={classes.headerLink}>
-                            <img src="/images/linkedin.svg" className={classes.contactIcon} />
+                            <img src="/images/linkedin.svg" className={classes.contactIcon} alt='linkedin icon' />
                         </a>
-
                     </div>
                     <Typography>
                         <a href='/images/Louie-Williford.pdf' className={classes.headerLink}>

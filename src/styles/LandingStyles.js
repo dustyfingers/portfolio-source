@@ -10,15 +10,16 @@ export default {
         textAlign: 'center',
         flexDirection: 'column',
         [sizes.down('xs')]: {
-            marginTop: 0,
-            height: '85vh'
+            marginTop: '5vh',
+            height: '80vh'
         }
     },
     header: {
         marginBottom: '1rem',
+        fontSize: '3rem',
+        lineHeight: '2.5rem',
         [sizes.down('lg')]: {
             margin: '0.5rem auto',
-            fontSize: '3rem'
         },
     },
     paragraph: {
@@ -43,9 +44,14 @@ export default {
         }
     },
     button: {
-        padding: '1.125rem 1.5rem',
+        padding: '1rem',
+        backgroundColor: 'rgba(255,255,255, 0)',
+        borderRadius: 3,
+        border: '0.5px solid white',
+        color: 'white',
+        boxShadow: '0 2px 4px 1px rgba(0, 0, 0, .1)',
         [sizes.down('sm')]: {
-            padding: '0.5rem .75rem'
+            padding: '0.5rem'
         },
     },
     buttons: {
