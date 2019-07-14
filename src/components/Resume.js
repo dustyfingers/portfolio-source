@@ -4,7 +4,6 @@ import { withStyles } from '@material-ui/styles';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
-import sizes from '../styles/sizes';
 import Footer from './Footer';
 import styles from '../styles/ResumeStyles';
 

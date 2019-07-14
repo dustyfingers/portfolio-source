@@ -35,7 +35,7 @@ const App = () => {
                     </main>
                 </RightDrawer>
             </div>
-        </Router >
+        </Router>
     );
 }
 
