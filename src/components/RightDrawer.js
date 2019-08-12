@@ -15,7 +15,6 @@ import '../styles/App.css';
 
 const RightDrawer = ({ classes, children, open, setOpen }) => {
 
-
     function handleDrawerOpen() {
         setOpen(true);
     }

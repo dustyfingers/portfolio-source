@@ -8,9 +8,8 @@ import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import useStyles from '../styles/ProjectCardStyles';
 
-const ProjectCard = (props) => {
+const ProjectCard = ({ description, title, image, siteLink, repoLink, showSiteLink, showRepoLink, open }) => {
     const classes = useStyles();
-    const { description, title, image, siteLink, repoLink, showSiteLink, showRepoLink, open } = props;
     return (
         <Card className={classes.card}>
             <a href={siteLink} className={classes.links}>

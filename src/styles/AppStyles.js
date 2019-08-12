@@ -83,6 +83,7 @@ const useStyles = makeStyles(theme => ({
     },
     Logo: {
         color: 'white !important',
+        fontSize: '2rem !important'
     }
 }));
 

@@ -7,29 +7,27 @@ import Footer from './Footer';
 import styles from '../styles/PortfolioStyles';
 
 
-const Portfolio = ({ classes, open }) => {
-    return (
-        <section className={classes.projectsSection}>
-            <Typography variant='h3' className={classes.projectsHeader}>My Portfolio</Typography>
-            <div className={classes.projectCards}>
-                {data.map((item, index) => (
-                    <ProjectCard
-                        title={item.title}
-                        description={item.desc}
-                        component='img'
-                        image={`/images/${item.image}`}
-                        alt={item.title}
-                        siteLink={item.siteLink}
-                        repoLink={item.repoLink}
-                        showSiteLink={item.showSiteLink}
-                        showRepoLink={item.showRepoLink}
-                        key={index}
-                        open={open} />
-                ))}
-            </div>
-            <Footer />
-        </section>
-    )
-}
+const Portfolio = ({ classes, open }) => (
+    <section className={classes.projectsSection}>
+        <Typography variant='h3' className={classes.projectsHeader}>My Portfolio</Typography>
+        <div className={classes.projectCards}>
+            {data.map((item, index) => (
+                <ProjectCard
+                    title={item.title}
+                    description={item.desc}
+                    component='img'
+                    image={`/images/${item.image}`}
+                    alt={item.title}
+                    siteLink={item.siteLink}
+                    repoLink={item.repoLink}
+                    showSiteLink={item.showSiteLink}
+                    showRepoLink={item.showRepoLink}
+                    key={index}
+                    open={open} />
+            ))}
+        </div>
+        <Footer />
+    </section>
+);
 
 export default withStyles(styles)(Portfolio);
