@@ -8,9 +8,11 @@ import Footer from "../components/Footer";
 import styles from "../styles/ResumeStyles";
 import projects from "../data/projects";
 import contact from '../data/contact';
+import skills from '../data/skills';
 
 import ProjectItem from "../components/ProjectItem";
 import ContactIcon from '../components/ContactIcon';
+import Skill from '../components/Skill';
 
 const Resume = ({ classes }) => (
   <section className={classes.resumeContainer}>
@@ -115,17 +117,7 @@ const Resume = ({ classes }) => (
         Skills
       </Typography>
       <div className={classes.skillsContainer}>
-        <span className={classes.skill}>HTML & CSS</span>
-        <span className={classes.skill}>JavaScript(ES6)</span>
-        <span className={classes.skill}>Bootstrap 4</span>
-        <span className={classes.skill}>SASS</span>
-        <span className={classes.skill}>React</span>
-        <span className={classes.skill}>Express</span>
-        <span className={classes.skill}>Node.js</span>
-        <span className={classes.skill}>MongoDB</span>
-        <span className={classes.skill}>Git</span>
-        <span className={classes.skill}>Heroku</span>
-        <span className={classes.skill}>AWS Amplify & Route53</span>
+            {skills.map(skill => <Skill skill={skill} />)}
       </div>
     </section>
     <Footer padding="4rem" />
