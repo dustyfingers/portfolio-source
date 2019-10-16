@@ -2,9 +2,9 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import clsx from 'clsx';
 import CssBaseline from '@material-ui/core/CssBaseline';
-import Landing from './components/Landing';
-import Portfolio from './components/Portfolio';
-import Resume from './components/Resume';
+import Landing from './pages/Landing';
+import Portfolio from './pages/Portfolio';
+import Resume from './pages/Resume';
 import RightDrawer from './components/RightDrawer';
 import './styles/App.css';
 import useStyles from './styles/AppStyles.js'

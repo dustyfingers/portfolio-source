@@ -48,11 +48,8 @@ const styles = {
         margin: '1rem',
         cursor: 'pointer'
     },
-    inline: {
-        color: 'white'
-    },
     headerLink: {
-        color: 'white',
+        color: '#465362',
         textDecoration: 'none',
         '&:focus, &:hover, &:visited, &:link, &:active': {
             textDecoration: 'none',
@@ -67,12 +64,6 @@ const styles = {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'space-between'
-    },
-    contactIcon: {
-        width: '2rem',
-        height: '2rem',
-        margin: '4px',
-        cursor: 'pointer'
     }
 };
 
