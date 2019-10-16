@@ -27,7 +27,7 @@ const Resume = ({ classes }) => (
             ))}
         </div>
         <Typography>
-          <a href="/images/Louie-Williford.pdf" className={classes.headerLink}>
+          <a href="/resume-dl/Louie-Williford.pdf" className={classes.headerLink}>
             Download my Resume!
           </a>
         </Typography>
