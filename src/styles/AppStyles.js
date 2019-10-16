@@ -1,15 +1,15 @@
 import { makeStyles } from '@material-ui/core/styles';
 import {
-    standardTextColor,
+    lightBgTextColor,
     navHeight,
     drawerWidth,
-    bgImageUrl
+    mainColor
 } from './variables';
 
 const useStyles = makeStyles(theme => ({
     root: {
         display: 'flex',
-        color: standardTextColor,
+        color: lightBgTextColor,
         height: '100vh',
     },
     appBar: {
@@ -19,7 +19,7 @@ const useStyles = makeStyles(theme => ({
         }),
         height: navHeight,
         justifyContent: 'center',
-        backgroundColor: 'rgba(0, 0, 0, 0.2)'
+        backgroundColor: mainColor
     },
     appBarShift: {
         width: `calc(100% - ${drawerWidth}px)`,
@@ -58,7 +58,6 @@ const useStyles = makeStyles(theme => ({
             duration: theme.transitions.duration.leavingScreen,
         }),
         marginRight: -drawerWidth,
-        backgroundImage: bgImageUrl,
         height: '100vh',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',

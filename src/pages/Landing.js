@@ -4,7 +4,7 @@ import { withStyles } from "@material-ui/styles";
 import Button from "@material-ui/core/Button";
 import { Link } from "react-router-dom";
 import styles from "../styles/LandingStyles";
-import Footer from "./Footer";
+import Footer from "../components/Footer";
 
 const Landing = ({ classes }) => (
   <section className={classes.landingSection}>

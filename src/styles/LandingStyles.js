@@ -47,8 +47,7 @@ export default {
         padding: '1rem',
         backgroundColor: 'rgba(255,255,255, 0)',
         borderRadius: 3,
-        border: '0.5px solid white',
-        color: 'white',
+        border: '0.5px solid black',
         boxShadow: '0 2px 4px 1px rgba(0, 0, 0, .1)',
         [sizes.down('sm')]: {
             padding: '0.5rem'
