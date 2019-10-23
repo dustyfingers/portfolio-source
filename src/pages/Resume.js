@@ -7,36 +7,40 @@ import ListItemText from "@material-ui/core/ListItemText";
 import Footer from "../components/Footer";
 import styles from "../styles/ResumeStyles";
 import projects from "../data/projects";
-import contact from '../data/contact';
+import skills from "../data/skills";
+import contact from "../data/contact";
 
 import ProjectItem from "../components/ProjectItem";
-import ContactIcon from '../components/ContactIcon';
+import ContactIcon from "../components/ContactIcon";
+import SkillIcon from "../components/SkillIcon";
+import ResumeSectionHeader from "../components/ResumeSectionHeader";
 
 const Resume = ({ classes }) => (
   <section className={classes.resumeContainer}>
     <section className={classes.header}>
       <List>
-        <Typography variant="h4">Louie Williford</Typography>
-        <Typography>Full Stack Web Developer || React Developer</Typography>
+        <Typography variant="h3">Louie Williford</Typography>
+        <Typography>Software Developer || Full Stack Web Developer</Typography>
       </List>
 
       <List className={classes.contactInfo}>
         <div className={classes.contactIcons}>
-            {contact.map(({...props}) => (
-                <ContactIcon {...props} />
-            ))}
+          {contact.map(({ ...props }) => (
+            <ContactIcon {...props} />
+          ))}
         </div>
         <Typography>
-          <a href="/resume-dl/Louie-Williford.pdf" className={classes.headerLink}>
+          <a
+            href="/resume-dl/Louie-Williford.pdf"
+            className={classes.headerLink}
+          >
             Download my Resume!
           </a>
         </Typography>
       </List>
     </section>
     <section className={classes.projects}>
-      <Typography variant="h4" className={classes.sectionHeader}>
-        Projects
-      </Typography>
+      <ResumeSectionHeader sectionTitle="Projects" />
       <List>
         {/* PROJECT LIST*/}
         {projects.map(project => {
@@ -46,9 +50,7 @@ const Resume = ({ classes }) => (
       </List>
     </section>
     <section className={classes.education}>
-      <Typography variant="h4" className={classes.sectionHeader}>
-        Education
-      </Typography>
+      <ResumeSectionHeader sectionTitle="Education" />
       <List>
         <ListItem>
           <ListItemText
@@ -70,9 +72,7 @@ const Resume = ({ classes }) => (
       </List>
     </section>
     <section className={classes.experience}>
-      <Typography variant="h4" className={classes.sectionHeader}>
-        Experience
-      </Typography>
+      <ResumeSectionHeader sectionTitle="Experience" />
       <List>
         <ListItem>
           <ListItemText
@@ -111,21 +111,11 @@ const Resume = ({ classes }) => (
       </List>
     </section>
     <section className={classes.skills}>
-      <Typography variant="h4" className={classes.sectionHeader}>
-        Skills
-      </Typography>
+      <ResumeSectionHeader sectionTitle="Skills" />
       <div className={classes.skillsContainer}>
-        <span className={classes.skill}>HTML & CSS</span>
-        <span className={classes.skill}>JavaScript(ES6)</span>
-        <span className={classes.skill}>Bootstrap 4</span>
-        <span className={classes.skill}>SASS</span>
-        <span className={classes.skill}>React</span>
-        <span className={classes.skill}>Express</span>
-        <span className={classes.skill}>Node.js</span>
-        <span className={classes.skill}>MongoDB</span>
-        <span className={classes.skill}>Git</span>
-        <span className={classes.skill}>Heroku</span>
-        <span className={classes.skill}>AWS Amplify & Route53</span>
+        {skills.map(skill => (
+          <SkillIcon skill={skill} />
+        ))}
       </div>
     </section>
     <Footer padding="4rem" />
