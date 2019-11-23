@@ -51,52 +51,10 @@ const projects = [
     repoLink: "https://github.com/dustyfingers/portfolio-source",
     tags: [
       "Front End Development",
-      "HTML",
-      "CSS",
       "JavaScript",
       "React",
       "UI Design",
-      "AWS"
-    ]
-  },
-  {
-    title: "YelpCamp",
-    desc:
-      "YelpCamp is a review site made for campgrounds. It is a full-stack web app built with HTML + CSS + Bootstrap 4 on the front end, and Express and MongoDB on the back end.",
-    image: "/images/project-images/yelpcamp-screencap.png",
-    showSiteLink: true,
-    siteLink: "https://vast-retreat-30517.herokuapp.com/",
-    showRepoLink: true,
-    repoLink:
-      "https://github.com/dustyfingers/webdev-bootcamp/tree/master/yelpcamp",
-    tags: [
-      "Full Stack Development",
-      "HTML",
-      "CSS",
-      "JavaScript",
-      "Bootstrap 4",
-      "Express",
-      "Node.js",
-      "MongoDB",
-      "Heroku"
-    ]
-  },
-  {
-    title: "pickr.io",
-    desc:
-      "pickr.io is a modern solution to color palette storage. It is a front end web app built using React, and caches data in localStorage.",
-    image: "/images/project-images/pickrio-screencap.png",
-    showSiteLink: true,
-    siteLink: "https://zealous-kowalevski-5676d4.netlify.com/",
-    showRepoLink: true,
-    repoLink: "https://github.com/dustyfingers/pickrio-deploy",
-    tags: [
-      "Front End Development",
-      "HTML",
-      "CSS",
-      "JavaScript",
-      "React",
-      "Netlify"
+      "AWS Amplify/Route53"
     ]
   }
 ];

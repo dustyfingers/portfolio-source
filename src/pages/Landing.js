@@ -12,18 +12,14 @@ const Landing = ({ classes }) => (
     <Typography className={classes.header}>I'm Louie.</Typography>
     <Typography paragraph className={classes.paragraph}>
       I'm a full stack web developer with a passion for learning about cutting
-      edge technology. In particular, I know and use frequently: JS/ES6+,
-      Python, LESS/SASS, React, Redux, Node.js, Express, Django, MongoDB, SQL,
-      Heroku and AWS Amplify/Route53. When I'm not at building the software
-      solutions of the future you can find me at the park with my dogs, at the
-      gym practicing jiu jitsu, or at home playing guitar!
+      edge technology. When I'm not building software, you can find me at the
+      park with my dogs or at the gym practicing jiu jitsu!
     </Typography>
     <Typography
       paragraph
       className={`${classes.paragraph} ${classes.paragraph2}`}
     >
-      I currently live and work in Colorado Springs, CO, but I am open to
-      opportunities in any major city in the US.
+      I currently work in Denver, CO.
     </Typography>
     <div className={classes.buttons}>
       <Link to="/portfolio" className={classes.buttonLink}>

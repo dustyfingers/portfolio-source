@@ -7,12 +7,12 @@ import ListItemText from "@material-ui/core/ListItemText";
 import Footer from "../components/Footer";
 import styles from "../styles/ResumeStyles";
 import projects from "../data/projects";
-import contact from '../data/contact';
-import skills from '../data/skills';
+import contact from "../data/contact";
+import skills from "../data/skills";
 
 import ProjectItem from "../components/ProjectItem";
-import ContactIcon from '../components/ContactIcon';
-import Skill from '../components/Skill';
+import ContactIcon from "../components/ContactIcon";
+import Skill from "../components/Skill";
 
 const Resume = ({ classes }) => (
   <section className={classes.resumeContainer}>
@@ -24,12 +24,15 @@ const Resume = ({ classes }) => (
 
       <List className={classes.contactInfo}>
         <div className={classes.contactIcons}>
-            {contact.map(({...props}) => (
-                <ContactIcon {...props} />
-            ))}
+          {contact.map(({ ...props }) => (
+            <ContactIcon {...props} />
+          ))}
         </div>
         <Typography>
-          <a href="/resume-dl/Louie-Williford.pdf" className={classes.headerLink}>
+          <a
+            href="/resume-dl/Louie-Williford.pdf"
+            className={classes.headerLink}
+          >
             Download my Resume!
           </a>
         </Typography>
@@ -63,7 +66,7 @@ const Resume = ({ classes }) => (
                   className={classes.inline}
                   color="textPrimary"
                 >
-                  05/19 - 02/20
+                  05/19 - 10/19
                 </Typography>
               </>
             }
@@ -78,7 +81,7 @@ const Resume = ({ classes }) => (
       <List>
         <ListItem>
           <ListItemText
-            primary="Cell Phone Repair Technician - Dr.PhoneFix"
+            primary="Jr. Web Developer - NativeRank"
             secondary={
               <>
                 <Typography
@@ -87,24 +90,7 @@ const Resume = ({ classes }) => (
                   className={classes.inline}
                   color="textPrimary"
                 >
-                  10/18-05/19
-                </Typography>
-              </>
-            }
-          ></ListItemText>
-        </ListItem>
-        <ListItem>
-          <ListItemText
-            primary="Tech Support Agent Tier I - Xerox Corp."
-            secondary={
-              <>
-                <Typography
-                  component="span"
-                  variant="body2"
-                  className={classes.inline}
-                  color="textPrimary"
-                >
-                  11/15-05/16
+                  10/19-current
                 </Typography>
               </>
             }
@@ -117,7 +103,9 @@ const Resume = ({ classes }) => (
         Skills
       </Typography>
       <div className={classes.skillsContainer}>
-            {skills.map(skill => <Skill skill={skill} />)}
+        {skills.map(skill => (
+          <Skill skill={skill} />
+        ))}
       </div>
     </section>
     <Footer padding="4rem" />
