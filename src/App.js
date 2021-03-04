@@ -1,9 +1,11 @@
 import React from 'react';
-import bootstrap from 'bootstrap';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+
+// import pages and components
 import Landing from './pages/Landing';
 import Portfolio from './pages/Portfolio';
 import Resume from './pages/Resume';
+import Menu from './components/BOOTSTRAPREBUILD/Menu';
 
 
 const App = () => {
@@ -11,9 +13,9 @@ const App = () => {
 
     return (
         <Router>
-            <div className='container'>
-                // ? nav menu?
-                <main>
+            <div>
+                <Menu />
+                <main className='container'>
                     <div>
                         <div/>
                         <Switch>
