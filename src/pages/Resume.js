@@ -1,29 +1,26 @@
 import React from "react";
 import Typography from "@material-ui/core/Typography";
-import { withStyles } from "@material-ui/styles";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
 import Footer from "../components/Footer";
-import styles from "../styles/ResumeStyles";
-import projects from "../data/projects";
-import contact from "../data/contact";
-import skills from "../data/skills";
-
 import ProjectItem from "../components/ProjectItem";
 import ContactIcon from "../components/ContactIcon";
 import Skill from "../components/Skill";
+import resumeData from '../data/data';
 
-const Resume = ({ classes }) => (
-  <section className={classes.resumeContainer}>
-    <section className={classes.header}>
+const { contact, projects, skills } = resumeData;
+
+const Resume = () => (
+  <section>
+    <section>
       <List>
         <Typography variant="h4">Louie Williford</Typography>
         <Typography>Full Stack Web Developer || React Developer</Typography>
       </List>
 
-      <List className={classes.contactInfo}>
-        <div className={classes.contactIcons}>
+      <List>
+        <div>
           {contact.map(({ ...props }) => (
             <ContactIcon {...props} />
           ))}
@@ -31,15 +28,14 @@ const Resume = ({ classes }) => (
         <Typography>
           <a
             href="/resume-dl/Louie-Williford.pdf"
-            className={classes.headerLink}
           >
             Download my Resume!
           </a>
         </Typography>
       </List>
     </section>
-    <section className={classes.projects}>
-      <Typography variant="h4" className={classes.sectionHeader}>
+    <section>
+      <Typography variant="h4">
         Projects
       </Typography>
       <List>
@@ -50,8 +46,8 @@ const Resume = ({ classes }) => (
         })}
       </List>
     </section>
-    <section className={classes.education}>
-      <Typography variant="h4" className={classes.sectionHeader}>
+    <section>
+      <Typography variant="h4">
         Education
       </Typography>
       <List>
@@ -63,7 +59,6 @@ const Resume = ({ classes }) => (
                 <Typography
                   component="span"
                   variant="body2"
-                  className={classes.inline}
                   color="textPrimary"
                 >
                   05/19 - 10/19
@@ -74,8 +69,8 @@ const Resume = ({ classes }) => (
         </ListItem>
       </List>
     </section>
-    <section className={classes.experience}>
-      <Typography variant="h4" className={classes.sectionHeader}>
+    <section>
+      <Typography variant="h4">
         Experience
       </Typography>
       <List>
@@ -87,7 +82,6 @@ const Resume = ({ classes }) => (
                 <Typography
                   component="span"
                   variant="body2"
-                  className={classes.inline}
                   color="textPrimary"
                 >
                   10/19-current
@@ -98,11 +92,11 @@ const Resume = ({ classes }) => (
         </ListItem>
       </List>
     </section>
-    <section className={classes.skills}>
-      <Typography variant="h4" className={classes.sectionHeader}>
+    <section>
+      <Typography variant="h4">
         Skills
       </Typography>
-      <div className={classes.skillsContainer}>
+      <div>
         {skills.map(skill => (
           <Skill skill={skill} />
         ))}
@@ -112,4 +106,4 @@ const Resume = ({ classes }) => (
   </section>
 );
 
-export default withStyles(styles)(Resume);
+export default Resume;

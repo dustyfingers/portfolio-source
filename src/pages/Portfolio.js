@@ -1,19 +1,19 @@
 import React from "react";
 import Typography from "@material-ui/core/Typography";
-import { withStyles } from "@material-ui/styles";
 import ProjectCard from "../components/ProjectCard";
-import projects from "../data/projects";
+import resumeData from "../data/data";
 import Footer from "../components/Footer";
-import styles from "../styles/PortfolioStyles";
 
-const Portfolio = ({ classes, open }) => {
+const { projects } = resumeData;
+
+const Portfolio = ({ open }) => {
   
   return (
-    <section className={classes.projectsSection}>
-      <Typography variant="h3" className={classes.projectsHeader}>
+    <section>
+      <Typography variant="h3">
         My Portfolio
       </Typography>
-      <div className={classes.projectCards}>
+      <div>
         {projects.map(({
                 title,
                 desc,
@@ -43,4 +43,4 @@ const Portfolio = ({ classes, open }) => {
   );
 };
 
-export default withStyles(styles)(Portfolio);
+export default Portfolio;

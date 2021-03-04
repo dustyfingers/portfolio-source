@@ -1,6 +1,5 @@
 import React from "react";
 import { Link, withRouter } from "react-router-dom";
-import clsx from "clsx";
 import Drawer from "@material-ui/core/Drawer";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
@@ -10,9 +9,8 @@ import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from "@material-ui/icons/Menu";
 import ChevronRightIcon from "@material-ui/icons/ChevronRight";
 import ListItem from "@material-ui/core/ListItem";
-import "../styles/App.css";
 
-const RightDrawer = ({ classes, children, open, setOpen, history }) => {
+const RightDrawer = ({ children, open, setOpen, history }) => {
   function handleDrawerOpen() {
     setOpen(true);
   }
@@ -25,13 +23,10 @@ const RightDrawer = ({ classes, children, open, setOpen, history }) => {
     <>
       <AppBar
         position="fixed"
-        className={clsx(classes.appBar, {
-          [classes.appBarShift]: open
-        })}
       >
         <Toolbar>
-          <Typography variant="h3" noWrap className={classes.title}>
-            <Link to="/" className={`${classes.navLink} ${classes.Logo}`}>
+          <Typography variant="h3" noWrap>
+            <Link to="/">
               {" "}
               Louie Williford{" "}
             </Link>
@@ -41,7 +36,6 @@ const RightDrawer = ({ classes, children, open, setOpen, history }) => {
             aria-label="Open drawer"
             edge="end"
             onClick={handleDrawerOpen}
-            className={clsx(open && classes.hide)}
           >
             <MenuIcon />
           </IconButton>
@@ -49,15 +43,11 @@ const RightDrawer = ({ classes, children, open, setOpen, history }) => {
       </AppBar>
       {children}
       <Drawer
-        className={classes.drawer}
         variant="persistent"
         anchor="right"
         open={open}
-        classes={{
-          paper: classes.drawerPaper
-        }}
       >
-        <div className={classes.drawerHeader}>
+        <div>
           <IconButton onClick={handleDrawerClose}>
             <ChevronRightIcon />
           </IconButton>
@@ -65,21 +55,18 @@ const RightDrawer = ({ classes, children, open, setOpen, history }) => {
         <List>
           <ListItem
             onClick={() => history.push("/")}
-            className={classes.navLink}
             button
           >
             Home
           </ListItem>
           <ListItem
             onClick={() => history.push("/portfolio")}
-            className={classes.navLink}
             button
           >
             My Portfolio
           </ListItem>
           <ListItem
             onClick={() => history.push("/resume")}
-            className={classes.navLink}
             button
           >
             My Resume

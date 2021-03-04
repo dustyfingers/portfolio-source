@@ -1,19 +1,15 @@
-import React from 'react'
-import styles from '../styles/ContactIconStyles'
-import { withStyles } from "@material-ui/styles";
+import React from "react";
 
-const ContactIcon = ({classes, link, iconLink, alt}) => (
+const ContactIcon = ({link, iconLink, alt}) => (
 <a
 href={link}
-className={classes.headerLink}
 >
 <img
   src={iconLink}
-  className={classes.contactIcon}
   alt={alt}
 />
 </a>
 )
 
-export default withStyles(styles)(ContactIcon);
+export default ContactIcon;
 
