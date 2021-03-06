@@ -6,25 +6,22 @@ import Landing from './pages/Landing';
 import Portfolio from './pages/Portfolio';
 import Resume from './pages/Resume';
 import Menu from './components/BOOTSTRAPREBUILD/Menu';
+import Footer from './components/BOOTSTRAPREBUILD/Footer';
 
 
 const App = () => {
-    const [open, setOpen] = React.useState(false);
-
     return (
         <Router>
-            <div>
+            <div id='AppContainer' className='text-light bg-primary'>
                 <Menu />
-                <main className='container'>
-                    <div>
-                        <div/>
-                        <Switch>
-                            <Route exact path='/' component={Landing} />
-                            <Route exact path='/portfolio' component={() => <Portfolio open={open} />} />
-                            <Route exact path='/resume' component={Resume} />
-                        </Switch>
-                    </div>
+                <main className='container' id='PageContainer'>
+                    <Switch>
+                        <Route exact path='/' component={Landing} />
+                        <Route path='/portfolio' component={Portfolio} />
+                        <Route path='/resume' component={Resume} />
+                    </Switch>
                 </main>
+                <Footer />
             </div>
         </Router>
     );

@@ -1,23 +1,19 @@
 import React from "react";
-import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
 import { Link } from "react-router-dom";
-import Footer from "../components/Footer";
 
 const Landing = () => (
   <section>
-    <Typography>Hi!</Typography>
-    <Typography>I'm Louie.</Typography>
-    <Typography paragraph>
+    <p>Hi!</p>
+    <p>I'm Louie.</p>
+    <p>
       I'm a full stack web developer with a passion for learning about cutting
       edge technology. When I'm not building software, you can find me at the
       park with my dogs or at the gym practicing jiu jitsu!
-    </Typography>
-    <Typography
-      paragraph
-    >
+    </p>
+    <p>
       I currently work in Denver, CO.
-    </Typography>
+    </p>
     <div>
       <Link to="/portfolio">
         <Button variant="outlined" size="large">
@@ -30,7 +26,6 @@ const Landing = () => (
         </Button>
       </Link>
     </div>
-    <Footer />
   </section>
 );
 

@@ -2,7 +2,6 @@ import React from "react";
 import Typography from "@material-ui/core/Typography";
 import ProjectCard from "../components/ProjectCard";
 import resumeData from "../data/data";
-import Footer from "../components/Footer";
 
 const { projects } = resumeData;
 
@@ -38,7 +37,6 @@ const Portfolio = ({ open }) => {
               />)
           )}
       </div>
-      <Footer />
     </section>
   );
 };

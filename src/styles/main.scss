@@ -1,9 +1,30 @@
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";
 
-* {
-    
-}
+// ! bootstrap default color overrides
+$primary: #020e17 !important;
+$secondary: #76d9b9 !important;
+$success: #15ab89 !important;
+$info: #d8c13a !important;
+$warning: #ff881d !important;
+$danger: #ef4444 !important;
+$light: #f9efc1 !default;
+$dark: $gray-900;
 
-a {
+#AppContainer {
+  // global theming settings
+  min-height: 100vh;
+  background: $primary;
+  color: $light;
+
+  a {
     text-decoration: none;
+    color: $light;
+  }
+
+  // navbar styles
+  #TopMenu {
+    #logo {
+      color: $secondary;
+    }
+  }
 }

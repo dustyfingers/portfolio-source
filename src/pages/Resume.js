@@ -3,7 +3,6 @@ import Typography from "@material-ui/core/Typography";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
-import Footer from "../components/Footer";
 import ProjectItem from "../components/ProjectItem";
 import ContactIcon from "../components/ContactIcon";
 import Skill from "../components/Skill";
@@ -102,7 +101,6 @@ const Resume = () => (
         ))}
       </div>
     </section>
-    <Footer padding="4rem" />
   </section>
 );
 
