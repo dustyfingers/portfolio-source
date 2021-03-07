@@ -1,5 +1,4 @@
 import React from "react";
-import Button from "@material-ui/core/Button";
 import { Link } from "react-router-dom";
 
 const Landing = () => (
@@ -16,14 +15,14 @@ const Landing = () => (
     </p>
     <div>
       <Link to="/portfolio">
-        <Button variant="outlined" size="large">
+        <button className="btn btn-large">
           My Portfolio
-        </Button>
+        </button>
       </Link>
       <Link to="/resume">
-        <Button variant="outlined" size="large">
+        <button className="btn btn-large">
           My Resume
-        </Button>
+        </button>
       </Link>
     </div>
   </section>

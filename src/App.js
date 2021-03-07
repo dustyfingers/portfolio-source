@@ -12,7 +12,7 @@ import Footer from './components/BOOTSTRAPREBUILD/Footer';
 const App = () => {
     return (
         <Router>
-            <div id='AppContainer' className='text-light bg-primary'>
+            <div id='AppContainer'>
                 <Menu />
                 <main className='container' id='PageContainer'>
                     <Switch>

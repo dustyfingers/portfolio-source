@@ -1,14 +1,14 @@
+// ! bootstrap default color overrides
+
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";
 
-// ! bootstrap default color overrides
-$primary: #020e17 !important;
-$secondary: #76d9b9 !important;
-$success: #15ab89 !important;
-$info: #d8c13a !important;
-$warning: #ff881d !important;
-$danger: #ef4444 !important;
-$light: #f9efc1 !default;
-$dark: $gray-900;
+$primary: #020e17;
+$secondary: #76d9b9;
+$success: #15ab89;
+$info: #d8c13a;
+$warning: #ff881d;
+$danger: #ef4444;
+$light: #f9efc1;
 
 #AppContainer {
   // global theming settings
@@ -25,6 +25,15 @@ $dark: $gray-900;
   #TopMenu {
     #logo {
       color: $secondary;
+    }
+
+    .navbar-toggler {
+      color: $light;
+      border-color: $light;
+    }
+
+    .nav-link {
+      cursor: pointer;
     }
   }
 }
