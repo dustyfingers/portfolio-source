@@ -1,5 +1,4 @@
 import React from "react";
-import Typography from "@material-ui/core/Typography";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
@@ -14,29 +13,29 @@ const Resume = () => (
   <section>
     <section>
       <List>
-        <Typography variant="h4">Louie Williford</Typography>
-        <Typography>Full Stack Web Developer || React Developer</Typography>
+        <h4>Louie Williford</h4>
+        <p>Full Stack Software Developer</p>
       </List>
 
       <List>
         <div>
-          {contact.map(({ ...props }) => (
+          {contact.map(({...props}) => (
             <ContactIcon {...props} />
           ))}
         </div>
-        <Typography>
+        <p>
           <a
             href="/resume-dl/Louie-Williford.pdf"
           >
             Download my Resume!
           </a>
-        </Typography>
+        </p>
       </List>
     </section>
     <section>
-      <Typography variant="h4">
+      <h4>
         Projects
-      </Typography>
+      </h4>
       <List>
         {/* PROJECT LIST*/}
         {projects.map(project => {
@@ -46,22 +45,22 @@ const Resume = () => (
       </List>
     </section>
     <section>
-      <Typography variant="h4">
+      <h4>
         Education
-      </Typography>
+      </h4>
       <List>
         <ListItem>
           <ListItemText
             primary="Lambda School - Full Stack Web Development"
             secondary={
               <>
-                <Typography
+                <p
                   component="span"
                   variant="body2"
                   color="textPrimary"
                 >
                   05/19 - 10/19
-                </Typography>
+                </p>
               </>
             }
           ></ListItemText>
@@ -69,22 +68,22 @@ const Resume = () => (
       </List>
     </section>
     <section>
-      <Typography variant="h4">
+      <h4>
         Experience
-      </Typography>
+      </h4>
       <List>
         <ListItem>
           <ListItemText
             primary="Jr. Web Developer - NativeRank"
             secondary={
               <>
-                <Typography
+                <p
                   component="span"
                   variant="body2"
                   color="textPrimary"
                 >
                   10/19-current
-                </Typography>
+                </p>
               </>
             }
           ></ListItemText>
@@ -92,9 +91,9 @@ const Resume = () => (
       </List>
     </section>
     <section>
-      <Typography variant="h4">
+      <h4>
         Skills
-      </Typography>
+      </h4>
       <div>
         {skills.map(skill => (
           <Skill skill={skill} />

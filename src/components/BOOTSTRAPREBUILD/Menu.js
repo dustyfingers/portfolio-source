@@ -3,7 +3,7 @@ import { Link, withRouter } from 'react-router-dom';
 
 const Menu = ({ history }) => (
     <>
-        <nav className="navbar navbar-expand-lg navbar-dark" id="TopMenu">
+        <nav className="navbar navbar-expand-lg navbar-dark fixed-top" id="TopMenu">
             <div className="container-fluid">
 
                 <Link to="/" id="logo"><h3>Louie Williford</h3></Link>

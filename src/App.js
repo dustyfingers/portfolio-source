@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 // import pages and components
-import Landing from './pages/Landing';
+import Landing from './pages/BOOTSTRAPREBUILD/Landing';
 import Portfolio from './pages/Portfolio';
 import Resume from './pages/Resume';
 import Menu from './components/BOOTSTRAPREBUILD/Menu';

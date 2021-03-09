@@ -1,17 +1,18 @@
 import React from "react";
-import Typography from "@material-ui/core/Typography";
 import ProjectCard from "../components/ProjectCard";
 import resumeData from "../data/data";
 
 const { projects } = resumeData;
 
+// use css grid to lay these cards out
+
 const Portfolio = ({ open }) => {
   
   return (
     <section>
-      <Typography variant="h3">
+      <h1>
         My Portfolio
-      </Typography>
+      </h1>
       <div>
         {projects.map(({
                 title,

@@ -23,17 +23,38 @@ $light: #f9efc1;
 
   // navbar styles
   #TopMenu {
+    background-color: $primary;
+
     #logo {
       color: $secondary;
     }
 
     .navbar-toggler {
-      color: $light;
-      border-color: $light;
+      color: $secondary;
+      border-color: $secondary;
     }
 
     .nav-link {
       cursor: pointer;
     }
+  }
+
+  // landing section styles
+  #LandingSection {
+    min-height: 90vh;
+
+    .landing-ctas {
+      color: $secondary;
+      border-color: $secondary;
+      &:hover {
+        color: $success;
+        border-color: $success;
+      }
+    }
+  }
+
+  // footer styles
+  #FooterMenu {
+    background-color: $primary;
   }
 }
