@@ -12,27 +12,30 @@ const Portfolio = () => {
       <h1>
         My Portfolio
       </h1>
-      <div>
-        {projects.map(({
-                title,
-                desc,
-                image,
-                siteLink,
-                repoLink,
-                showSiteLink,
-                showRepoLink
-              }, index) => 
-                (<ProjectCard
-                title={title}
-                description={desc}
-                image={image}
-                siteLink={siteLink}
-                repoLink={repoLink}
-                showSiteLink={showSiteLink}
-                showRepoLink={showRepoLink}
-                key={index}
-              />)
+      <div className="container">
+        <div className="row">
+          {projects.map(({
+            title,
+            desc,
+            image,
+            siteLink,
+            repoLink,
+            showSiteLink,
+            showRepoLink
+          }, index) => 
+            (<div className="col-md mt-4">
+                <ProjectCard
+                  title={title}
+                  description={desc}
+                  image={image}
+                  siteLink={siteLink}
+                  repoLink={repoLink}
+                  showSiteLink={showSiteLink}
+                  showRepoLink={showRepoLink}
+                  key={index} />      
+              </div>)
           )}
+        </div>
       </div>
     </section>
   );

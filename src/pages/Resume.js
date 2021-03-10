@@ -10,7 +10,7 @@ const Resume = () => (
   <section id="ResumeSection" className="main-section">
     <section>
       <div>
-        <h4>Louie Williford</h4>
+        <h1>Louie Williford</h1>
         <p>Full Stack Software Developer</p>
       </div>
 
@@ -21,9 +21,7 @@ const Resume = () => (
           ))}
         </div>
         <p>
-          <a
-            href="/resume-dl/Louie-Williford.pdf"
-          >
+          <a href="/resume-dl/Louie-Williford.pdf">
             Download my Resume!
           </a>
         </p>

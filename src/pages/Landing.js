@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const Landing = () => (
   <section id="LandingSection" className="d-flex align-items-center text-center">
-    <div>
+    <div className="landing-cta-section mx-auto">
       <p>Hi!</p>
       <p>I'm Louie.</p>
       <p>

@@ -3,7 +3,7 @@ import React from 'react';
 
 const ProjectCard = ({ description, title, image, siteLink, repoLink, showSiteLink, showRepoLink }) => {
     return (
-        <div className="card">
+        <div className="card h-100">
             <img src={image} className="card-img-top" alt={title} />
             <div className="card-body">
                 <h5 className="card-title">{title}</h5>
