@@ -14,25 +14,19 @@ const resumeData = {
             link: "https://www.github.com/dustyfingers",
             iconLink: "/images/contact-icons/github.svg",
             alt: "github icon"
-        },
-        {
-            link: "https://www.linkedin.com/in/louie-williford/",
-            iconLink: "/images/contact-icons/linkedin.svg",
-            alt: "linkedin icon"
         }
     ],
     skills: [
         "HTML & CSS",
         "LESS/SASS",
-        "Wordpress/PHP",
+        "PHP/Wordpress",
         "Bootstrap 4/UI Kit",
         "Javascript(ES6+)",
         "React.js",
-        "Express",
-        "Node.js",
+        "Node.js/Express",
         "Python/Django",
         "MongoDB",
-        "postgreSQL",
+        "mySQL/postgreSQL",
         "Git/Github",
         "C#",
         "Unity",

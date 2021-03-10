@@ -15,10 +15,13 @@ $light: #f9efc1;
   min-height: 100vh;
   background: $primary;
   color: $light;
-
   a {
     text-decoration: none;
     color: $light;
+  }
+
+  .main-section {
+    margin-top: 56px;
   }
 
   // navbar styles
@@ -51,6 +54,22 @@ $light: #f9efc1;
         border-color: $success;
       }
     }
+  }
+
+  // portfolio section styles
+  #PortfolioSection {
+  }
+
+  // resume styles
+  #ResumeSection {
+    .contact-icon {
+      width: 32px;
+      height: 32px;
+    }
+  }
+
+  // sudoku page styles
+  #SudokuSection {
   }
 
   // footer styles

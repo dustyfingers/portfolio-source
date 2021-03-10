@@ -2,11 +2,11 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 // import pages and components
-import Landing from './pages/BOOTSTRAPREBUILD/Landing';
+import Landing from './pages/Landing';
 import Portfolio from './pages/Portfolio';
 import Resume from './pages/Resume';
-import Menu from './components/BOOTSTRAPREBUILD/Menu';
-import Footer from './components/BOOTSTRAPREBUILD/Footer';
+import Menu from './components/Menu';
+import Footer from './components/Footer';
 
 
 const App = () => {

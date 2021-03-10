@@ -1,23 +1,20 @@
 import React from "react";
-import List from "@material-ui/core/List";
-import ListItem from "@material-ui/core/ListItem";
-import ListItemText from "@material-ui/core/ListItemText";
 import ProjectItem from "../components/ProjectItem";
 import ContactIcon from "../components/ContactIcon";
 import Skill from "../components/Skill";
 import resumeData from '../data/data';
-
 const { contact, projects, skills } = resumeData;
 
+
 const Resume = () => (
-  <section>
+  <section id="ResumeSection" className="main-section">
     <section>
-      <List>
+      <div>
         <h4>Louie Williford</h4>
         <p>Full Stack Software Developer</p>
-      </List>
+      </div>
 
-      <List>
+      <div>
         <div>
           {contact.map(({...props}) => (
             <ContactIcon {...props} />
@@ -30,65 +27,45 @@ const Resume = () => (
             Download my Resume!
           </a>
         </p>
-      </List>
+      </div>
     </section>
     <section>
       <h4>
         Projects
       </h4>
-      <List>
+      <div>
         {/* PROJECT LIST*/}
         {projects.map(project => {
           const { title, desc, siteLink } = project;
           return <ProjectItem title={title} desc={desc} siteLink={siteLink} />;
         })}
-      </List>
+      </div>
     </section>
     <section>
       <h4>
         Education
       </h4>
-      <List>
-        <ListItem>
-          <ListItemText
-            primary="Lambda School - Full Stack Web Development"
-            secondary={
-              <>
-                <p
-                  component="span"
-                  variant="body2"
-                  color="textPrimary"
-                >
-                  05/19 - 10/19
-                </p>
-              </>
-            }
-          ></ListItemText>
-        </ListItem>
-      </List>
+      <div>
+        <div>
+          <div>
+            <p>Lambda School - Full Stack Web Development</p>
+            <p>05/19 - 10/19</p>
+          </div>
+        </div>
+      </div>
     </section>
     <section>
       <h4>
         Experience
       </h4>
-      <List>
-        <ListItem>
-          <ListItemText
-            primary="Jr. Web Developer - NativeRank"
-            secondary={
-              <>
-                <p
-                  component="span"
-                  variant="body2"
-                  color="textPrimary"
-                >
-                  10/19-current
-                </p>
-              </>
-            }
-          ></ListItemText>
-        </ListItem>
-      </List>
+      <div>
+        <div>
+          <div>
+            <p>Jr. Web Developer - NativeRank</p>
+            <p>10/19 - current</p>
+          </div>
+        </div>
+      </div>
     </section>
     <section>
       <h4>

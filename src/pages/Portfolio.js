@@ -2,14 +2,13 @@ import React from "react";
 import ProjectCard from "../components/ProjectCard";
 import resumeData from "../data/data";
 
+
 const { projects } = resumeData;
 
-// use css grid to lay these cards out
-
-const Portfolio = ({ open }) => {
-  
+// TODO: use css grid to lay these cards out
+const Portfolio = () => {
   return (
-    <section>
+    <section id="PortfolioSection" className="main-section">
       <h1>
         My Portfolio
       </h1>
@@ -26,15 +25,12 @@ const Portfolio = ({ open }) => {
                 (<ProjectCard
                 title={title}
                 description={desc}
-                component="img"
                 image={image}
-                alt={title}
                 siteLink={siteLink}
                 repoLink={repoLink}
                 showSiteLink={showSiteLink}
                 showRepoLink={showRepoLink}
                 key={index}
-                open={open}
               />)
           )}
       </div>

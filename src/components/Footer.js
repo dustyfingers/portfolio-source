@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 const Footer = () => (
     <footer className="navbar fixed-bottom" id="FooterMenu">
         <div className="container">
