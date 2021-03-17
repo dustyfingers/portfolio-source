@@ -163,8 +163,6 @@ const Board = () => {
             puzzle[rowIdx][colIdx] = randNum;
         }
 
-        let randNum = Math.floor(Math.random() * 9) + 1;
-        puzzle[rowIdx][colIdx] = randNum;
         return;
     }
 
