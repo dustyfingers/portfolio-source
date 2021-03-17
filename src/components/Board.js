@@ -151,22 +151,22 @@ const Board = () => {
         }
     }
 
-    // const generateNumAndCheckCell = (puzzle, box, rowIdx, colIdx) => {
-    //     // // generate a random number
-    //     // let randNum = Math.floor(Math.random() * 9) + 1;
-    //     // let numUsedInBox = usedInBox(puzzle, randNum, box);
-    //     // let numUsedInRow = usedInRow(puzzle, randNum, rowIdx);
-    //     // let numUsedInCol = usedInCol(puzzle, randNum, colIdx);
+    const generateNumAndCheckCell = (puzzle, box, rowIdx, colIdx) => {
+        // generate a random number
+        let randNum = Math.floor(Math.random() * 9) + 1;
+        let numUsedInBox = usedInBox(puzzle, randNum, box);
+        let numUsedInRow = usedInRow(puzzle, randNum, rowIdx);
+        let numUsedInCol = usedInCol(puzzle, randNum, colIdx);
 
-    //     // // if this number is okay to add, put it in the current cell
-    //     // if (!numUsedInBox && !numUsedInCol && !numUsedInRow) {
-    //     //     puzzle[rowIdx][colIdx] = randNum;
-    //     // }
+        // if this number is okay to add, put it in the current cell
+        if (!numUsedInBox && !numUsedInCol && !numUsedInRow) {
+            puzzle[rowIdx][colIdx] = randNum;
+        }
 
-    //     let randNum = Math.floor(Math.random() * 9) + 1;
-    //     puzzle[rowIdx][colIdx] = randNum;
-    //     return;
-    // }
+        let randNum = Math.floor(Math.random() * 9) + 1;
+        puzzle[rowIdx][colIdx] = randNum;
+        return;
+    }
 
     const generatePuzzle = () => {
         let puzzle = [
