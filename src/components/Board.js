@@ -1,6 +1,28 @@
-import React from 'react';
+import React, {useEffect} from 'react';
+import axios from "axios";
+
+
 
 const Board = () => {
+
+    let isPuzzleValid = true;
+    
+    useEffect(() => {
+        const options = {
+            method: 'GET',
+            url: 'https://sugoku.herokuapp.com/board?difficulty=medium',
+            headers: {
+              'content-type': 'application/json'
+            }
+          };
+          
+          axios.request(options).then(function (response) {
+              console.log(response.data);
+          }).catch(function (error) {
+              console.error(error);
+          });
+    });
+
     // returns true if the given number num appears already in the specified column in this puzzle
     // returns false otherwise
     const usedInCol = (puzzleArr, num, currentColIdx) => {
@@ -158,6 +180,17 @@ const Board = () => {
 
         // if this number is okay to add, put it in the current cell
         while (needNum) {
+            if (guessedNums != []) {
+                console.log("guessedNums:  ");
+                console.log(guessedNums);
+            } 
+            
+            if (guessedNums.length == 9) {
+                console.log("this puzzle is invalid!");
+                isPuzzleValid = false;
+                needNum = false;
+            }
+
             let randNum = Math.floor(Math.random() * 9) + 1;
             if (!guessedNums.includes(randNum)) {
                 let numUsedInBox = usedInBox(puzzle, randNum, box);
@@ -167,8 +200,8 @@ const Board = () => {
                     puzzle[rowIdx][colIdx] = randNum;
                     needNum = false;
                 }
+                guessedNums += randNum;
             }
-            guessedNums += randNum;
         }
     }
 
@@ -206,28 +239,14 @@ const Board = () => {
                 console.log('current puzzle state:  ');
                 console.log(JSON.stringify(puzzle));
 
-                console.log('i:  ' + i);
-                console.log('j:  ' + j);
-
-                console.log('currentBox:  ' + currentBox);
-
-                console.log('puzzle[i][j] before generateNumAndCheckCell:  ');
+                console.log('current cell value before generateNumAndCheckCell:  ');
                 console.log(puzzle[i][j]);
 
-                // ! generate number and check cell
-                // let randNum = Math.floor(Math.random() * 9) + 1;
-                // puzzle[i][j] = randNum;
-
-
-                // while (puzzle[i][j] === 0) {
                 // this works, but how to get it to run more than once???
                 // i need it to run while the current cells value is still zero
                 generateNumAndCheckCell(puzzle, currentBox, i, j);
-                console.log('puzzle[i][j] after generateNumAndCheckCell:  ');
+                console.log('current cell value after generateNumAndCheckCell:  ');
                 console.log(puzzle[i][j]);
-                // }
-
-
             }
         }
         console.log('completed puzzle:');
