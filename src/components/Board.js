@@ -152,18 +152,24 @@ const Board = () => {
     }
 
     const generateNumAndCheckCell = (puzzle, box, rowIdx, colIdx) => {
-        // generate a random number
-        let randNum = Math.floor(Math.random() * 9) + 1;
-        let numUsedInBox = usedInBox(puzzle, randNum, box);
-        let numUsedInRow = usedInRow(puzzle, randNum, rowIdx);
-        let numUsedInCol = usedInCol(puzzle, randNum, colIdx);
+        // generate a random number and run proper checks on board
+        let needNum = true;
+        let guessedNums = [];
 
         // if this number is okay to add, put it in the current cell
-        if (!numUsedInBox && !numUsedInCol && !numUsedInRow) {
-            puzzle[rowIdx][colIdx] = randNum;
+        while (needNum) {
+            let randNum = Math.floor(Math.random() * 9) + 1;
+            if (!guessedNums.includes(randNum)) {
+                let numUsedInBox = usedInBox(puzzle, randNum, box);
+                let numUsedInRow = usedInRow(puzzle, randNum, rowIdx);
+                let numUsedInCol = usedInCol(puzzle, randNum, colIdx);
+                if (!numUsedInBox && !numUsedInCol && !numUsedInRow) {
+                    puzzle[rowIdx][colIdx] = randNum;
+                    needNum = false;
+                }
+            }
+            guessedNums += randNum;
         }
-
-        return;
     }
 
     const generatePuzzle = () => {
@@ -205,17 +211,23 @@ const Board = () => {
 
                 console.log('currentBox:  ' + currentBox);
 
-                console.log('puzzle[i][j]:  ');
+                console.log('puzzle[i][j] before generateNumAndCheckCell:  ');
                 console.log(puzzle[i][j]);
 
                 // ! generate number and check cell
-                let randNum = Math.floor(Math.random() * 9) + 1;
-                puzzle[i][j] = randNum;
+                // let randNum = Math.floor(Math.random() * 9) + 1;
+                // puzzle[i][j] = randNum;
 
 
                 // while (puzzle[i][j] === 0) {
-                //     generateNumAndCheckCell(puzzle, currentBox, i, j);
+                // this works, but how to get it to run more than once???
+                // i need it to run while the current cells value is still zero
+                generateNumAndCheckCell(puzzle, currentBox, i, j);
+                console.log('puzzle[i][j] after generateNumAndCheckCell:  ');
+                console.log(puzzle[i][j]);
                 // }
+
+
             }
         }
         console.log('completed puzzle:');
