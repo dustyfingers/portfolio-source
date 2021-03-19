@@ -1,10 +1,9 @@
 import React from 'react';
 
-const Cell = () => {
+const Cell = (props) => {
+    const {cellValue} = props;
     return (
-        <div>
-            
-        </div>
+        <td className="sudoku-cell d-flex align-items-center justify-content-center">{cellValue}</td>
     );
 };
 

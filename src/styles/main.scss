@@ -73,6 +73,14 @@ $light: #f9efc1;
 
   // sudoku page styles
   #SudokuSection {
+    .sudoku-row {
+      padding: 0px;
+    }
+    .sudoku-cell {
+      width: 60px;
+      height: 60px;
+      padding: 0 !important;
+    }
   }
 
   // footer styles
