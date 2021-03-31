@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@babel/helper-builder-react-jsx": "^7.12.13",
     "@popperjs/core": "^2.9.0",
     "axios": "^0.21.1",
     "bootstrap": "^5.0.0-beta2",

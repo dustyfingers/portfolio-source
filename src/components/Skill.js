@@ -2,7 +2,7 @@ import React from "react";
 
 
 const Skill = ({skill}) => (
-    <span >{skill}</span>
+    <span className="m-2">{skill}</span>
 );
 
 export default Skill;
