@@ -45,8 +45,8 @@ const Resume = () => (
 
         {/* skills section */}
         <div>
-            <p className="display-5">Skills</p>
-            <div  className="px-3">
+            <p className="display-5">Top Skills</p>
+            <div className="px-3 d-flex flex-wrap justify-content-evenly align-items-center">
                 {skills.map(skill => (
                     <Skill skill={skill} />
                 ))}
