@@ -6,7 +6,7 @@ const ExperienceItem = ({jobTitle, to, from, location, employer, desc}) => {
         <div className="my-3">
             <p className="fs-4 m-1">{jobTitle}</p>
             <p className="m-1">{employer} - {location}</p>
-            <p className="m-1">{to} to {from}</p>
+            <p className="m-1">{from} to {to}</p>
             { desc ? (<p>{desc}</p>) : ''}
         </div>
     );
