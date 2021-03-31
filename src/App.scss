@@ -1,0 +1,94 @@
+@import url("https://use.typekit.net/iai7epa.css");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+@import "./styles/colors.scss";
+
+#AppContainer {
+  // global theming settings
+  min-height: 100vh;
+  background: $primary;
+  color: $light;
+  a {
+    text-decoration: none;
+    color: $light;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Delve Hand";
+  }
+  p,
+  a,
+  span {
+    font-family: "Open Sans";
+  }
+
+  .cta-btn {
+    color: $secondary;
+    border-color: $secondary;
+    &:hover {
+      color: $success;
+      border-color: $success;
+    }
+  }
+
+  .main-section {
+    margin-top: 56px;
+  }
+
+  // navbar styles
+  #TopMenu {
+    background-color: $primary;
+
+    #logo {
+      color: $secondary;
+    }
+
+    .navbar-toggler {
+      color: $secondary;
+      border-color: $secondary;
+    }
+
+    .nav-link {
+      cursor: pointer;
+    }
+  }
+
+  // landing section styles
+  #LandingSection {
+    min-height: 90vh;
+
+    .landing-cta-section {
+      max-width: 800px;
+    }
+  }
+
+  // resume styles
+  #ResumeSection {
+    .contact-icon {
+      width: 32px;
+      height: 32px;
+    }
+  }
+
+  // sudoku page styles
+  #SudokuSection {
+    .sudoku-row {
+      padding: 0px;
+    }
+    .sudoku-cell {
+      width: 60px;
+      height: 60px;
+      padding: 0 !important;
+    }
+  }
+
+  // footer styles
+  #FooterMenu {
+    background-color: $primary;
+  }
+}

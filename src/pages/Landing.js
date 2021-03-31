@@ -1,40 +1,34 @@
 import React from "react";
-import Typography from "@material-ui/core/Typography";
-import { withStyles } from "@material-ui/styles";
-import Button from "@material-ui/core/Button";
 import { Link } from "react-router-dom";
-import styles from "../styles/LandingStyles";
-import Footer from "../components/Footer";
 
-const Landing = ({ classes }) => (
-  <section className={classes.landingSection}>
-    <Typography className={classes.header}>Hi!</Typography>
-    <Typography className={classes.header}>I'm Louie.</Typography>
-    <Typography paragraph className={classes.paragraph}>
-      I'm a full stack web developer with a passion for learning about cutting
-      edge technology. When I'm not building software, you can find me at the
-      park with my dogs or at the gym practicing jiu jitsu!
-    </Typography>
-    <Typography
-      paragraph
-      className={`${classes.paragraph} ${classes.paragraph2}`}
-    >
-      I currently work in Denver, CO.
-    </Typography>
-    <div className={classes.buttons}>
-      <Link to="/portfolio" className={classes.buttonLink}>
-        <Button variant="outlined" size="large" className={classes.button}>
-          My Portfolio
-        </Button>
-      </Link>
-      <Link to="/resume" className={classes.buttonLink}>
-        <Button variant="outlined" size="large" className={classes.button}>
-          My Resume
-        </Button>
-      </Link>
+
+const Landing = () => (
+<section id="LandingSection" className="d-flex align-items-center text-center">
+    <div className="landing-cta-section mx-auto">
+        <h1 className="display-1">Hi!</h1>
+        <h4 className="display-1">I'm Louie.</h4>
+        <p>
+            I'm a full stack software developer with a passion for learning about cutting
+            edge technology. When I'm not building software, you can find me at the
+            park with my beautiful family or at the gym practicing jiu jitsu!
+        </p>
+        <p>I am currently looking for work in or around Denver, CO.</p>
+
+        {/* call to action links */}
+        <div>
+            <Link to="/portfolio">
+                <button className="btn btn-lg cta-btn my-2 mx-3">
+                    My Portfolio
+                </button>
+            </Link>
+            <Link to="/resume">
+                <button className="btn btn-lg cta-btn my-2 mx-3">
+                    My Resume
+                </button>
+            </Link>
+        </div>
     </div>
-    <Footer />
-  </section>
+</section>
 );
 
-export default withStyles(styles)(Landing);
+export default Landing;

@@ -1,12 +1,15 @@
 import React from 'react';
-import Typography from '@material-ui/core/Typography';
+import { Link } from 'react-router-dom';
 
-const StickyFooter = ({ padding }) => (
-    <footer style={padding ? { textAlign: 'center', paddingTop: padding } : { textAlign: 'center', marginTop: 'auto' }}>
-        <Typography variant="body2">
-            Built with love by Louie Williford, &copy; 2019
-            </Typography>
+
+const Footer = ({history}) => (
+    <footer className="navbar fixed-bottom" id="FooterMenu">
+        <div className="container">
+            <div className="d-flex justify-content-between w-100">
+                <span>Built with love by Louie Williford, &copy; 2021</span>
+            </div>
+        </div>
     </footer>
 );
 
-export default StickyFooter;
+export default Footer;

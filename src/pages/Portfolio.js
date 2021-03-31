@@ -1,46 +1,40 @@
 import React from "react";
-import Typography from "@material-ui/core/Typography";
-import { withStyles } from "@material-ui/styles";
-import ProjectCard from "../components/ProjectCard";
-import projects from "../data/projects";
-import Footer from "../components/Footer";
-import styles from "../styles/PortfolioStyles";
+import PortfolioCard from "../components/PortfolioCard/PortfolioCard";
+import resumeData from "../data/data";
 
-const Portfolio = ({ classes, open }) => {
-  
-  return (
-    <section className={classes.projectsSection}>
-      <Typography variant="h3" className={classes.projectsHeader}>
-        My Portfolio
-      </Typography>
-      <div className={classes.projectCards}>
-        {projects.map(({
-                title,
-                desc,
-                image,
-                siteLink,
-                repoLink,
-                showSiteLink,
-                showRepoLink
-              }, index) => 
-                (<ProjectCard
-                title={title}
-                description={desc}
-                component="img"
-                image={image}
-                alt={title}
-                siteLink={siteLink}
-                repoLink={repoLink}
-                showSiteLink={showSiteLink}
-                showRepoLink={showRepoLink}
-                key={index}
-                open={open}
-              />)
-          )}
-      </div>
-      <Footer />
-    </section>
-  );
+const { projects } = resumeData;
+
+const Portfolio = () => {
+    return (
+        <section id="PortfolioSection" className="main-section d-flex flex-column align-items-center">
+            <h1 className="display-1">My Portfolio</h1>
+            <div className="container">
+                <div className="row">
+                    {projects.map(({
+                    title,
+                    desc,
+                    image,
+                    siteLink,
+                    repoLink,
+                    showSiteLink,
+                    showRepoLink
+                    }, index) => 
+                    (<div className="col-lg mt-4">
+                        <PortfolioCard
+                            title={title}
+                            description={desc}
+                            image={image}
+                            siteLink={siteLink}
+                            repoLink={repoLink}
+                            showSiteLink={showSiteLink}
+                            showRepoLink={showRepoLink}
+                            key={index} />      
+                        </div>)
+                    )}
+                </div>
+            </div>
+        </section>
+    );
 };
 
-export default withStyles(styles)(Portfolio);
+export default Portfolio;

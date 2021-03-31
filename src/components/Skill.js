@@ -1,9 +1,8 @@
-import React from 'react'
-import styles from '../styles/SkillStyles'
-import { withStyles } from "@material-ui/styles";
+import React from "react";
 
-const Skill = ({skill, classes}) => (
-    <span className={classes.skill}>{skill}</span>
-)
 
-export default withStyles(styles)(Skill);
+const Skill = ({skill}) => (
+    <span >{skill}</span>
+);
+
+export default Skill;
