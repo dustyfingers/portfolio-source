@@ -19,8 +19,8 @@ const resumeData = {
     skills: [
         "HTML & CSS",
         "LESS/SASS",
-        "PHP/Wordpress",
-        "Bootstrap 4/UI Kit",
+        "PHP/Wordpress/UIKit",
+        "Bootstrap 3/4/5",
         "Javascript(ES6+)",
         "React.js",
         "Node.js/Express",
@@ -30,7 +30,7 @@ const resumeData = {
         "Git/Github",
         "C#",
         "Unity",
-        "Docker"
+        "Photoshop"
     ],
     projects: [
         {

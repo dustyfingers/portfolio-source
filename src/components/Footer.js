@@ -7,7 +7,6 @@ const Footer = ({history}) => (
         <div className="container">
             <div className="d-flex justify-content-between w-100">
                 <span>Built with love by Louie Williford, &copy; 2021</span>
-                <Link className="d-none d-md-block" to="/sudoku">Like Sudoku?</Link>
             </div>
         </div>
     </footer>

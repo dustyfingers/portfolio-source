@@ -5,7 +5,6 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Landing from './pages/Landing';
 import Portfolio from './pages/Portfolio';
 import Resume from './pages/Resume';
-import Sudoku from './pages/Sudoku';
 import Menu from './components/Menu';
 import Footer from './components/Footer';
 
@@ -20,7 +19,6 @@ const App = () => {
                         <Route exact path='/' component={Landing} />
                         <Route path='/portfolio' component={Portfolio} />
                         <Route path='/resume' component={Resume} />
-                        <Route path='/sudoku' component={Sudoku} />
                     </Switch>
                 </main>
                 <Footer />
