@@ -4,10 +4,11 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 // import pages and components
 import Landing from './pages/Landing';
 import Portfolio from './pages/Portfolio';
-import Resume from './pages/Resume';
+import Resume from './pages/Resume/Resume';
 import Menu from './components/Menu';
 import Footer from './components/Footer';
 
+import "./App.scss";
 
 const App = () => {
     return (

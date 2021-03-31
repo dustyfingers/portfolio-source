@@ -1,14 +1,7 @@
-// ! bootstrap default color overrides
+@import url("https://use.typekit.net/iai7epa.css");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 
-@import "../../node_modules/bootstrap/scss/bootstrap.scss";
-
-$primary: #020e17;
-$secondary: #76d9b9;
-$success: #15ab89;
-$info: #d8c13a;
-$warning: #ff881d;
-$danger: #ef4444;
-$light: #f9efc1;
+@import "./styles/colors.scss";
 
 #AppContainer {
   // global theming settings
@@ -18,6 +11,29 @@ $light: #f9efc1;
   a {
     text-decoration: none;
     color: $light;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Delve Hand";
+  }
+  p,
+  a,
+  span {
+    font-family: "Open Sans";
+  }
+
+  .cta-btn {
+    color: $secondary;
+    border-color: $secondary;
+    &:hover {
+      color: $success;
+      border-color: $success;
+    }
   }
 
   .main-section {
@@ -48,14 +64,6 @@ $light: #f9efc1;
 
     .landing-cta-section {
       max-width: 800px;
-      .landing-ctas {
-        color: $secondary;
-        border-color: $secondary;
-        &:hover {
-          color: $success;
-          border-color: $success;
-        }
-      }
     }
   }
 

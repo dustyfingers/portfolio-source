@@ -77,7 +77,7 @@ const resumeData = {
         {
             title: "Portfolio Site",
             desc:
-                "My portfolio was created from scratch with react, and is hosted on a simple AWS Amplify backend.",
+                "My portfolio was created from scratch with react, and is hosted using AWS Amplify's amazing CI/CD services.",
             image: "/images/project-images/portfolio-screencap.png",
             showSiteLink: false,
             siteLink: "/",
@@ -92,8 +92,46 @@ const resumeData = {
             ]
         }
       ],
-      experience: {},
-      education: {}
+      experience: [
+        {
+            jobTitle: "Software Developer",
+            employer: "FitSW",
+            desc: "At FitSW I designed, built and tested several product-critical client facing features, including the ability for personal trainers to sell packages of their services and the ability for personal trainers to create subscriptions that their clients can then subscribe to. These features caused an almost 100% increase in fee revenue on our stripe connect platform. I was also tasked with building analytics and squashing bugs as they were reported by users, among other smaller projects. Day to day I used PHP, jQuery, JS, Bootstrap, HTML and CSS.",
+            location: "Colorado Springs, CO",
+            from: "January 2020",
+            to: "May 2020"
+        },
+        {
+            jobTitle: "Junior Web Developer",
+            employer: "NativeRank",
+            desc: "At NativeRank, I built pixel-perfect custom web solutions for enterprise level consumers, leveraging mockups provided by the design team. Day to day I used HTML/CSS, LESS, UI Kit, Handlebars.js, PHP and Wordpress.",
+            location: "Denver, CO",
+            from: "September 2019",
+            to: "January 2020"
+        },
+        {
+            jobTitle: "Phone Repair Technician",
+            employer: "Dr. PhoneFix",
+            desc: "",
+            location: "Colorado Springs, CO",
+            from: "2017",
+            to: "2018"
+        },
+        {
+            jobTitle: "Customer Service Representative",
+            employer: "Xerox",
+            location: "Colorado Springs, CO",
+            desc: "",
+            from: "2015",
+            to: "2016"
+        },
+    ],
+    education: {
+        program: "Bootcamp Program in Fullstack Web Development and Computer Science (Hired Out)",
+        school: "Lambda School",
+        from: "2019",
+        to: "2019"
+    }
 };
 
 export default resumeData;

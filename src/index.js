@@ -1,7 +1,9 @@
 import React from 'react';
-import bootstrap from 'bootstrap';
 import ReactDOM from 'react-dom';
 import App from './App';
-import "../src/styles/main.scss";
+
+// bootstrap
+import "../node_modules/bootstrap/scss/bootstrap.scss";
+import bootstrap from 'bootstrap';
 
 ReactDOM.render(<App />, document.getElementById('root'));
