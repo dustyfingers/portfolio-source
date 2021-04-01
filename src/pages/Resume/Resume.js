@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 import ResumeProjectItem from "../../components/ResumeProjectItem";
 import ExperienceItem from "../../components/ExperienceItem";
@@ -22,7 +21,7 @@ const Resume = () => (
         <div>
             <p className="display-5">Experience</p>
             <div className="px-3">
-                {experience.map(item => <ExperienceItem {...item}/>)}
+                {experience.map(item => <ExperienceItem {...item} />)}
             </div>
         </div>
 
