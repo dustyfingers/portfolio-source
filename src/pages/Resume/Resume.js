@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
 import ResumeProjectItem from "../../components/ResumeProjectItem";
 import ExperienceItem from "../../components/ExperienceItem";
 import ContactIcon from "../../components/ContactIcon";
@@ -58,7 +60,7 @@ const Resume = () => (
                 <ContactIcon {...props} />
                 ))}
             </div>
-            <a href="/resume-dl/Louie-Williford.pdf" type="button" className="btn btn-lg cta-btn my-2 mx-3">Download my Resume!</a>
+            <a href={process.env.PUBLIC_URL + "/resume-dl/Louie-Williford.pdf"} type="button" className="btn btn-lg cta-btn my-2 mx-3" download>Download my Resume!</a>
         </div>
   </section>
 );
