@@ -36,17 +36,15 @@ const Resume = () => (
         <div>
             <p className="display-5">Education</p>
             <div className="px-3">
-                <div>
                 <p className="fs-4">Lambda School - Full Stack Web Development</p>
-                <p>05/19 - 10/19</p>
-                </div>
+                <p className="px-2">05/19 - 10/19</p>
             </div>
         </div>
 
         {/* skills section */}
         <div>
             <p className="display-5">Top Skills</p>
-            <div className="px-3 d-flex flex-wrap justify-content-evenly align-items-center">
+            <div className="px-3 d-flex flex-wrap justify-content-evenly align-items-center skills">
                 {skills.map(skill => (
                     <Skill skill={skill} />
                 ))}
