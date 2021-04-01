@@ -1,5 +1,10 @@
 @import "../../styles/colors.scss";
 
-.portfolio-card-text {
-  color: $primary;
+.card {
+  .card-img-top {
+    max-height: 196px;
+  }
+  .portfolio-card-text {
+    color: $primary;
+  }
 }
