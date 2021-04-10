@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 import ResumeProjectItem from "../../components/ResumeProjectItem";
 import ExperienceItem from "../../components/ExperienceItem";
@@ -11,7 +10,7 @@ import "./Resume.scss";
 const { contact, projects, skills, experience } = resumeData;
 
 const Resume = () => (
-    <section id="ResumeSection" className="main-section">
+    <section id="ResumeSection" className="main-section pb-2">
         {/* name/title section */}
         <div className="text-center">
             <h1 className="display-1">Louie Williford</h1>
@@ -22,7 +21,7 @@ const Resume = () => (
         <div>
             <p className="display-5">Experience</p>
             <div className="px-3">
-                {experience.map(item => <ExperienceItem {...item}/>)}
+                {experience.map(item => <ExperienceItem {...item} />)}
             </div>
         </div>
 
