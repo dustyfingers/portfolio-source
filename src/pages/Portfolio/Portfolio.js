@@ -9,7 +9,7 @@ const { projects } = resumeData;
 const Portfolio = () => {
     return (
         <section id="PortfolioSection" className="main-section d-flex flex-column align-items-center">
-            <h1 className="display-1">My Portfolio</h1>
+            <h1 className="display-1 text-center">My Portfolio</h1>
             <div className="container">
                 <div className="row">
                     {projects.map(({
@@ -21,7 +21,7 @@ const Portfolio = () => {
                     showSiteLink,
                     showRepoLink
                     }, index) => 
-                    (<div className="col-lg mt-4">
+                    (<div className="col-md mt-4">
                         <PortfolioCard
                             title={title}
                             description={desc}
