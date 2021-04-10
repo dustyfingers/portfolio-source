@@ -1,0 +1,7 @@
+@import "../../styles/media-queries.scss";
+
+#PortfolioSection {
+  @include xs {
+    padding-bottom: 2.5rem;
+  }
+}

@@ -10,7 +10,7 @@ import "./Resume.scss";
 const { contact, projects, skills, experience } = resumeData;
 
 const Resume = () => (
-    <section id="ResumeSection" className="main-section">
+    <section id="ResumeSection" className="main-section pb-2">
         {/* name/title section */}
         <div className="text-center">
             <h1 className="display-1">Louie Williford</h1>

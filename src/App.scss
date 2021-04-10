@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto+Mono&display=swap");
 
 @import "./styles/colors.scss";
 
@@ -18,12 +18,12 @@
   h4,
   h5,
   h6 {
-    font-family: "Delve Hand", "Open Sans";
+    font-family: "Roboto Mono", monospace;
   }
   p,
   a,
   span {
-    font-family: "Open Sans";
+    font-family: "Open Sans", sans-serif;
   }
 
   .cta-btn {
@@ -71,18 +71,6 @@
     .contact-icon {
       width: 32px;
       height: 32px;
-    }
-  }
-
-  // sudoku page styles
-  #SudokuSection {
-    .sudoku-row {
-      padding: 0px;
-    }
-    .sudoku-cell {
-      width: 60px;
-      height: 60px;
-      padding: 0 !important;
     }
   }
 

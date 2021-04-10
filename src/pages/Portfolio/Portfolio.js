@@ -1,6 +1,8 @@
 import React from "react";
-import PortfolioCard from "../components/PortfolioCard/PortfolioCard";
-import resumeData from "../data/data";
+
+import PortfolioCard from "../../components/PortfolioCard/PortfolioCard";
+import resumeData from "../../data/data";
+import "./Portfolio.scss";
 
 const { projects } = resumeData;
 

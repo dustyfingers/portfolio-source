@@ -6,7 +6,7 @@ const Menu = ({ history }) => (
     <>
         <nav className="navbar navbar-expand-lg navbar-dark fixed-top" id="TopMenu">
             <div className="container-fluid">
-                <Link to="/" id="logo"><h3>Louie Williford</h3></Link>
+                <Link to="/" id="logo"><img height="40px" src="/images/logo.svg"/></Link>
 
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarDropdown" aria-controls="navbarDropdown" aria-expanded="false" aria-label="Toggle navigation">
                     <img className="navbar-toggler-icon" src="/images/list.svg"></img>
