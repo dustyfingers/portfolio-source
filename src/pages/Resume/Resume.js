@@ -59,7 +59,7 @@ const Resume = () => (
                 <ContactIcon {...props} />
                 ))}
             </div>
-            <a href={process.env.PUBLIC_URL + "/resume-dl/Louie-Williford.pdf"} type="button" className="btn btn-lg cta-btn my-2 mx-3" download>Download my Resume!</a>
+            <a href="https://louies-resume.s3.us-east-2.amazonaws.com/Louie-Williford.pdf" target="_blank" type="button" className="btn btn-lg cta-btn my-2 mx-3">Download my Resume!</a>
         </div>
   </section>
 );
