@@ -6,11 +6,6 @@ const resumeData = {
             alt: "email icon"
         },
         {
-            link: "tel:4094609950",
-            iconLink: "/images/contact-icons/phonebook.svg",
-            alt: "phone icon"
-        },
-        {
             link: "https://www.github.com/dustyfingers",
             iconLink: "/images/contact-icons/github.svg",
             alt: "github icon"
