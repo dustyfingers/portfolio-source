@@ -1,10 +1,32 @@
 @import "../../styles/colors.scss";
 
-.card {
+.portfolio-card {
+  border: 2px solid $primary !important;
+  border-bottom: 2px solid $secondary !important;
+  border-radius: 0px !important;
+  color: $secondary !important;
+
+  &:hover {
+    border-bottom-color: $success !important;
+  }
+
+  .portfolio-card-body {
+    background-color: $primary;
+  }
+
   .card-img-top {
     max-height: 196px;
   }
-  .portfolio-card-text {
-    color: $primary;
+
+  .portfolio-btn {
+    color: $secondary !important;
+    background-color: $primary;
+    border: 1px solid $secondary !important;
+    border: none;
+    &:hover {
+      background-color: $primary !important;
+      color: $success !important;
+      border-color: $success !important;
+    }
   }
 }
