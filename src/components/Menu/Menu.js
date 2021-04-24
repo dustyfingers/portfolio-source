@@ -1,10 +1,11 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 
+import './Menu.scss';
 
 const Menu = ({ history }) => (
     <>
-        <nav className="navbar navbar-expand-lg navbar-dark fixed-top" id="TopMenu">
+        <nav className="navbar navbar-expand-lg navbar-dark fixed-top" id="Menu">
             <div className="container-fluid">
                 <Link to="/" id="logo"><img height="40px" src="/images/logo.svg"/></Link>
 

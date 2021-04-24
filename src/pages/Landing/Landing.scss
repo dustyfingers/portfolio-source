@@ -1,0 +1,10 @@
+#LandingSection {
+  min-height: 95vh;
+
+  // animate this #LandingArea section somehow...
+  // animating directly using sass doesnt seem to work....what about a library?
+
+  .landing-cta-section {
+    max-width: 820px;
+  }
+}

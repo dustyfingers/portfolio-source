@@ -2,8 +2,8 @@
 
 @import "./styles/colors.scss";
 
+// global theming
 #AppContainer {
-  // global theming settings
   min-height: 100vh;
   background: $primary;
   color: $light;
@@ -27,55 +27,17 @@
   }
 
   .cta-btn {
-    color: $secondary;
-    border-color: $secondary;
+    color: $secondary !important;
+    background-color: $primary;
+    border: 1px solid $secondary !important;
     &:hover {
-      color: $success;
-      border-color: $success;
+      background-color: $primary !important;
+      color: $success !important;
+      border-color: $success !important;
     }
   }
 
   .main-section {
     margin-top: 56px;
-  }
-
-  // navbar styles
-  #TopMenu {
-    background-color: $primary;
-
-    #logo {
-      color: $secondary;
-    }
-
-    .navbar-toggler {
-      color: $secondary;
-      border-color: $secondary;
-    }
-
-    .nav-link {
-      cursor: pointer;
-    }
-  }
-
-  // landing section styles
-  #LandingSection {
-    min-height: 90vh;
-
-    .landing-cta-section {
-      max-width: 800px;
-    }
-  }
-
-  // resume styles
-  #ResumeSection {
-    .contact-icon {
-      width: 32px;
-      height: 32px;
-    }
-  }
-
-  // footer styles
-  #FooterMenu {
-    background-color: $primary;
   }
 }
