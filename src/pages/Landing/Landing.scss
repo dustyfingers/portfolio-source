@@ -1,10 +1,41 @@
+@import "../../styles/colors.scss";
+
 #LandingSection {
   min-height: 95vh;
 
-  // animate this #LandingArea section somehow...
-  // animating directly using sass doesnt seem to work....what about a library?
+  .hi-tagline {
+    animation: 1s ease-in-out pulse;
+  }
+
+  .name-tagline {
+    animation: 1.6s ease-in pulse;
+  }
+
+  .personal-summary {
+    animation: 20s ease-in-out pulse;
+  }
+
+  .work-line {
+    animation: 26s ease-in-out pulse;
+  }
 
   .landing-cta-section {
     max-width: 820px;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  25% {
+    color: darken($secondary, 15%);
+    transform: scale(1.025);
+  }
+
+  50% {
+    color: $secondary;
+    transform: scale(1);
   }
 }
