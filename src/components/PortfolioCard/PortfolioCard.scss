@@ -6,7 +6,6 @@
   border-right-width: 0px !important;
   border-bottom: 2px solid $secondary !important;
   border-radius: 0px !important;
-  color: $secondary !important;
 
   &:hover {
     border-bottom-color: $success !important;
@@ -15,6 +14,10 @@
   .portfolio-card-body {
     background-color: $primary;
     cursor: default;
+
+    .card-content {
+      color: $light;
+    }
   }
 
   .card-img-top {
