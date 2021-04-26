@@ -1,7 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Particles from "react-particles-js";
 
 import "./Landing.scss";
+import particlesConfig from "../../data/particlesConfig";
 
 const Landing = () => (
 <section id="LandingSection" className="d-flex align-items-center text-center">
@@ -29,6 +31,7 @@ const Landing = () => (
             </Link>
         </div>
     </div>
+    <Particles canvasClassName="particle-canvas" params={particlesConfig}/>
 </section>
 );
 
