@@ -28,10 +28,10 @@
 
   .cta-btn {
     color: $secondary !important;
-    background-color: $primary;
+    background-color: rgba(0, 0, 0, 0);
     border: 1px solid $secondary !important;
     &:hover {
-      background-color: $primary !important;
+      background-color: rgba(0, 0, 0, 0) !important;
       color: $success !important;
       border-color: $success !important;
     }
