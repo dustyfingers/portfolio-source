@@ -10,8 +10,8 @@ const PortfolioCard = ({ description, title, image, siteLink, repoLink, showSite
                 <h5 className="card-title">{title}</h5>
                 <p className="card-text">{description}</p>
                 <div className="buttons">
-                    {showSiteLink ? (<a href={siteLink} className="btn btn-primary ml-0 my-1 mr-1 portfolio-btn">Explore the Project</a>) : ''}
-                    {showRepoLink ? (<a href={repoLink} className="btn btn-primary m-1 portfolio-btn">See the Code</a>) : ''}
+                    {showSiteLink ? (<a href={siteLink} className="btn btn-primary ml-0 my-1 me-2 cta-btn">Explore the Project</a>) : ''}
+                    {showRepoLink ? (<a href={repoLink} className="btn btn-primary m-1 cta-btn">See the Code</a>) : ''}
                 </div>
             </div>
         </div>

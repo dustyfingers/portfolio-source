@@ -1,0 +1,18 @@
+@import "../../styles/colors.scss";
+
+#Menu {
+  background-color: $primary;
+
+  #logo {
+    color: $secondary;
+  }
+
+  .navbar-toggler {
+    color: $secondary;
+    border-color: $secondary;
+  }
+
+  .nav-link {
+    cursor: pointer;
+  }
+}
