@@ -3,20 +3,24 @@
 #LandingSection {
   min-height: 95vh;
 
-  .hi-tagline {
-    animation: 1s ease-in pulse;
-  }
+  .landing-content {
+    cursor: default;
 
-  .name-tagline {
-    animation: 2s ease-in pulse;
-  }
+    .hi-tagline {
+      animation: 1s ease-in pulse;
+    }
 
-  .personal-summary {
-    animation: 15s ease-in-out pulse;
-  }
+    .name-tagline {
+      animation: 2s ease-in pulse;
+    }
 
-  .work-line {
-    animation: 18s ease-in-out pulse;
+    .personal-summary {
+      animation: 15s ease-in-out pulse;
+    }
+
+    .work-line {
+      animation: 18s ease-in-out pulse;
+    }
   }
 
   .landing-cta-section {
