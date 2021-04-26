@@ -2,6 +2,8 @@
 
 .portfolio-card {
   border: 2px solid $primary !important;
+  border-left-width: 0px !important;
+  border-right-width: 0px !important;
   border-bottom: 2px solid $secondary !important;
   border-radius: 0px !important;
   color: $secondary !important;
@@ -12,10 +14,13 @@
 
   .portfolio-card-body {
     background-color: $primary;
+    cursor: default;
   }
 
   .card-img-top {
     max-height: 196px;
+    border-radius: 0%;
+    height: 200px;
   }
 
   .portfolio-btn {
