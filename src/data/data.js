@@ -33,7 +33,7 @@ const resumeData = {
         {
             title: "louiemadeit Beat Store",
             desc:
-                "I designed, built, tested and deployed this application in it's entirety. No courseware here. The front end is built using React + Redux and Bootstrap 5, and is hosted using AWS Amplify. The backend is a Node.js/Express server + a MongoDB database and uses AWS S3 for storing files. It is hosted on a Heroku server.",
+                "I designed, built, tested and deployed this application in it's entirety. No courseware here. The front end is built using React + Redux and Bootstrap 5, and is hosted using AWS Amplify. The backend is a Node.js/Express server + a MongoDB database, and uses AWS S3 for storing files. It is hosted on a Heroku server.",
             image: "/images/project-images/welldone-screencap.png",
             showSiteLink: true,
             siteLink: "https://www.louiemadeit.com",
