@@ -12,22 +12,43 @@ const resumeData = {
         }
     ],
     skills: [
-        "HTML & CSS",
-        "LESS/SASS",
-        "PHP/Wordpress/UIKit",
+        "HTML",
+        "CSS/SASS/LESS",
+        "PHP",
+        "Wordpress/UIKit",
         "Bootstrap 3/4/5",
         "Javascript(ES6+)",
-        "React.js",
+        "React",
         "Node.js/Express",
-        "Python/Django",
+        "Python",
+        "Dart/Flutter",
         "MongoDB",
         "mySQL/postgreSQL",
         "Git/Github",
         "C#",
         "Unity",
-        "Photoshop"
+        "Firebase"
     ],
     projects: [
+        {
+            title: "louiemadeit Beat Store",
+            desc:
+                "I designed, built, tested and deployed this application in it's entirety. No courseware here. The front end is built using Bootstrap 5, React + Redux, and is hosted using AWS Amplify. The backend is built using Node.js/Express, MongoDB and AWS S3 for storing files, and is deployed on a Heroku server.",
+            image: "/images/project-images/welldone-screencap.png",
+            showSiteLink: true,
+            siteLink: "https://www.louiemadeit.com",
+            showRepoLink: true,
+            repoLink: "https://github.com/dustyfingers/louiemadeit-be",
+            tags: [
+                "Full Stack Development",
+                "JavaScript",
+                "React",
+                "Express",
+                "Node.js",
+                "MongoDB",
+                "AWS S3"
+            ]
+        },
         {
             title: "WellDone",
             desc:
