@@ -30,6 +30,7 @@
     color: $secondary !important;
     background-color: rgba(0, 0, 0, 0);
     border: 1px solid $secondary !important;
+    border-radius: 0%;
     &:hover {
       background-color: rgba(0, 0, 0, 0) !important;
       color: $success !important;
