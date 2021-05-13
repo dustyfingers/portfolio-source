@@ -30,7 +30,7 @@ const Portfolio = () => {
                             repoLink={repoLink}
                             showSiteLink={showSiteLink}
                             showRepoLink={showRepoLink} />      
-                        </div>)
+                    </div>)
                     )}
                 </div>
             </div>
