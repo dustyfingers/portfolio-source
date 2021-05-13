@@ -12,26 +12,47 @@ const resumeData = {
         }
     ],
     skills: [
-        "HTML & CSS",
-        "LESS/SASS",
-        "PHP/Wordpress/UIKit",
+        "HTML",
+        "CSS/SASS/LESS",
+        "PHP",
+        "Wordpress/UIKit",
         "Bootstrap 3/4/5",
         "Javascript(ES6+)",
-        "React.js",
+        "React",
         "Node.js/Express",
-        "Python/Django",
+        "Python",
+        "Dart/Flutter",
         "MongoDB",
         "mySQL/postgreSQL",
         "Git/Github",
         "C#",
         "Unity",
-        "Photoshop"
+        "Firebase"
     ],
     projects: [
         {
+            title: "louiemadeit Beat Store",
+            desc:
+                "I designed, built, tested and deployed this application in it's entirety. The front end is built using React + Redux and Bootstrap 5, and is hosted using AWS Amplify. The backend is a Node.js/Express server + a MongoDB database, and uses AWS S3 for storing files. It is hosted on Heroku.",
+            image: "/images/project-images/beat-store-screencap.png",
+            showSiteLink: true,
+            siteLink: "https://dev.louiemadeit.com",
+            showRepoLink: true,
+            repoLink: "https://github.com/dustyfingers/louiemadeit-be",
+            tags: [
+                "Full Stack Development",
+                "JavaScript",
+                "React",
+                "Express",
+                "Node.js",
+                "MongoDB",
+                "AWS S3"
+            ]
+        },
+        {
             title: "WellDone",
             desc:
-                "I was part of the team tasked with building the backend and reworking the reports and dashboard pages. I personally used Express/postgreSQL on this project.",
+                "My team helped build the backend and reworked the reports and dashboard pages for a non-profit org that provides well sensors to communities in developing countries. I personally used Express/postgreSQL and Next.js on this project.",
             image: "/images/project-images/welldone-screencap.png",
             showSiteLink: true,
             siteLink: "https://welldone.org",
@@ -51,7 +72,7 @@ const resumeData = {
         {
             title: "Stack Landing Page",
             desc:
-                "I was tasked with building the landing page for a web app alongside a remote UI team. We built the about page and the landing page using Sass, Bootstrap 4 and Javascript.",
+                "I built the landing page for a mock web-app alongside a remote UI team and one other developer. I built the about page and the landing page using HTML, Sass, Bootstrap 4 and raw Javascript(ES6+). The project is hosted on Netlify.",
             image: "/images/project-images/stack-screencap.png",
             showSiteLink: true,
             siteLink: "https://stack-cards.netlify.com/",
@@ -72,7 +93,7 @@ const resumeData = {
         {
             title: "Portfolio Site",
             desc:
-                "My portfolio was created from scratch with react, and is hosted using AWS Amplify's amazing CI/CD services.",
+                "My portfolio was created from scratch with React + SASS, and is hosted using AWS Amplify's amazing CI/CD services.",
             image: "/images/project-images/portfolio-screencap.png",
             showSiteLink: false,
             siteLink: "/",

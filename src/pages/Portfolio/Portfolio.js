@@ -21,7 +21,7 @@ const Portfolio = () => {
                     showSiteLink,
                     showRepoLink
                     }, index) => 
-                    (<div className="col-md mt-4" key={index} >
+                    (<div className="col-md-4 mt-4" key={index} >
                         <PortfolioCard
                             title={title}
                             description={desc}
@@ -30,7 +30,7 @@ const Portfolio = () => {
                             repoLink={repoLink}
                             showSiteLink={showSiteLink}
                             showRepoLink={showRepoLink} />      
-                        </div>)
+                    </div>)
                     )}
                 </div>
             </div>
