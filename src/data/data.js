@@ -52,7 +52,7 @@ const resumeData = {
         {
             title: "WellDone",
             desc:
-                "My team helped rebuilt the backend and reworked the reports and dashboard pages for a non-profit org that provides well sensors to communities in developing countries. I personally used Express/postgreSQL and Next.js on this project.",
+                "My team helped build the backend and reworked the reports and dashboard pages for a non-profit org that provides well sensors to communities in developing countries. I personally used Express/postgreSQL and Next.js on this project.",
             image: "/images/project-images/welldone-screencap.png",
             showSiteLink: true,
             siteLink: "https://welldone.org",
