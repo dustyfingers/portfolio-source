@@ -72,7 +72,7 @@ const resumeData = {
         {
             title: "Stack Landing Page",
             desc:
-                "I built the landing page for a mock web-app alongside a remote UI team and one other developer. I built the about page and the landing page using HTML, Sass, Bootstrap 4 and raw Javascript(ES6+). The project is hosted on netlify.",
+                "I built the landing page for a mock web-app alongside a remote UI team and one other developer. I built the about page and the landing page using HTML, Sass, Bootstrap 4 and raw Javascript(ES6+). The project is hosted on Netlify.",
             image: "/images/project-images/stack-screencap.png",
             showSiteLink: true,
             siteLink: "https://stack-cards.netlify.com/",
