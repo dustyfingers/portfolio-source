@@ -36,11 +36,11 @@ export default {
         },
         modes: {
             repulse: {
-              distance: 200,
+              distance: 150,
               duration: 0.4
             },
             push: {
-              particles_nb: 3
+              particles_nb: 2
             },
             remove: {
               particles_nb: 2
