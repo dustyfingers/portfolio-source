@@ -7,7 +7,7 @@ import Skill from "../../components/Skill";
 import resumeData from '../../data/data';
 import "./Resume.scss";
 
-const { contact, projects, skills, experience } = resumeData;
+const { contact, projects, skills, experience, education } = resumeData;
 
 const Resume = () => (
     <section id="ResumeSection" className="main-section pb-2">
@@ -37,8 +37,8 @@ const Resume = () => (
         <div>
             <p className="display-5">Education</p>
             <div className="px-3">
-                <p className="fs-4">Lambda School - Full Stack Web Development</p>
-                <p className="px-2">05/19 - 10/19</p>
+                <p className="fs-4">{education.school} - {education.program}</p>
+                <p className="px-2">{education.from} - {education.to}</p>
             </div>
         </div>
 

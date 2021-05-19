@@ -9,6 +9,11 @@ const resumeData = {
             link: "https://www.github.com/dustyfingers",
             iconLink: "/images/contact-icons/github.svg",
             alt: "github icon"
+        },
+        {
+            link: "https://www.linkedin.com/in/louie-williford/",
+            iconLink: "/images/contact-icons/linkedin.svg",
+            alt: "linkedin icon"
         }
     ],
     skills: [
@@ -25,8 +30,7 @@ const resumeData = {
         "MongoDB",
         "mySQL/postgreSQL",
         "Git/Github",
-        "C#",
-        "Unity",
+        "C#/Unity",
         "Firebase"
     ],
     projects: [
@@ -50,9 +54,28 @@ const resumeData = {
             ]
         },
         {
+            title: "Lambda Alumni Network",
+            desc:
+                "I collaborated with ~10 other developers remotely to finish the product before a major beta release. My team finished the implementation of an entire new UI rework. I personally helped build the site’s search functionality.",
+            image: "/images/project-images/lan-screencap.png",
+            showSiteLink: true,
+            siteLink: "https://a.lambdaalumninetwork.dev/welcome",
+            showRepoLink: true,
+            repoLink: "https://github.com/Lambda-School-Labs/lan-fe-a",
+            tags: [
+                "Full Stack Development",
+                "JavaScript",
+                "React",
+                "Express",
+                "Node.js",
+                "MongoDB",
+                "AWS S3"
+            ]
+        },
+        {
             title: "WellDone",
             desc:
-                "My team helped build the backend and reworked the reports and dashboard pages for a non-profit org that provides well sensors to communities in developing countries. I personally used Express/postgreSQL and Next.js on this project.",
+                "I helped build the backend and reworked the reports and dashboard pages for a non-profit org that provides well sensors to communities in developing countries. I personally used Express/postgreSQL and Next.js on this project.",
             image: "/images/project-images/welldone-screencap.png",
             showSiteLink: true,
             siteLink: "https://welldone.org",
@@ -143,10 +166,10 @@ const resumeData = {
         },
     ],
     education: {
-        program: "Bootcamp Program in Fullstack Web Development and Computer Science (Hired Out)",
+        program: "Fullstack Web Development and Computer Science",
         school: "Lambda School",
         from: "2019",
-        to: "2019"
+        to: "2021"
     }
 };
 
