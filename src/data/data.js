@@ -35,7 +35,7 @@ const resumeData = {
     ],
     projects: [
         {
-            title: "louiemadeit Beat Store",
+            title: "Beat Store (under construction!)",
             desc:
                 "I designed, built, tested and deployed this application in it's entirety. The front end is built using React + Redux and Bootstrap 5, and is hosted using AWS Amplify. I built the backend with Node.js/Express + MongoDB, and AWS S3 for file storage. The backend is hosted on Heroku.",
             image: "/images/project-images/beat-store-screencap.png",
