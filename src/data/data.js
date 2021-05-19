@@ -37,7 +37,7 @@ const resumeData = {
         {
             title: "louiemadeit Beat Store",
             desc:
-                "I designed, built, tested and deployed this application in it's entirety. The front end is built using React + Redux and Bootstrap 5, and is hosted using AWS Amplify. The backend is a Node.js/Express server + a MongoDB database, and uses AWS S3 for storing files. It is hosted on Heroku.",
+                "I designed, built, tested and deployed this application in it's entirety. The front end is built using React + Redux and Bootstrap 5, and is hosted using AWS Amplify. I built the backend with Node.js/Express + MongoDB, and AWS S3 for file storage. The backend is hosted on Heroku.",
             image: "/images/project-images/beat-store-screencap.png",
             showSiteLink: true,
             siteLink: "https://dev.louiemadeit.com",
@@ -56,7 +56,7 @@ const resumeData = {
         {
             title: "Lambda Alumni Network",
             desc:
-                "I collaborated with ~10 other developers remotely to finish the product before a major beta release. My team finished the implementation of an entire new UI rework. I personally helped build the site’s search functionality.",
+                "I collaborated with ~10 other developers remotely to finish the project for a major beta release. My team finished the implementation of an entire new UI rework in the process. I personally helped build the site’s search functionality.",
             image: "/images/project-images/lan-screencap.png",
             showSiteLink: true,
             siteLink: "https://a.lambdaalumninetwork.dev/welcome",
