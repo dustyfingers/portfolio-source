@@ -35,7 +35,7 @@ const resumeData = {
     ],
     projects: [
         {
-            title: "Beat Store (under construction!)",
+            title: "louiemadeit Beat Store (under construction!)",
             desc:
                 "I designed, built, tested and deployed this application in it's entirety. The front end is built using React + Redux and Bootstrap 5, and is hosted using AWS Amplify. I built the backend with Node.js/Express + MongoDB, and AWS S3 for file storage. The backend is hosted on Heroku.",
             image: "/images/project-images/beat-store-screencap.png",
@@ -56,7 +56,7 @@ const resumeData = {
         {
             title: "Lambda Alumni Network",
             desc:
-                "I collaborated with ~10 other developers remotely to finish the project for a major beta release. My team finished the implementation of an entire new UI rework in the process. I personally helped build the site’s search functionality.",
+                "I collaborated with ~10 other developers remotely to finish this project for a major beta release. My team implemented an entire new UI in the process. I personally helped build the site’s search functionality.",
             image: "/images/project-images/lan-screencap.png",
             showSiteLink: true,
             siteLink: "https://a.lambdaalumninetwork.dev/welcome",
@@ -75,7 +75,7 @@ const resumeData = {
         {
             title: "WellDone",
             desc:
-                "I helped build the backend and reworked the reports and dashboard pages for a non-profit org that provides well sensors to communities in developing countries. I personally used Express/postgreSQL and Next.js on this project.",
+                "I helped build the backend and reworked the reports and dashboard pages for a non-profit org that provides well sensors and a sensor monitoring platform to communities in developing countries. I personally used Express/postgreSQL and Next.js on this project.",
             image: "/images/project-images/welldone-screencap.png",
             showSiteLink: true,
             siteLink: "https://welldone.org",
@@ -95,7 +95,7 @@ const resumeData = {
         {
             title: "Stack Landing Page",
             desc:
-                "I built the landing page for a mock web-app alongside a remote UI team and one other developer. I built the about page and the landing page using HTML, Sass, Bootstrap 4 and raw Javascript(ES6+). The project is hosted on Netlify.",
+                "I built the landing page for a mock web-app alongside a remote UX Design team and one other developer. I built the about page and the landing page using HTML, Sass, Bootstrap 4 and raw Javascript(ES6+). The project is hosted on Netlify.",
             image: "/images/project-images/stack-screencap.png",
             showSiteLink: true,
             siteLink: "https://stack-cards.netlify.com/",
@@ -116,7 +116,7 @@ const resumeData = {
         {
             title: "Portfolio Site",
             desc:
-                "My portfolio was created from scratch with React + SASS, and is hosted using AWS Amplify's amazing CI/CD services.",
+                "I built my portfolio with React + SASS + Bootstrap 5, and I host it using AWS Amplify's amazing CI/CD services.",
             image: "/images/project-images/portfolio-screencap.png",
             showSiteLink: false,
             siteLink: "/",
