@@ -133,6 +133,14 @@ const resumeData = {
       ],
       experience: [
         {
+            jobTitle: "Jr. Web Application Developer",
+            employer: "Zaronology, Inc",
+            desc: "At Zaronology I built features using...*insert duties and stuff here*",
+            location: "Remote",
+            from: "July 2021",
+            to: "Current"
+        },
+        {
             jobTitle: "Software Developer",
             employer: "FitSW",
             desc: "At FitSW I designed, built and tested several product-critical client facing features, including the ability for personal trainers to sell packages of their services and the ability for personal trainers to create subscriptions that their clients can then subscribe to. These features caused an almost 100% increase in fee revenue on our stripe connect platform. I was also tasked with building analytics and squashing bugs as they were reported by users, among other smaller projects. Day to day I used PHP, jQuery, JS, Bootstrap, HTML and CSS.",

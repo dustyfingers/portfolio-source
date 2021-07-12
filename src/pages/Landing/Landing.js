@@ -16,7 +16,7 @@ const Landing = () => (
                 edge technology. When I'm not building user-oriented software solutions, you can find me at the
                 park with my beautiful family, in my home studio producing instrumentals, or at the gym practicing jiu jitsu!
             </p>
-            <p className="work-line">I am currently looking for work in or around Denver, CO.</p>
+            <p className="work-line">I am currently happily employed.</p>
         </div>
 
         {/* call to action links */}
