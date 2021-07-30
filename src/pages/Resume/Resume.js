@@ -21,7 +21,7 @@ const Resume = () => (
         <div>
             <p className="display-5 text-center">Experience</p>
             <div>
-                {experience.map(item => <ExperienceItem {...item} key={item.employer}/>)}
+                {experience.map((item, idx) => <ExperienceItem {...item} key={`experience-item-${idx}`}/>)}
             </div>
         </div>
 
@@ -29,7 +29,7 @@ const Resume = () => (
         <div>
             <p className="display-5 text-center">Projects</p>
             <div>
-                {projects.map(project => <ResumeProjectItem {...project} key={project.title}/>)}
+                {projects.map((project, idx) => <ResumeProjectItem {...project} key={`project-item-${idx}`}/>)}
             </div>
         </div>
 
@@ -46,18 +46,14 @@ const Resume = () => (
         <div className="d-flex flex-column align-items-center justify-content-center">
             <p className="display-5 text-center">Top Skills</p>
             <div className="d-flex flex-wrap justify-content-evenly align-items-center skills w-75">
-                {skills.map(skill => (
-                    <Skill skill={skill} key={skill} />
-                ))}
+                {skills.map((skill, idx) => <Skill skill={skill} key={`skill-item-${idx}`} />)}
             </div>
         </div>
 
         {/* contact section */}
         <div className="d-flex flex-column justify-content-center align-items-center p-5">
             <div className="d-flex py-2">
-                {contact.map(({...props}) => (
-                <ContactIcon {...props} key={props.alt} />
-                ))}
+                {contact.map(({...props}, idx) => <ContactIcon {...props} key={`contact-item-${idx}`} />)}
             </div>
             <a href="https://louies-resume.s3.us-east-2.amazonaws.com/Louie-Williford.pdf" target="_blank" rel="noreferrer" type="button" className="btn btn-lg cta-btn my-2 mx-3">Download my Resume!</a>
         </div>

@@ -1,4 +1,4 @@
-export default {
+const particlesConfig = {
     particles: {
         number: {
             value: 25
@@ -10,8 +10,8 @@ export default {
         shape: {
             type: "circle",
             stroke: {
-              width: 3,
-              color: "#0E5159"
+                width: 3,
+                color: "#0E5159"
             }
         },
         line_linked: {
@@ -36,15 +36,17 @@ export default {
         },
         modes: {
             repulse: {
-              distance: 150,
-              duration: 0.4
+                distance: 150,
+                duration: 0.4
             },
             push: {
-              particles_nb: 2
+                particles_nb: 2
             },
             remove: {
-              particles_nb: 2
+                particles_nb: 2
             }
           }
     }
 };
+
+export default particlesConfig;
