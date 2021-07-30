@@ -13,10 +13,10 @@ const Landing = () => (
             <h4 className="display-1 name-tagline">I'm Louie.</h4>
             <p className="personal-summary">
                 I'm a full stack software developer with a passion for learning about cutting
-                edge technology. When I'm not building user-oriented software solutions, you can find me at the
+                edge technology. When I'm not building user-oriented software solutions you can find me at the
                 park with my beautiful family, in my home studio producing instrumentals, or at the gym practicing jiu jitsu!
             </p>
-            <p className="work-line">I am currently happily employed.</p>
+            <p className="work-line">I am currently happily employed in the beautiful city of Colorado Springs.</p>
         </div>
 
         {/* call to action links */}
