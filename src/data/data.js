@@ -17,21 +17,24 @@ const resumeData = {
         }
     ],
     skills: [
+        "React",
+        "Redux",
+        "Node.js/Express",
+        "mySQL/postgreSQL",
+        "MongoDB",
+        "Firebase",
+        "Javascript(ES6+)",
         "HTML",
         "CSS/SASS/LESS",
+        "jQuery",
         "PHP",
         "Wordpress/UIKit",
         "Bootstrap 3/4/5",
-        "Javascript(ES6+)",
-        "React",
-        "Node.js/Express",
-        "Python",
-        "Dart/Flutter",
-        "MongoDB",
-        "mySQL/postgreSQL",
+        "AWS Amplify",
+        "AWS S3",
+        "Heroku",
         "Git/Github",
-        "C#/Unity",
-        "Firebase"
+        "Python"
     ],
     projects: [
         {
@@ -133,9 +136,27 @@ const resumeData = {
       ],
       experience: [
         {
+            jobTitle: "Jr. Web Application Developer",
+            employer: "Zaronology, Inc",
+            bullets: [
+                'Collaborated with a distributed remote team to build full stack features for a members-only streaming service, including the administration interface',
+                'Built marketing sites for commercial film releases and retreats',
+                'Built and optimized Shopify sites for mobile screens and implemented new features as requested by clients',
+                'Tech Stack: React, SASS, Node.js, Bootstrap, Handlebars.js, JS, HTML5, CSS3, jQuery, Shopify, MySQL',
+            ],
+            location: "Remote",
+            from: "June 2021",
+            to: "Current"
+        },
+        {
             jobTitle: "Software Developer",
             employer: "FitSW",
-            desc: "At FitSW I designed, built and tested several product-critical client facing features, including the ability for personal trainers to sell packages of their services and the ability for personal trainers to create subscriptions that their clients can then subscribe to. These features caused an almost 100% increase in fee revenue on our stripe connect platform. I was also tasked with building analytics and squashing bugs as they were reported by users, among other smaller projects. Day to day I used PHP, jQuery, JS, Bootstrap, HTML and CSS.",
+            bullets: [
+                'Designed, built and tested several product-critical client facing features, such as the ability for personal trainers to create subscriptions their clients can subscribe to',
+                'Built analytics and squashed bugs as they were reported by users',
+                'The features I built caused an over 100% increase in fee revenue on our Stripe Connect platform by allowing personal trainers to directly sell services to their clients in-app',
+                'Tech stack: PHP, MySQL,  jQuery, JS, Bootstrap, HTML5 and CSS3',
+            ],
             location: "Colorado Springs, CO",
             from: "January 2020",
             to: "May 2020"
@@ -143,7 +164,10 @@ const resumeData = {
         {
             jobTitle: "Junior Web Developer",
             employer: "NativeRank",
-            desc: "At NativeRank, I built pixel-perfect custom web solutions for enterprise level consumers, leveraging mockups provided by the design team. Day to day I used HTML/CSS, LESS, UI Kit, Handlebars.js, PHP and Wordpress.",
+            bullets: [
+                'Built around 4 pixel-perfect custom web solutions per month for enterprise level consumers, leveraging mockups provided by the design team',
+                'Tech stack: HTML/CSS, LESS, UI Kit, Handlebars.js, PHP, MySQL, and Wordpress'
+            ],
             location: "Denver, CO",
             from: "September 2019",
             to: "January 2020"
@@ -151,7 +175,6 @@ const resumeData = {
         {
             jobTitle: "Phone Repair Technician",
             employer: "Dr. PhoneFix",
-            desc: "",
             location: "Colorado Springs, CO",
             from: "2017",
             to: "2018"
@@ -160,7 +183,6 @@ const resumeData = {
             jobTitle: "Customer Service Representative",
             employer: "Xerox",
             location: "Colorado Springs, CO",
-            desc: "",
             from: "2015",
             to: "2016"
         },
