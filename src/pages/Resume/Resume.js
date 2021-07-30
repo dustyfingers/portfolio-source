@@ -12,7 +12,7 @@ const { contact, projects, skills, experience, education } = resumeData;
 const Resume = () => (
     <section id="ResumeSection" className="main-section pb-2">
         {/* name/title section */}
-        <div className="text-center p-5">
+        <div className="text-center px-5 pb-5">
             <h1 className="display-1">Louie Williford</h1>
             <p>Jr. Web Application Developer</p>
         </div>
