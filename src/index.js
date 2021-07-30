@@ -4,6 +4,6 @@ import App from './App';
 
 // bootstrap
 import "../node_modules/bootstrap/scss/bootstrap.scss";
-import bootstrap from 'bootstrap';
+import 'bootstrap';
 
 ReactDOM.render(<App />, document.getElementById('root'));
