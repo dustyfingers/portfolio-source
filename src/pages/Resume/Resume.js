@@ -30,7 +30,7 @@ const Resume = () => {
     const controls = new OrbitControls(camera, renderer.domElement)
 
     // build geometry and material for lou cube
-    const louTexture = new THREE.TextureLoader().load('headshot.jpg');
+    const louTexture = new THREE.TextureLoader().load('images/headshot.jpg');
     const lou = new THREE.Mesh(
       new THREE.BoxGeometry(3,3,3),
       new THREE.MeshBasicMaterial({ map: louTexture })
