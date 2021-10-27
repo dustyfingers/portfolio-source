@@ -1,16 +1,85 @@
-import React from "react";
+import React, { useEffect } from 'react';
+import * as THREE from 'three';
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'; 
 
-import ResumeProjectItem from "../../components/ResumeProjectItem";
-import ExperienceItem from "../../components/ExperienceItem";
-import ContactIcon from "../../components/ContactIcon";
-import Skill from "../../components/Skill";
+import ResumeProjectItem from '../../components/ResumeProjectItem';
+import ExperienceItem from '../../components/ExperienceItem';
+import ContactIcon from '../../components/ContactIcon';
+import Skill from '../../components/Skill';
 import resumeData from '../../data/data';
-import "./Resume.scss";
+
+import './Resume.scss';
 
 const { contact, projects, skills, experience, education } = resumeData;
 
-const Resume = () => (
-    <section id="ResumeSection" className="main-section pb-2">
+const Resume = () => {
+
+  // hook into threejs on component mount
+  useEffect(() => {
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+    const renderer = new THREE.WebGLRenderer();
+
+    // configfure renderer and camera
+    renderer.setPixelRatio(window.devicePixelRatio);
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    document.body.appendChild(renderer.domElement);
+    camera.position.z = 5;
+
+    // build controls
+    const controls = new OrbitControls(camera, renderer.domElement)
+
+    // build geometry and material for lou cube
+    const louTexture = new THREE.TextureLoader().load('headshot.jpg');
+    const lou = new THREE.Mesh(
+      new THREE.BoxGeometry(3,3,3),
+      new THREE.MeshBasicMaterial({ map: louTexture })
+    );
+
+    // build and configure point light
+    const pointLight = new THREE.PointLight(0xFFFFFF);
+    pointLight.position.set(20, 20, 20);
+
+    // build ambient light
+    const ambientLight = new THREE.AmbientLight(0xFFFFFF);
+
+    // grid helpers show where the grid is in the scene
+    const gridHelper = new THREE.GridHelper(200, 50);
+    scene.add(gridHelper);
+
+    // add items to scene
+    scene.add(lou);
+    scene.add(pointLight, ambientLight);
+
+    const rotateLou = () => {
+      lou.rotation.y += 0.01;
+      lou.rotation.x += 0.01;
+    }
+
+    const moveCamera = () => {
+      console.log('moving camera!!')
+      const currentTop = document.body.getBoundingClientRect().top;
+    
+      rotateLou();
+    
+      camera.position.z = currentTop * -0.01;
+    }
+
+    // constantly rerender
+    const rerender = () => {
+      requestAnimationFrame(rerender);
+      controls.update();
+      renderer.render(scene, camera);
+    }
+
+    window.addEventListener('scroll', moveCamera);
+    rerender()
+  }, [])
+
+  return (
+    <>
+      <canvas id="bg"></canvas>
+      <section id="ResumeSection" className="main-section pb-2">
         {/* name/title section */}
         <div className="text-center px-5 pb-5">
             <h1 className="display-1">Louie Williford</h1>
@@ -57,7 +126,8 @@ const Resume = () => (
             </div>
             <a href="https://louies-resume.s3.us-east-2.amazonaws.com/Louie-Williford.pdf" target="_blank" rel="noreferrer" type="button" className="btn btn-lg cta-btn my-2 mx-3">Download my Resume!</a>
         </div>
-  </section>
-);
+      </section>
+    </>
+)};
 
 export default Resume;
