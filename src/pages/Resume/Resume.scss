@@ -4,8 +4,25 @@ canvas {
   left: 0;
 }
 
+:root {
+  --dark-bg: rgba(15, 15, 15, 0.95);
+  --spacing: 350px;
+}
+
+
+.content-container {
+  border: 1px solid red;
+  width: 100vw;
+}
 #ResumeSection {
-  padding-bottom: 8rem;
+  position: absolute;
+  // width: 100vw;
+  color: white;
+  z-index: 99;
+  width: 100%;
+  margin: 0px auto;
+  padding: 120px 0px;
+  border: 1px solid yellow;
 
   .contact-icon {
     width: 32px;
