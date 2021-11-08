@@ -9,11 +9,11 @@ canvas {
   --spacing: 350px;
 }
 
-
 .content-container {
   border: 1px solid red;
   width: 100vw;
 }
+
 #ResumeSection {
   position: absolute;
   // width: 100vw;
@@ -23,6 +23,8 @@ canvas {
   margin: 0px auto;
   padding: 120px 0px;
   border: 1px solid yellow;
+  top: 0;
+  left: 0;
 
   .contact-icon {
     width: 32px;
