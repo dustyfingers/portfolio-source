@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'; 
 
@@ -13,6 +13,27 @@ import './Resume.scss';
 const { contact, projects, skills, experience, education } = resumeData;
 
 const Resume = () => {
+  const [sceneState, setScene] = useState(null);
+  const [cameraState, setCamera] = useState(null);
+  const [rendererState, setRenderer] = useState(null);
+
+  const rotateLou = lou => {
+    lou.rotation.y += 0.01;
+    lou.rotation.x += 0.01;
+  }
+
+  const moveCamera = (camera, lou) => {
+    const currentTop = document.body.getBoundingClientRect().top;
+    camera.position.z = currentTop * -0.01;
+    rotateLou(lou);
+  }
+
+  // constantly rerender
+  const rerender = () => {
+    console.log(rendererState)
+    requestAnimationFrame(rerender);
+    rendererState.render(sceneState, cameraState);
+  }
 
   // hook into threejs on component mount
   useEffect(() => {
@@ -20,64 +41,60 @@ const Resume = () => {
     const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
     const renderer = new THREE.WebGLRenderer();
 
-    // configfure renderer and camera
-    renderer.setPixelRatio(window.devicePixelRatio);
-    renderer.setSize(window.innerWidth, window.innerHeight);
-    document.body.appendChild(renderer.domElement);
-    camera.position.z = 5;
+    // set state
+    setScene(scene);
+    setCamera(camera);
+    setRenderer(renderer);
+  }, [])
 
-    // build geometry and material for lou cube
-    const louTexture = new THREE.TextureLoader().load('images/headshot.jpg');
-    const lou = new THREE.Mesh(
-      new THREE.BoxGeometry(3,3,3),
-      new THREE.MeshBasicMaterial({ map: louTexture })
-    );
-
-    // build and configure point light
-    const pointLight = new THREE.PointLight(0xFFFFFF);
-    pointLight.position.set(20, 20, 20);
-
-    // build ambient light
-    const ambientLight = new THREE.AmbientLight(0xFFFFFF);
-
-    // grid helpers show where the grid is in the scene
-    const gridHelper = new THREE.GridHelper(200, 50);
-    scene.add(gridHelper);
-
-    // add items to scene
-    scene.add(lou);
-    scene.add(pointLight, ambientLight);
-
-    const rotateLou = () => {
-      lou.rotation.y += 0.01;
-      lou.rotation.x += 0.01;
+  useEffect(() => {
+    if (sceneState && cameraState && rendererState) {
+      // configfure renderer and camera
+      rendererState.setPixelRatio(window.devicePixelRatio);
+      rendererState.setSize(window.innerWidth, window.innerHeight);
+      document.body.appendChild(rendererState.domElement);
+      cameraState.position.z = 5;
+  
+      // build geometry and material for lou cube
+      const louTexture = new THREE.TextureLoader().load('images/headshot.jpg');
+      const lou = new THREE.Mesh(
+        new THREE.BoxGeometry(3,3,3),
+        new THREE.MeshBasicMaterial({ map: louTexture })
+      );
+  
+      // build and configure point light
+      const pointLight = new THREE.PointLight(0xFFFFFF);
+      pointLight.position.set(20, 20, 20);
+  
+      // build ambient light
+      const ambientLight = new THREE.AmbientLight(0xFFFFFF);
+  
+      // grid helpers show where the grid is in the scene
+      const gridHelper = new THREE.GridHelper(200, 50);
+      sceneState.add(gridHelper);
+  
+      // add items to scene
+      sceneState.add(lou);
+      sceneState.add(pointLight, ambientLight);
+  
+      window.addEventListener('scroll', () => moveCamera(cameraState, lou));
+      rerender();
     }
+  }, [sceneState, cameraState, rendererState])
 
-    const moveCamera = () => {
-      console.log('moving camera!!')
-      const currentTop = document.body.getBoundingClientRect().top;
-    
-      rotateLou();
-    
-      camera.position.z = currentTop * -0.01;
-    }
-
-    // constantly rerender
-    const rerender = () => {
-      requestAnimationFrame(rerender);
-      renderer.render(scene, camera);
-    }
-
-    window.addEventListener('scroll', moveCamera);
-    rerender()
+  // get rid of three.js stuff when component unmounts
+  useEffect(() => () => {
+    setScene(null)
+    setCamera(null);
+    setRenderer(null);
   }, [])
 
   return (
     <>
       <canvas id="bg"></canvas>
 
-      <div className="content-container">
-        <main id="ResumeSection" className="main-section pb-2">
+      <main id="ResumeContainer" className="main-section pb-2">
+        <div id="Resume" className="container">
           {/* name/title section */}
           <div className="text-center px-5 pb-5">
               <h1 className="display-1">Louie Williford</h1>
@@ -124,9 +141,9 @@ const Resume = () => {
               </div>
               <a href="https://louies-resume.s3.us-east-2.amazonaws.com/Louie-Williford.pdf" target="_blank" rel="noreferrer" type="button" className="btn btn-lg cta-btn my-2 mx-3">Download my Resume!</a>
           </div>
-        </main>
-      </div>
+        </div>
 
+      </main>
     </>
 )};
 
