@@ -1,5 +1,5 @@
 import React from "react";
-import { uuid } from "uuid";
+import { v4 as uuid } from "uuid";
 
 import PortfolioCard from "../../components/PortfolioCard/PortfolioCard";
 import resumeData from "../../data/data";
@@ -21,8 +21,7 @@ const Portfolio = () => {
                         repoLink,
                         showSiteLink,
                         showRepoLink
-                        }, index) => 
-                            (<div className="col-md-4 mt-4" key={`${title}-${uuid()}`} >
+                        }, index) => (<div className="col-md-4 mt-4" key={`${title}-${uuid()}`} >
                                 <PortfolioCard
                                     title={title}
                                     description={desc}

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
-import { uuid } from "uuidv4";
+import { v4 as uuid } from "uuid";
 
 import ResumeProjectItem from '../../components/ResumeProjectItem';
 import ExperienceItem from '../../components/ExperienceItem';
