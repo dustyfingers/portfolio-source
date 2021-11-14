@@ -1,5 +1,5 @@
 import React from "react";
-
+import { uuid } from "uuidv4";
 
 const ExperienceItem = ({jobTitle, to, from, location, employer, bullets}) => {
     return (
@@ -7,7 +7,7 @@ const ExperienceItem = ({jobTitle, to, from, location, employer, bullets}) => {
             <p className="fs-4 m-1">{jobTitle}</p>
             <p className="m-1 px-2">{employer} - {location}</p>
             <p className="m-1 px-2">{from} to {to}</p>
-            {bullets && <ul>{bullets.map((bullet, idx) => <li className="px-2" key={`bullet-item-${idx}`}>{bullet}</li>)}</ul>}
+            {bullets && <ul>{bullets.map((bullet, idx) => <li className="px-2" key={`bullet-item-${uuid()}`}>{bullet}</li>)}</ul>}
         </div>
     );
 };

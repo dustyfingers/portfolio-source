@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import * as THREE from 'three';
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'; 
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
+import { uuid } from "uuidv4";
 
 import ResumeProjectItem from '../../components/ResumeProjectItem';
 import ExperienceItem from '../../components/ExperienceItem';
@@ -16,6 +17,7 @@ const Resume = () => {
   const [sceneState, setScene] = useState(null);
   const [cameraState, setCamera] = useState(null);
   const [rendererState, setRenderer] = useState(null);
+  const [frameId, setFrameId] = useState(null);
 
   const rotateLou = lou => {
     lou.rotation.y += 0.01;
@@ -30,10 +32,12 @@ const Resume = () => {
 
   // constantly rerender
   const rerender = () => {
-    console.log(rendererState)
-    requestAnimationFrame(rerender);
+    const frame_id = requestAnimationFrame(rerender);
+    setFrameId(frame_id);
     rendererState.render(sceneState, cameraState);
   }
+
+  const stop = () => cancelAnimationFrame(frameId)
 
   // hook into threejs on component mount
   useEffect(() => {
@@ -45,7 +49,7 @@ const Resume = () => {
     setScene(scene);
     setCamera(camera);
     setRenderer(renderer);
-  }, [])
+  }, []);
 
   useEffect(() => {
     if (sceneState && cameraState && rendererState) {
@@ -80,19 +84,20 @@ const Resume = () => {
       window.addEventListener('scroll', () => moveCamera(cameraState, lou));
       rerender();
     }
-  }, [sceneState, cameraState, rendererState])
+  }, [sceneState, cameraState, rendererState]);
 
   // get rid of three.js stuff when component unmounts
-  useEffect(() => () => {
-    setScene(null)
-    setCamera(null);
-    setRenderer(null);
-  }, [])
+  // useEffect(() => () => {
+  //   // rendererState is already null??
+  //   // when is this being rebound??
+  //   // cant perform a state update on an unmounted component...
+  //   stop();
+  // }, []);
+
+  useEffect(() => console.log(rendererState), [rendererState])
 
   return (
     <>
-      <canvas id="bg"></canvas>
-
       <main id="ResumeContainer" className="main-section pb-2">
         <div id="Resume" className="container">
           {/* name/title section */}
@@ -105,7 +110,7 @@ const Resume = () => {
           <div>
               <p className="display-5 text-center">Experience</p>
               <div>
-                  {experience.map((item, idx) => <ExperienceItem {...item} key={`experience-item-${idx}`}/>)}
+                  {experience.map((item, idx) => <ExperienceItem {...item} key={`experience-item-${uuid()}`}/>)}
               </div>
           </div>
 
@@ -113,7 +118,7 @@ const Resume = () => {
           <div>
               <p className="display-5 text-center">Projects</p>
               <div>
-                  {projects.map((project, idx) => <ResumeProjectItem {...project} key={`project-item-${idx}`}/>)}
+                  {projects.map((project, idx) => <ResumeProjectItem {...project} key={`project-item-${uuid()}`}/>)}
               </div>
           </div>
 
@@ -130,14 +135,14 @@ const Resume = () => {
           <div className="d-flex flex-column align-items-center justify-content-center">
               <p className="display-5 text-center">Top Skills</p>
               <div className="d-flex flex-wrap justify-content-evenly align-items-center skills w-75">
-                  {skills.map((skill, idx) => <Skill skill={skill} key={`skill-item-${idx}`} />)}
+                  {skills.map((skill, idx) => <Skill skill={skill} key={`skill-item-${uuid()}`} />)}
               </div>
           </div>
 
           {/* contact section */}
           <div className="d-flex flex-column justify-content-center align-items-center p-5">
               <div className="d-flex py-2">
-                  {contact.map(({...props}, idx) => <ContactIcon {...props} key={`contact-item-${idx}`} />)}
+                  {contact.map(({...props}, idx) => <ContactIcon {...props} key={`contact-item-${uuid()}`} />)}
               </div>
               <a href="https://louies-resume.s3.us-east-2.amazonaws.com/Louie-Williford.pdf" target="_blank" rel="noreferrer" type="button" className="btn btn-lg cta-btn my-2 mx-3">Download my Resume!</a>
           </div>

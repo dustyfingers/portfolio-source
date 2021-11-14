@@ -15,6 +15,7 @@
     "react-router-dom": "^5.0.1",
     "react-scripts": "^4.0.3",
     "three": "^0.133.1",
+    "uuidv4": "^6.2.12",
     "yarn": "^1.22.11"
   },
   "scripts": {
