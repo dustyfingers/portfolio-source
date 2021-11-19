@@ -21,7 +21,8 @@ const Portfolio = () => {
                         repoLink,
                         showSiteLink,
                         showRepoLink
-                        }, index) => (<div className="col-md-4 mt-4" key={`${title}-${uuid()}`} >
+                        }, index) => (
+                            <div className="col-md-4 mt-4" key={`${title}-${uuid()}`} >
                                 <PortfolioCard
                                     title={title}
                                     description={desc}
@@ -30,7 +31,8 @@ const Portfolio = () => {
                                     repoLink={repoLink}
                                     showSiteLink={showSiteLink}
                                     showRepoLink={showRepoLink} />      
-                            </div>)
+                            </div>
+                        )
                     )}
                 </div>
             </div>
