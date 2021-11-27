@@ -7,8 +7,8 @@ import "./Portfolio.scss";
 
 const { projects } = resumeData;
 
-const Portfolio = () => {
-    return (
+const Portfolio = () => (
+    <main className='container' id='PageContainer'>
         <section id="PortfolioSection" className="main-section d-flex flex-column align-items-center">
             <h1 className="display-1 text-center">My Portfolio</h1>
             <div className="container">
@@ -37,7 +37,7 @@ const Portfolio = () => {
                 </div>
             </div>
         </section>
-    );
-};
+    </main>
+);
 
 export default Portfolio;
