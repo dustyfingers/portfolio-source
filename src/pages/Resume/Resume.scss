@@ -1,12 +1,14 @@
+@import "../../styles/colors.scss";
+
+#CanvasContainer {
+  height: 2432.38px;
+  width: 100vw;
+}
+
 canvas {
   position: fixed;
   top: 0;
   left: 0;
-}
-
-#CanvasContainer {
-  height: 100vh;
-  width: 100vw;
 }
 
 // make AppContainer see through
@@ -16,14 +18,17 @@ canvas {
 
 #ResumeContainer  {
   position: absolute;
-  z-index: 99;
+  // z-index: -100;
   width: 100%;
   top: 0;
   left: 0;
+  // background: rgba(0,0,0,0);
+  // background: $primary;
 
   #Resume {
+    // z-index: 0;
     margin: 0 auto;
-    width: 80%;
+    width: 75%;
   }
 
   .contact-icon {
