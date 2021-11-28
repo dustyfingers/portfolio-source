@@ -162,7 +162,7 @@ const resumeData = {
             to: "May 2020"
         },
         {
-            jobTitle: "Junior Web Developer",
+            jobTitle: "Jr. Web Developer",
             employer: "NativeRank",
             bullets: [
                 'Built around 4 pixel-perfect custom web solutions per month for enterprise level consumers, leveraging mockups provided by the design team',
