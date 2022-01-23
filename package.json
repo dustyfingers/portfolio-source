@@ -16,6 +16,7 @@
     "react-particles-js": "^3.4.1",
     "react-router-dom": "^5.0.1",
     "react-scripts": "^4.0.3",
+    "react-scroll-percentage": "^4.2.0",
     "three": "^0.133.1",
     "uuid": "^8.3.2",
     "yarn": "^1.22.11"
