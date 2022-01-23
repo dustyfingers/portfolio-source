@@ -18,7 +18,7 @@ const ResumeContent = () => {
       <div id="Resume" className="container">
 
         {/* name/title section */}
-        <div className="text-center px-5 pb-5">
+        <div className="text-center pb-5">
             <h1 className="display-1">Louie Williford</h1>
             <p>Jr. Web Application Developer</p>
         </div>
