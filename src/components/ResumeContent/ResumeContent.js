@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { v4 as uuid } from 'uuid';
+import { useScrollPercentage } from 'react-scroll-percentage';
 
 import ResumeProjectItem from '../../components/ResumeProjectItem';
 import ExperienceItem from '../../components/ExperienceItem';
@@ -12,14 +13,22 @@ import './ResumeContent.scss';
 const { contact, projects, skills, experience, education } = resumeData;
 
 const ResumeContent = () => {
+
+  const [ref, percentage] = useScrollPercentage({ threshold: 0 });
+
+  useEffect(() => {
+    console.log({percentage: percentage.toPrecision(2)})
+  }, [percentage])
+
   return (
+
     <main id="ResumeContentContainer" className="main-section pb-2">
 
-      <div id="Resume" className="container">
+      <div ref={ref} id="Resume" className="container">
 
         {/* name/title section */}
         <div className="text-center pb-5">
-            <h1 className="display-1">Louie Williford</h1>
+            <h1 className="display-1 d-flex align-items-center justify-content-center">Louie Williford</h1>
             <p>Jr. Web Application Developer</p>
         </div>
 
@@ -65,8 +74,11 @@ const ResumeContent = () => {
         </div>
         
       </div>
+
     </main>
+
   );
+
 };
 
 export default ResumeContent;

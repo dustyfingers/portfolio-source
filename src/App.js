@@ -14,9 +14,9 @@ const App = () => {
 
     useEffect(() => {
 
-      console.log('well hello ;)');
+      // console.log('well hello ;)');
 
-      setTimeout(() => console.log('fancy meeting you here!'), 5000);
+      // setTimeout(() => console.log('fancy meeting you here!'), 5000);
 
     }, []);
 

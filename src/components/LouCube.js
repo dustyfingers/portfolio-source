@@ -20,8 +20,8 @@ export const LouCube = props => {
     // this is kind of broken but usable for now
     const percentage = scroller.get_scroll_percentage();
 
-    console.log({percentage})
-    console.log({topOffset})
+    // console.log({percentage})
+    // console.log({topOffset})
 
     // no top offset means we are at the top of the document
     if (!topOffset) {
