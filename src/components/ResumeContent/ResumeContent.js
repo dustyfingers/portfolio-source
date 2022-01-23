@@ -24,7 +24,7 @@ const ResumeContent = () => {
         </div>
 
         {/* experience section */}
-        <div>
+        <div className="pb-4">
             <p className="display-5 text-center">Experience</p>
             <div>
                 {experience.map((item, idx) => <ExperienceItem {...item} key={`experience-item-${uuid()}`}/>)}
@@ -32,7 +32,7 @@ const ResumeContent = () => {
         </div>
 
         {/* education section */}
-        <div className="d-flex flex-column align-items-center justify-content-center">
+        <div className="d-flex flex-column align-items-center justify-content-center pb-4">
             <p className="display-5 text-center">Education</p>
             <div>
                 <p className="fs-4 text-center">{education.school} - {education.program}</p>
@@ -41,7 +41,7 @@ const ResumeContent = () => {
         </div>
 
         {/* projects section */}
-        <div>
+        <div className="pb-4">
             <p className="display-5 text-center">Projects</p>
             <div>
                 {projects.map((project, idx) => <ResumeProjectItem {...project} key={`project-item-${uuid()}`}/>)}
@@ -49,7 +49,7 @@ const ResumeContent = () => {
         </div>
 
         {/* skills section */}
-        <div className="d-flex flex-column align-items-center justify-content-center">
+        <div className="d-flex flex-column align-items-center justify-content-center pb-4">
             <p className="display-5 text-center">Top Skills</p>
             <div className="d-flex flex-wrap justify-content-evenly align-items-center skills w-75">
                 {skills.map((skill, idx) => <Skill skill={skill} key={`skill-item-${uuid()}`} />)}

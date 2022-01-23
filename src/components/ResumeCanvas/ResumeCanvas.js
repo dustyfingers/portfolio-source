@@ -1,4 +1,5 @@
 import React from 'react';
+import styled from 'styled-components';
 
 import { Canvas } from '@react-three/fiber';
 import { Stars } from '@react-three/drei';
@@ -23,6 +24,8 @@ const ResumeCanvas = () => {
           saturation={0} // Saturation 0-1 (default=0)
           fade // Faded dots (default=false)
         />
+        
+        <color attach="background" args={['#020e17']} />
 
         <ambientLight intensity={1} />
 
