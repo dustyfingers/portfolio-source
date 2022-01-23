@@ -31,6 +31,7 @@ export const LouCube = props => {
       
     }
 
+    // percentage at 100 means we are at the bottom of the document
     // else if (percentage === 100) {
     //   meshRef.current.position.x = 8;
     //   meshRef.current.position.y = 1;
