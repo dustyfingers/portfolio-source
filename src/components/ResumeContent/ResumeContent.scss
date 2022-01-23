@@ -1,11 +1,15 @@
 #ResumeContentContainer  {
   position: absolute;
-  // z-index: -100;
   width: 100%;
+  height: 100%;
   top: 0;
   left: 0;
-  // background: rgba(0,0,0,0);
-  // background: $primary;
+  // background-color: #1756dd32;
+  // display: flex;
+  // flex-direction: column;
+  // align-items: center;
+  // padding-top: 13%;
+  z-index: 99;
 
   #Resume {
     // z-index: 0;

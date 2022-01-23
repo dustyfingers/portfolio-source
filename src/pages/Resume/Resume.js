@@ -21,7 +21,6 @@ const Resume = () => {
           
         </div>
 
-
       </Suspense>
     </>
 )};
