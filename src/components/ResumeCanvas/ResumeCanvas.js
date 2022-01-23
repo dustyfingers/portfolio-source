@@ -1,7 +1,7 @@
 import React from 'react';
 import { Canvas } from '@react-three/fiber';
 import { Stars } from '@react-three/drei';
-import { useScrollPercentage } from 'react-scroll-percentage';
+// import { useScrollPercentage } from 'react-scroll-percentage';
 
 // custom three.js components
 import { LouCube } from '../../components/LouCube';
@@ -10,11 +10,11 @@ import './ResumeCanvas.scss';
 
 const ResumeCanvas = () => {
 
-  const [ref, percentage] = useScrollPercentage({ threshold: 0 });
+  // const [ref, percentage] = useScrollPercentage({ threshold: 0 });
 
   return (
 
-    <div id="ResumeCanvasContainer" ref={ref}>
+    <div id="ResumeCanvasContainer" /* ref={ref} */ >
 
       <Canvas id="ResumeCanvas" dpr={window.devicePixelRatio}>
 
@@ -36,7 +36,7 @@ const ResumeCanvas = () => {
         {/* <directionalLight position={[0, 0, 5]} /> */}
         
         {/* scene objects */}
-        <LouCube position={[8,1,-2]} percentage={percentage} />
+        <LouCube position={[8,1,-2]} /* percentage={percentage} */ />
 
 
       </Canvas>
