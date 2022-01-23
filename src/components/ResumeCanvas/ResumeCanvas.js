@@ -1,5 +1,4 @@
-import React from 'react';
-import styled from 'styled-components';
+import React, { useRef } from 'react';
 
 import { Canvas } from '@react-three/fiber';
 import { Stars } from '@react-three/drei';
@@ -10,11 +9,18 @@ import { LouCube } from '../../components/LouCube';
 import './ResumeCanvas.scss';
 
 const ResumeCanvas = () => {
+  // const [zoom, setZoom] = useState(75)
+
+
+  // const scrollArea = useRef()
+  // const onScroll = (e) => (state.top.current = e.target.scrollTop)
+  // useEffect(() => void onScroll({ target: scrollArea.current }), [])
+
   return (
 
     <div id="ResumeCanvasContainer">
 
-      <Canvas id="ResumeCanvas">
+      <Canvas id="ResumeCanvas" dpr={window.devicePixelRatio}>
 
         <Stars
           radius={100} // Radius of the inner sphere (default=100)
@@ -31,9 +37,13 @@ const ResumeCanvas = () => {
 
         {/* <directionalLight position={[0, 0, 5]} /> */}
 
-        <LouCube position={[4.75,4,-5]} />
+        <LouCube position={[8,1,-2]} />
 
       </Canvas>
+
+      {/* <div className="scrollArea" ref={scrollArea} onScroll={onScroll}>
+        <div style={{ height: `${state.pages * 100}vh` }} />
+      </div> */}
 
     </div>
 
