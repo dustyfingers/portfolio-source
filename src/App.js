@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 // import pages and components
@@ -11,6 +11,15 @@ import Footer from './components/Footer/Footer';
 import "./App.scss";
 
 const App = () => {
+
+    useEffect(() => {
+
+      console.log('well hello ;)');
+
+      setTimeout(() => console.log('fancy meeting you here!'), 5000);
+
+    }, []);
+
     return (
         <Router>
             <div id='AppContainer'>

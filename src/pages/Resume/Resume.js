@@ -2,8 +2,8 @@ import React, { Suspense } from 'react';
 // need uuid later dont delete bozo
 import { v4 as uuid } from 'uuid';
 import { Canvas } from '@react-three/fiber';
-import { Billboard, Environment } from '@react-three/drei';
-import { MapControls, Stars } from '@react-three/drei';
+// import { Billboard, Environment } from '@react-three/drei';
+import { Stars } from '@react-three/drei';
 
 // resume stuff
 import ResumeProjectItem from '../../components/ResumeProjectItem';
@@ -23,9 +23,11 @@ const Resume = () => {
 
   return (
     <>
-      {/* todo: fallback needs to be a LoadingWheel component */}
+      {/* TODO: fallback needs to be a LoadingWheel component */}
       <Suspense fallback={null}>
+
         <div id="CanvasContainer">
+          
           <Canvas>
 
             <Stars
@@ -47,7 +49,9 @@ const Resume = () => {
 
           {/* #ResumeContainer from sketchpad.txt here */}
           <main id="ResumeContainer" className="main-section pb-2">
+
             <div id="Resume" className="container">
+
               {/* name/title section */}
               <div className="text-center px-5 pb-5">
                   <h1 className="display-1">Louie Williford</h1>
@@ -94,12 +98,12 @@ const Resume = () => {
                   </div>
                   <a href="https://louies-resume.s3.us-east-2.amazonaws.com/Louie-Williford.pdf" target="_blank" rel="noreferrer" type="button" className="btn btn-lg cta-btn my-2 mx-3">Download my Resume!</a>
               </div>
+              
             </div>
 
           </main>
+
         </div>
-
-
 
       </Suspense>
     </>
