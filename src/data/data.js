@@ -40,7 +40,7 @@ const resumeData = {
         {
             title: "louiemadeit Beat Store (under construction!)",
             desc:
-                "I designed, built, tested and deployed this application in it's entirety. The front end is built using React + Redux and Bootstrap 5, and is hosted using AWS Amplify. I built the backend with Node.js/Express + MongoDB, and AWS S3 for file storage. The backend is hosted on Heroku.",
+                "I designed, built, tested and deployed this application in it's entirety. The front end is built using React + Redux and Bootstrap 5, and is hosted using AWS Amplify. I built the backend with Node.js/Express + MongoDB, and AWS S3 for file storage and hosted it on Heroku.",
             image: "/images/project-images/beat-store-screencap.png",
             showSiteLink: true,
             siteLink: "https://dev.louiemadeit.com",
@@ -119,7 +119,7 @@ const resumeData = {
         {
             title: "Portfolio Site",
             desc:
-                "I built my portfolio with React + SASS + Bootstrap 5, and I host it using AWS Amplify's amazing CI/CD services.",
+                "I built my portfolio with React + SASS + Bootstrap 5 + three.js, and I host it using AWS Amplify's amazing CI/CD services.",
             image: "/images/project-images/portfolio-screencap.png",
             showSiteLink: false,
             siteLink: "/",
@@ -133,8 +133,8 @@ const resumeData = {
                 "AWS Amplify/Route53"
             ]
         }
-      ],
-      experience: [
+    ],
+    experience: [
         {
             jobTitle: "Jr. Web Application Developer",
             employer: "Zaronology, Inc",
@@ -145,7 +145,7 @@ const resumeData = {
                 'Tech Stack: React, SASS, Node.js, Bootstrap, Handlebars.js, JS, HTML5, CSS3, jQuery, Shopify, MySQL',
             ],
             location: "Remote",
-            from: "June 2021",
+            from: "Jun. 2021",
             to: "Current"
         },
         {
@@ -158,26 +158,26 @@ const resumeData = {
                 'Tech stack: PHP, MySQL,  jQuery, JS, Bootstrap, HTML5 and CSS3',
             ],
             location: "Colorado Springs, CO",
-            from: "January 2020",
+            from: "Jan. 2020",
             to: "May 2020"
         },
         {
-            jobTitle: "Junior Web Developer",
+            jobTitle: "Jr. Web Developer",
             employer: "NativeRank",
             bullets: [
                 'Built around 4 pixel-perfect custom web solutions per month for enterprise level consumers, leveraging mockups provided by the design team',
                 'Tech stack: HTML/CSS, LESS, UI Kit, Handlebars.js, PHP, MySQL, and Wordpress'
             ],
             location: "Denver, CO",
-            from: "September 2019",
-            to: "January 2020"
+            from: "Sep. 2019",
+            to: "Jan. 2020"
         },
         {
             jobTitle: "Phone Repair Technician",
             employer: "Dr. PhoneFix",
             location: "Colorado Springs, CO",
             from: "2017",
-            to: "2018"
+            to: "2019"
         },
         {
             jobTitle: "Customer Service Representative",
