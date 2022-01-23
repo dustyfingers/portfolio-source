@@ -1,6 +1,7 @@
-import React, { useRef, createRef, useState, useEffect } from 'react';
+import React from 'react';
 import { Canvas } from '@react-three/fiber';
-import { Stars, ScrollControls, Scroll } from '@react-three/drei';
+import { Stars } from '@react-three/drei';
+import { useScrollPercentage } from 'react-scroll-percentage';
 
 // custom three.js components
 import { LouCube } from '../../components/LouCube';
@@ -8,44 +9,35 @@ import { LouCube } from '../../components/LouCube';
 import './ResumeCanvas.scss';
 
 const ResumeCanvas = () => {
-  // const [zoom, setZoom] = useState(75)
-  // const [top, createTop] = useState(createRef())
 
-
-  // const scrollArea = useRef()
-  // const onScroll = (e) => (top.current = e.target.scrollTop)
-  // useEffect(() => onScroll({ target: scrollArea.current }), [])
+  const [ref, percentage] = useScrollPercentage({ threshold: 0 });
 
   return (
 
-    <div id="ResumeCanvasContainer">
+    <div id="ResumeCanvasContainer" ref={ref}>
 
       <Canvas id="ResumeCanvas" dpr={window.devicePixelRatio}>
 
-        {/* <ScrollControls> */}
+        {/* background */}
+        <Stars
+          radius={100} // Radius of the inner sphere (default=100)
+          depth={50} // Depth of area where stars should fit (default=50)
+          count={5000} // Amount of stars (default=5000)
+          factor={2} // Size factor (default=4)
+          saturation={0} // Saturation 0-1 (default=0)
+          fade // Faded dots (default=false)
+        />
 
-          <Stars
-            radius={100} // Radius of the inner sphere (default=100)
-            depth={50} // Depth of area where stars should fit (default=50)
-            count={5000} // Amount of stars (default=5000)
-            factor={2} // Size factor (default=4)
-            saturation={0} // Saturation 0-1 (default=0)
-            fade // Faded dots (default=false)
-          />
-          
-          <color attach="background" args={['#020e17']} />
+        <color attach="background" args={['#020e17']} />
 
-          <ambientLight intensity={1} />
+        {/* lighting */}
+        <ambientLight intensity={1} />
 
-          {/* <directionalLight position={[0, 0, 5]} /> */}
+        {/* <directionalLight position={[0, 0, 5]} /> */}
+        
+        {/* scene objects */}
+        <LouCube position={[8,1,-2]} percentage={percentage} />
 
-          {/* <LouCube position={[8,1,-2]} /> */}
-
-          {/* <div className="scrollArea" ref={scrollArea} onScroll={onScroll}>
-            <div style={{ height: `100vh` }} />
-          </div> */}
-
-        {/* </ScrollControls> */}
 
       </Canvas>
 
