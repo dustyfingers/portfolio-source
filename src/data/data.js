@@ -136,6 +136,19 @@ const resumeData = {
     ],
     experience: [
         {
+            jobTitle: "Web Application Developer",
+            employer: "Zaronology, Inc",
+            bullets: [
+                'Worked with product managers to re-architect a members only streaming service to allow SSO with other web and native mobile apps',
+                'Part of the team to build and launch a proprietary streaming platform into beta, including personally building the checkout/user registration process',
+                'Built full stack features with  junior developers, providing guidance and assistance as needed',
+                'Tech Stack: React, SASS, Node.js, Bootstrap, Handlebars.js, JS, HTML5, CSS3, jQuery, Shopify, MySQL',
+            ],
+            location: "Remote",
+            from: "Feb. 2022",
+            to: "Current"
+        },
+        {
             jobTitle: "Jr. Web Application Developer",
             employer: "Zaronology, Inc",
             bullets: [
@@ -145,8 +158,8 @@ const resumeData = {
                 'Tech Stack: React, SASS, Node.js, Bootstrap, Handlebars.js, JS, HTML5, CSS3, jQuery, Shopify, MySQL',
             ],
             location: "Remote",
-            from: "Jun. 2021",
-            to: "Current"
+            from: "July 2021",
+            to: "Feb. 2022"
         },
         {
             jobTitle: "Software Developer",

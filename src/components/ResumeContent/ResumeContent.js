@@ -61,7 +61,7 @@ const ResumeContent = () => {
             <div className="d-flex py-2">
                 {contact.map(({...props}, idx) => <ContactIcon {...props} key={`contact-item-${uuid()}`} />)}
             </div>
-            <a href="https://louies-resume.s3.us-east-2.amazonaws.com/Louie-Williford.pdf" target="_blank" rel="noreferrer" type="button" className="btn btn-lg cta-btn my-2 mx-3">Download my Resume!</a>
+            <a href="https://louies-resume.s3.us-east-2.amazonaws.com/Louie+Williford+-+Full+Stack+Software+Developer.pdf" target="_blank" rel="noreferrer" type="button" className="btn btn-lg cta-btn my-2 mx-3">Download my Resume!</a>
         </div>
         
       </div>
