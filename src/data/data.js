@@ -21,9 +21,8 @@ const resumeData = {
         "Redux",
         "Node.js/Express",
         "mySQL/postgreSQL",
-        "MongoDB",
-        "Firebase",
-        "Javascript(ES6+)",
+        "MongoDB/AWS DynamoDB",
+        "Javascript (ES6+)",
         "HTML",
         "CSS/SASS/LESS",
         "jQuery",
@@ -32,7 +31,7 @@ const resumeData = {
         "Bootstrap 3/4/5",
         "AWS Amplify",
         "AWS S3",
-        "Heroku",
+        "AWS Lambda",
         "Git/Github",
         "Python"
     ],
@@ -194,7 +193,7 @@ const resumeData = {
         }
     ],
     education: {
-        program: "Fullstack Web Development and Computer Science",
+        program: "Full Stack Web Development and Computer Science",
         school: "Lambda School",
         from: "2019",
         to: "2021"
