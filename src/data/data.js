@@ -191,14 +191,7 @@ const resumeData = {
             location: "Colorado Springs, CO",
             from: "2017",
             to: "2019"
-        },
-        {
-            jobTitle: "Customer Service Representative",
-            employer: "Xerox",
-            location: "Colorado Springs, CO",
-            from: "2015",
-            to: "2016"
-        },
+        }
     ],
     education: {
         program: "Fullstack Web Development and Computer Science",
