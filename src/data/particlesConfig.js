@@ -20,6 +20,14 @@ const particlesConfig = {
             color: "#0E5159",
             opacity: 0.6,
             width: 1
+        },
+        move: {
+            direction: "none",
+            enable: true,
+            outMode: "bounce",
+            random: false,
+            speed: 4,
+            straight: true,
         }
     },
 
