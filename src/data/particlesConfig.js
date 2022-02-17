@@ -1,4 +1,5 @@
 const particlesConfig = {
+    fps_limit: 32,
     particles: {
         number: {
             value: 25
@@ -32,6 +33,7 @@ const particlesConfig = {
     },
 
     interactivity: {
+        detect_on: "canvas",
         events: {
             onhover: {
                 enable: true,
