@@ -1,4 +1,5 @@
 const particlesConfig = {
+    fps_limit: 32,
     particles: {
         number: {
             value: 25
@@ -20,10 +21,19 @@ const particlesConfig = {
             color: "#0E5159",
             opacity: 0.6,
             width: 1
+        },
+        move: {
+            direction: "none",
+            enable: true,
+            outMode: "bounce",
+            random: false,
+            speed: 4,
+            straight: true,
         }
     },
 
     interactivity: {
+        detect_on: "canvas",
         events: {
             onhover: {
                 enable: true,

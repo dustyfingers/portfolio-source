@@ -28,8 +28,8 @@ const ResumeContent = () => {
 
         {/* name/title section */}
         <div className="text-center pb-5">
-            <h1 className="display-1 d-flex align-items-center justify-content-center">Louie Williford</h1>
-            <p>Jr. Web Application Developer</p>
+            <h1 className="display-1">Louie Williford</h1>
+            <p>Full Stack Web Application Developer</p>
         </div>
 
         {/* experience section */}
@@ -70,7 +70,7 @@ const ResumeContent = () => {
             <div className="d-flex py-2">
                 {contact.map(({...props}, idx) => <ContactIcon {...props} key={`contact-item-${uuid()}`} />)}
             </div>
-            <a href="https://louies-resume.s3.us-east-2.amazonaws.com/Louie-Williford.pdf" target="_blank" rel="noreferrer" type="button" className="btn btn-lg cta-btn my-2 mx-3">Download my Resume!</a>
+            <a href="https://louies-resume.s3.us-east-2.amazonaws.com/Louie+Williford+-+Full+Stack+Software+Developer.pdf" target="_blank" rel="noreferrer" type="button" className="btn btn-lg cta-btn my-2 mx-3">Download my Resume!</a>
         </div>
         
       </div>
