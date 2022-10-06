@@ -1,7 +1,6 @@
 import React from 'react';
 import { Canvas } from '@react-three/fiber';
-import { Stars } from '@react-three/drei';
-// import { useScrollPercentage } from 'react-scroll-percentage';
+import { Stars, PresentationControls } from '@react-three/drei';
 
 // custom three.js components
 import { LouCube } from '../../components/LouCube';
@@ -9,8 +8,6 @@ import { LouCube } from '../../components/LouCube';
 import './ResumeCanvas.scss';
 
 const ResumeCanvas = () => {
-
-  // const [ref, percentage] = useScrollPercentage({ threshold: 0 });
 
   return (
 
@@ -34,10 +31,21 @@ const ResumeCanvas = () => {
         <ambientLight intensity={1} />
 
         {/* <directionalLight position={[0, 0, 5]} /> */}
-        
-        {/* scene objects */}
-        <LouCube position={[8,1,-2]} /* percentage={percentage} */ />
 
+        <PresentationControls
+          global={false} // Spin globally or by dragging the model
+          snap={false} // Snap-back to center (can also be a spring config)
+          speed={1} // Speed factor
+          zoom={1} // Zoom factor when half the polar-max is reached
+          rotation={[0, 0, 0]} // Default rotation
+          polar={[0, Math.PI / 2]} // Vertical limits
+          azimuth={[-Infinity, Infinity]} // Horizontal limits
+          config = { { mass: 1, tension: 170, friction: 26 } } >
+            
+            {/* scene objects */}
+            {/* <LouCube position={[8,1,-2]} /> */}
+
+        </PresentationControls>
 
       </Canvas>
 
