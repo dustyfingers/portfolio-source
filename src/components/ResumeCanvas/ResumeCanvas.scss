@@ -1,10 +1,12 @@
 #ResumeCanvasContainer {
-  height: 100vh;
-  width: 100%;
+    height: 100vh;
+    width: 100%;
+    pointer-events: none;
 }
 
 canvas {
-  position: fixed;
-  top: 0;
-  left: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
 }

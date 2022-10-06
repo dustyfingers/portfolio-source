@@ -13,38 +13,38 @@ export const LouCube = props => {
   // set off to side
   // on scroll, animate position
 
-  const handleScroll = (topOffset) => {
+//   const handleScroll = (topOffset) => {
 
-    const scroller = new wScroll();
+//     const scroller = new wScroll();
     
-    // this is kind of broken but usable for now
-    const percentage = scroller.get_scroll_percentage();
+//     // this is kind of broken but usable for now
+//     const percentage = scroller.get_scroll_percentage();
 
-    // console.log({percentage})
-    // console.log({topOffset})
+//     // console.log({percentage})
+//     // console.log({topOffset})
 
-    // no top offset means we are at the top of the document
-    if (!topOffset) {
-      meshRef.current.position.x = 8;
-      meshRef.current.position.y = 1;
-      meshRef.current.position.z = -2;
+//     // no top offset means we are at the top of the document
+//     if (!topOffset) {
+//       meshRef.current.position.x = 8;
+//       meshRef.current.position.y = 1;
+//       meshRef.current.position.z = -2;
       
-    }
+//     }
 
-    // percentage at 100 means we are at the bottom of the document
-    // else if (percentage === 100) {
-    //   meshRef.current.position.x = 8;
-    //   meshRef.current.position.y = 1;
-    //   meshRef.current.position.z = -2;
-    // }
+//     // percentage at 100 means we are at the bottom of the document
+//     // else if (percentage === 100) {
+//     //   meshRef.current.position.x = 8;
+//     //   meshRef.current.position.y = 1;
+//     //   meshRef.current.position.z = -2;
+//     // }
 
-    else {
-      meshRef.current.position.y = meshRef.current.position.y + (topOffset / 100) * -1;
-    }
+//     else {
+//       meshRef.current.position.y = meshRef.current.position.y + (topOffset / 100) * -1;
+//     }
 
-  }
+//   }
 
-  const scrollEvent = () => handleScroll(window.scrollY);
+//   const scrollEvent = () => handleScroll(window.scrollY);
 
   // rotate cube every frame
   useFrame((state, delta) => {
@@ -55,19 +55,23 @@ export const LouCube = props => {
 
   })
 
-  useEffect(() => document.addEventListener('scroll', scrollEvent), [])
+//   useEffect(() => document.addEventListener('scroll', scrollEvent), [])
 
-  useEffect(() => () => document.removeEventListener('scroll', scrollEvent), [])
+//   useEffect(() => () => document.removeEventListener('scroll', scrollEvent), [])
 
   return (
+
     <mesh 
-      ref={meshRef}
-      {...props} >
-        <boxGeometry args={[1, 1, 1]} />
-        {/* <meshPhongMaterial specularMap={specularMap} /> */}
-        {/* normal map gets passedf in as prop to meshStandardMaterial like this */}
-        {/* <meshStandardMaterial map={colorMap} normalMap={normalMap} /> */}
-      <meshStandardMaterial map={colorMap} />
+        ref={meshRef}
+        {...props} >
+
+            <boxGeometry args={[1, 1, 1]} />
+            {/* <meshPhongMaterial specularMap={specularMap} /> */}
+            {/* normal map gets passedf in as prop to meshStandardMaterial like this */}
+            {/* <meshStandardMaterial map={colorMap} normalMap={normalMap} /> */}
+
+        <meshStandardMaterial map={colorMap} />
+
     </mesh>
   )
 }
