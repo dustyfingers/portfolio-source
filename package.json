@@ -18,6 +18,7 @@
     "react-scripts": "^5.0.1",
     "react-tsparticles": "^2.3.3",
     "three": "0.145.0",
+    "tsparticles": "^2.3.4",
     "uuid": "^9.0.0",
     "yarn": "^1.22.17"
   },
