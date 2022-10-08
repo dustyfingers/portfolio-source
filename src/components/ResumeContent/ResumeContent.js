@@ -1,5 +1,6 @@
 import React from 'react';
 import { v4 as uuid } from 'uuid';
+import { motion } from 'framer-motion';
 
 import ResumeProjectItem from '../../components/ResumeProjectItem';
 import ExperienceItem from '../../components/ExperienceItem';
@@ -16,10 +17,10 @@ const ResumeContent = () => {
         <main id="ResumeContentContainer" className="main-section pb-2">
             <div id="Resume" className="container">
                 {/* name/title section */}
-                <div className="text-center pb-5">
+                <motion.div className="text-center pb-5">
                     <h1 className="display-1">Louie Williford</h1>
                     <p>Full Stack Software Engineer</p>
-                </div>
+                </motion.div>
 
                 {/* experience section */}
                 <div className="pb-5">
@@ -32,7 +33,12 @@ const ResumeContent = () => {
                 </div>
 
                 {/* education section */}
-                <div className="d-flex flex-column align-items-center justify-content-center pb-5">
+                <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transform={{ duration: 3, ease: 'easeOut' }}
+                    className="d-flex flex-column align-items-center justify-content-center pb-5"
+                >
                     <p className="display-5 text-center">Education</p>
                     <div>
                         <p className="fs-4 text-center">
@@ -42,7 +48,7 @@ const ResumeContent = () => {
                             {education.from} - {education.to}
                         </p>
                     </div>
-                </div>
+                </motion.div>
 
                 {/* projects section */}
                 <div className="pb-5">
