@@ -1,45 +1,45 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto+Mono&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto+Mono&display=swap');
 
-@import "./styles/colors.scss";
+@import './styles/colors.scss';
 
 // global theming
 #AppContainer {
-  min-height: 100vh;
-  background: $primary;
-  color: $light;
-
-  a {
-    text-decoration: none;
+    min-height: 100vh;
+    // background: $primary;
     color: $light;
-  }
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    font-family: "Roboto Mono", monospace;
-  }
-  p,
-  a,
-  span {
-    font-family: "Open Sans", sans-serif;
-  }
-
-  .cta-btn {
-    color: $secondary !important;
-    background-color: rgba(0, 0, 0, 0);
-    border: 1px solid $secondary !important;
-    border-radius: 0%;
-    &:hover {
-      background-color: rgba(0, 0, 0, 0) !important;
-      color: $success !important;
-      border-color: $success !important;
+    a {
+        text-decoration: none;
+        color: $light;
     }
-  }
 
-  .main-section {
-    margin-top: 56px;
-  }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: 'Roboto Mono', monospace;
+    }
+    p,
+    a,
+    span {
+        font-family: 'Open Sans', sans-serif;
+    }
+
+    .cta-btn {
+        color: $secondary !important;
+        background-color: rgba(0, 0, 0, 0);
+        border: 1px solid $secondary !important;
+        border-radius: 0%;
+        &:hover {
+            background-color: rgba(0, 0, 0, 0) !important;
+            color: $success !important;
+            border-color: $success !important;
+        }
+    }
+
+    .main-section {
+        margin-top: 56px;
+    }
 }
