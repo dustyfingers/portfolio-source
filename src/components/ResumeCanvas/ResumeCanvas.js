@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import * as THREE from 'three';
 import { Canvas } from '@react-three/fiber';
-import { Stars, PerspectiveCamera, PresentationControls } from '@react-three/drei';
+import { Stars, PerspectiveCamera, PresentationControls, Html } from '@react-three/drei';
 import { EffectComposer, Noise } from '@react-three/postprocessing';
 import { motion, useScroll, useInView } from 'framer-motion';
 
@@ -9,10 +9,10 @@ import { motion, useScroll, useInView } from 'framer-motion';
 import LouCube from '../LouCube';
 import ResumeContent from '../ResumeContent/ResumeContent';
 
-// using motion with a custom component
-// const AnimatedComponent = motion.custom(CustomComponent);
-
 import './ResumeCanvas.scss';
+
+// how to have custom motion components without styled-components
+// const AnimatedCube = motion(LouCube);
 
 const ResumeCanvas = () => {
     // const { scrollY } = useScroll();
@@ -21,42 +21,6 @@ const ResumeCanvas = () => {
 
     return (
         <>
-            <p>heloasdaosdoadsdasd</p>
-            <p>heloasdaosdoadsdasd</p>
-            <p>heloasdaosdoadsdasd</p>
-            <p>heloasdaosdoadsdasd</p>
-            <p>heloasdaosdoadsdasd</p>
-            <p>heloasdaosdoadsdasd</p>
-            <p>heloasdaosdoadsdasd</p>
-            <p>heloasdaosdoadsdasd</p>
-            <p>heloasdaosdoadsdasd</p>
-            <p>heloasdaosdoadsdasd</p>
-            <p>heloasdaosdoadsdasd</p>
-            <p>heloasdaosdoadsdasd</p>
-            <p>heloasdaosdoadsdasd</p>
-            <p>heloasdaosdoadsdasd</p>
-            <p>heloasdaosdoadsdasd</p>
-            <p>heloasdaosdoadsdasd</p>
-            <p>heloasdaosdoadsdasd</p>
-            <p>heloasdaosdoadsdasd</p>
-            <p>heloasdaosdoadsdasd</p>
-            <p>heloasdaosdoadsdasd</p>
-            <p>heloasdaosdoadsdasd</p>
-            <p>heloasdaosdoadsdasd</p>
-            <p>heloasdaosdoadsdasd</p>
-            <p>heloasdaosdoadsdasd</p>
-            <p>heloasdaosdoadsdasd</p>
-            <p>heloasdaosdoadsdasd</p>
-            <p>heloasdaosdoadsdasd</p>
-            <p>heloasdaosdoadsdasd</p>
-            <p>heloasdaosdoadsdasd</p>
-            <p>heloasdaosdoadsdasd</p>
-            <p>heloasdaosdoadsdasd</p>
-            <p>heloasdaosdoadsdasd</p>
-            <p>heloasdaosdoadsdasd</p>
-            <p>heloasdaosdoadsdasd</p>
-            <p>heloasdaosdoadsdasd</p>
-            <p>heloasdaosdoadsdasd</p>
             <Canvas id="ResumeCanvas" dpr={window.devicePixelRatio}>
                 <gridHelper />
                 <PerspectiveCamera
@@ -65,11 +29,13 @@ const ResumeCanvas = () => {
                     aspect={window.innerWidth / window.innerHeight}
                     near={1}
                     far={1000}
-                    position={new THREE.Vector3(2, 0, 0)}
+                    position={new THREE.Vector3(0, 2, 14)}
                     // rotation={new THREE.Euler(-0.7, -0.2, -0.2)}
                 />
                 <LouCube position={[0, 0, 0]} />
-                <LouCube position={[0, 0, -2]} />
+                <Html>
+                    <div>hello</div>
+                </Html>
                 {/* <color attach="background" args={['red']} />
                 <PresentationControls>
                     <Stars
@@ -88,12 +54,6 @@ const ResumeCanvas = () => {
                     <Noise opacity={0.9} />
                 </EffectComposer> */}
             </Canvas>
-            <div>hellopp</div>
-            <div>hellopp</div>
-            <div>hellopp</div>
-            <div>hellopp</div> <div>hellopp</div> <div>hellopp</div> <div>hellopp</div>{' '}
-            <div>hellopp</div> <div>hellopp</div> <div>hellopp</div> <div>hellopp</div>{' '}
-            <div>hellopp</div> <div>hellopp</div>
         </>
     );
 };
