@@ -39,7 +39,12 @@ const ResumeContent = () => {
                 </div>
 
                 {/* education section */}
-                <div className="d-flex flex-column align-items-center justify-content-center pb-5">
+                <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transform={{ duration: 3, ease: 'easeOut' }}
+                    className="d-flex flex-column align-items-center justify-content-center pb-5"
+                >
                     <p className="display-5 text-center">Education</p>
                     <div>
                         <p className="fs-4 text-center">
@@ -49,7 +54,7 @@ const ResumeContent = () => {
                             {education.from} - {education.to}
                         </p>
                     </div>
-                </div>
+                </motion.div>
 
                 {/* projects section */}
                 <div className="pb-5">

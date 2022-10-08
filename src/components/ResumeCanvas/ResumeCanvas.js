@@ -11,9 +11,6 @@ import ResumeContent from '../ResumeContent/ResumeContent';
 
 import './ResumeCanvas.scss';
 
-// how to have custom motion components without styled-components
-// const AnimatedCube = motion(LouCube);
-
 const ResumeCanvas = () => {
     // const { scrollY } = useScroll();
 
@@ -33,8 +30,8 @@ const ResumeCanvas = () => {
                     // rotation={new THREE.Euler(-0.7, -0.2, -0.2)}
                 />
                 <LouCube position={[0, 0, 0]} />
-                <Html>
-                    <div>hello</div>
+                <Html center>
+                    <ResumeContent />
                 </Html>
                 {/* <color attach="background" args={['red']} />
                 <PresentationControls>
