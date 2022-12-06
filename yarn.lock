@@ -1443,6 +1443,11 @@
     schema-utils "^2.6.5"
     source-map "^0.7.3"
 
+"@pmndrs/cannon-worker-api@^2.3.0":
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/@pmndrs/cannon-worker-api/-/cannon-worker-api-2.3.0.tgz#5ef133833ef858a264d95fc70106ca567f113475"
+  integrity sha512-XFR/IABU6uIEllocfGBV9SVakQWIYrZq/Ijk2ZYTv2jYorDebvT4cW8GWIE6UO/T/NChpI+fBTGlUs6wwZW5sg==
+
 "@popperjs/core@^2.11.2":
   version "2.11.2"
   resolved "https://registry.yarnpkg.com/@popperjs/core/-/core-2.11.2.tgz#830beaec4b4091a9e9398ac50f865ddea52186b9"

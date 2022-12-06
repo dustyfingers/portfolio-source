@@ -1,10 +1,6 @@
-canvas {
-    // FIXME: this is messing up the rendering of three.js
-    // position: fixed;
-    // top: 0;
-    // left: 0;
-    // height: 100vh;
-    width: 100%;
-    // z-index: 99;
-    border: 10px solid red;
+#ResumeCanvas {
+    canvas {
+        height: 100vh;
+        width: 100%;
+    }
 }
