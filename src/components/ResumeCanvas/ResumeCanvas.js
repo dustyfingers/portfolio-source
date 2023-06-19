@@ -14,14 +14,9 @@ import Clump from '../Clump/Clump';
 import Pointer from '../Pointer/Pointer';
 
 const ResumeCanvas = () => {
-    // const { scrollY } = useScroll();
-
-    // useEffect(() => console.log(scrollY), [scrollY]);
-
     return (
         <>
             <Canvas id="ResumeCanvas" dpr={window.devicePixelRatio}>
-                <gridHelper />
                 <PerspectiveCamera
                     makeDefault
                     fov={45}
