@@ -5,6 +5,7 @@
 
     .landing-content {
         cursor: default;
+        color: $primary;
 
         .hi-tagline {
             animation: 1s ease-in pulse;
@@ -16,10 +17,6 @@
 
         .personal-summary {
             animation: 9s ease-in-out pulse;
-        }
-
-        .work-line {
-            animation: 12s ease-in-out pulse;
         }
     }
 
@@ -43,12 +40,12 @@
     }
 
     25% {
-        color: darken($secondary, 15%);
+        color: darken($primary, 15%);
         transform: scale(1.025);
     }
 
     50% {
-        color: $secondary;
+        color: $primary;
         transform: scale(1);
     }
 }

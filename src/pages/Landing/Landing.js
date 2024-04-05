@@ -6,6 +6,14 @@ import { loadFull } from 'tsparticles';
 import './Landing.scss';
 import particlesConfig from '../../data/particlesConfig';
 
+const CtaLink = ({ title, link }) => {
+    return (
+        <Link to={link}>
+            <button className="btn btn-lg cta-btn my-2 mx-3">{title}</button>
+        </Link>
+    );
+};
+
 const Landing = () => {
     const initParticles = useCallback(async engine => await loadFull(engine), []);
     const particlesLoaded = useCallback(container => console.log(container), []);
@@ -18,9 +26,7 @@ const Landing = () => {
                 <div className="landing-cta-section mx-auto">
                     <div className="landing-content">
                         <h1 className="display-1 hi-tagline">Hi!</h1>
-
-                        <h4 className="display-1 name-tagline">I'm Louie.</h4>
-
+                        <h1 className="display-1 name-tagline">I'm Louie.</h1>
                         <p className="personal-summary">
                             I'm a full stack software engineer with a passion for learning
                             about cutting edge technology. When I'm not building
@@ -28,32 +34,11 @@ const Landing = () => {
                             with my beautiful family, in my home studio producing
                             instrumentals, or at the gym practicing jiu jitsu!
                         </p>
-
-                        <p className="work-line">
-                            I am currently happily employed in the beautiful city of
-                            Colorado Springs.
-                        </p>
                     </div>
-
-                    {/* call to action links */}
                     <div>
-                        <Link to="/resume">
-                            <button className="btn btn-lg cta-btn my-2 mx-3">
-                                My Resume
-                            </button>
-                        </Link>
-
-                        <Link to="/portfolio">
-                            <button className="btn btn-lg cta-btn my-2 mx-3">
-                                My Portfolio
-                            </button>
-                        </Link>
-
-                        <Link to="/work-together">
-                            <button className="btn btn-lg cta-btn my-2 mx-3">
-                                Let's Work Together!
-                            </button>
-                        </Link>
+                        <CtaLink title="My Resume" link="/resume" />
+                        <CtaLink title="My Portfolio" link="/portfolio" />
+                        <CtaLink title="Let's Work Together" link="/work-together" />
                     </div>
                 </div>
 

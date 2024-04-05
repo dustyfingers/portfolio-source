@@ -1,19 +1,19 @@
-@import "../../styles/colors.scss";
+@import '../../styles/colors.scss';
 
 #Menu {
-  background-color: $primary;
+    background-color: transparent;
 
-  .navbar-toggler {
-    color: $secondary;
-    border-color: $secondary;
-  }
-
-  .nav-link {
-    cursor: pointer;
-    color: $secondary;
-
-    &:hover {
-      color: $success;
+    .navbar-toggler {
+        color: $primary;
+        border-color: $primary;
     }
-  }
+
+    .nav-link {
+        cursor: pointer;
+        color: $primary;
+
+        &:hover {
+            color: $success;
+        }
+    }
 }

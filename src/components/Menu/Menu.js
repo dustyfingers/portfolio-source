@@ -3,6 +3,16 @@ import { Link } from 'react-router-dom';
 
 import './Menu.scss';
 
+const NavItem = ({ title, link }) => {
+    return (
+        <li className="nav-item d-flex flex-row-reverse">
+            <Link to={link} className="nav-link">
+                // {title}
+            </Link>
+        </li>
+    );
+};
+
 const Menu = () => {
     return (
         <nav className="navbar navbar-expand-lg navbar-dark fixed-top" id="Menu">
@@ -29,21 +39,9 @@ const Menu = () => {
 
                 <div className="collapse navbar-collapse" id="navbarDropdown">
                     <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
-                        <li className="nav-item d-flex flex-row-reverse">
-                            <Link to="/" className="nav-link">
-                                // Home
-                            </Link>
-                        </li>
-                        <li className="nav-item d-flex flex-row-reverse">
-                            <Link to="/resume" className="nav-link">
-                                // Resume
-                            </Link>
-                        </li>
-                        <li className="nav-item d-flex flex-row-reverse">
-                            <Link to="/portfolio" className="nav-link">
-                                // Portfolio
-                            </Link>
-                        </li>
+                        <NavItem title="Home" link="/" />
+                        <NavItem title="Portfolio" link="/portfolio" />
+                        <NavItem title="Resume" link="/resume" />
                     </ul>
                 </div>
             </div>
