@@ -6,7 +6,7 @@ const HamburgerMenuIcon = ({ color, width, height }) => {
             height={height}
             fill={color}
             class="bi bi-list"
-            viewBox="0 0 16 16"
+            viewBox="-0.5 -1 16 16"
         >
             <path
                 stroke={color}

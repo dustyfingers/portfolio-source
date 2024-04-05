@@ -50,7 +50,7 @@ const ResumeContent = () => {
                         <p className="fs-4 text-center">
                             {education.school} - {education.program}
                         </p>
-                        <p className="px-2 text-center">
+                        <p className="text-center">
                             {education.from} - {education.to}
                         </p>
                     </div>
@@ -86,7 +86,7 @@ const ResumeContent = () => {
                             <ContactIcon {...props} key={`contact-item-${uuid()}`} />
                         ))}
                     </div>
-                    <a
+                    {/* <a
                         href="https://louies-resume.s3.us-east-2.amazonaws.com/Louie+Williford+-+Full+Stack+Software+Developer.pdf"
                         target="_blank"
                         rel="noreferrer"
@@ -94,7 +94,7 @@ const ResumeContent = () => {
                         className="btn btn-lg cta-btn my-2 mx-3"
                     >
                         Download my Resume!
-                    </a>
+                    </a> */}
                 </div>
             </div>
         </main>

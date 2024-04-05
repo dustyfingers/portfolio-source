@@ -1,4 +1,5 @@
 @import '../../styles/colors.scss';
+@import '../../styles/media-queries.scss';
 
 #Menu {
     background-color: transparent;
@@ -6,6 +7,28 @@
     .navbar-toggler {
         color: $primary;
         border-color: $primary;
+        padding: 0.25rem 0.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include gt-sm {
+            display: none;
+        }
+    }
+
+    .navbar-dropdown {
+        background: $primary;
+
+        // fix text disappearing on dark bg
+        li {
+            color: $light;
+        }
+
+        color: $light;
+        @include gt-sm {
+            background: transparent;
+            color: unset;
+        }
     }
 
     .nav-link {
