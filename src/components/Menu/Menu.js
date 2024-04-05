@@ -33,10 +33,13 @@ const Menu = () => {
                     aria-expanded="false"
                     aria-label="Toggle navigation"
                 >
-                    <HamburgerMenuIcon height={16} width={16} color={'#020e17'} />
+                    <HamburgerMenuIcon height={18} width={18} color={'#020e17'} />
                 </button>
 
-                <div className="collapse navbar-collapse" id="navbarDropdown">
+                <div
+                    className="collapse navbar-collapse navbar-dropdown"
+                    id="navbarDropdown"
+                >
                     <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
                         <NavItem title="Home" link="/" />
                         <NavItem title="Portfolio" link="/portfolio" />

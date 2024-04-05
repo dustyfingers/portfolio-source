@@ -38,7 +38,7 @@ const Landing = () => {
                     <div>
                         <CtaLink title="My Resume" link="/resume" />
                         <CtaLink title="My Portfolio" link="/portfolio" />
-                        <CtaLink title="Let's Work Together" link="/work-together" />
+                        {/* <CtaLink title="Let's Work Together" link="/work-together" /> */}
                     </div>
                 </div>
 

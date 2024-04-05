@@ -17,7 +17,12 @@ const ResumeContent = () => {
         <main id="ResumeContentContainer" className="main-section pb-2">
             <div id="Resume" className="container">
                 {/* name/title section */}
-                <motion.div className="text-center pb-5">
+                <motion.div
+                    className="text-center pb-5"
+                    // initial={{ opacity: 0 }}
+                    // animate={{ opacity: 1 }}
+                    // transform={{ duration: 3000, ease: 'easeOut' }}
+                >
                     <h1 className="display-1">Louie Williford</h1>
                     <p>Full Stack Software Engineer</p>
                 </motion.div>
@@ -44,7 +49,7 @@ const ResumeContent = () => {
                         <p className="fs-4 text-center">
                             {education.school} - {education.program}
                         </p>
-                        <p className="px-2 text-center">
+                        <p className="text-center">
                             {education.from} - {education.to}
                         </p>
                     </div>
@@ -80,7 +85,7 @@ const ResumeContent = () => {
                             <ContactIcon {...props} key={`contact-item-${uuid()}`} />
                         ))}
                     </div>
-                    <a
+                    {/* <a
                         href="https://louies-resume.s3.us-east-2.amazonaws.com/Louie+Williford+-+Full+Stack+Software+Developer.pdf"
                         target="_blank"
                         rel="noreferrer"
@@ -88,7 +93,7 @@ const ResumeContent = () => {
                         className="btn btn-lg cta-btn my-2 mx-3"
                     >
                         Download my Resume!
-                    </a>
+                    </a> */}
                 </div>
             </div>
         </main>
