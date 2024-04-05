@@ -7,18 +7,18 @@ const particlesConfig = {
         size: {
             value: 2,
         },
-        color: '#0E5159',
+        color: '#76d9b9',
         shape: {
             type: 'circle',
             stroke: {
                 width: 3,
-                color: '#0E5159',
+                color: '#76d9b9',
             },
         },
         line_linked: {
             enable: true,
             distance: 200,
-            color: '#0E5159',
+            color: '#76d9b9',
             opacity: 0.6,
             width: 1,
         },
@@ -27,7 +27,7 @@ const particlesConfig = {
             enable: true,
             outMode: 'bounce',
             random: false,
-            speed: 4,
+            speed: 3,
             straight: true,
         },
     },

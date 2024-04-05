@@ -1,7 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import HamburgerMenuIcon from '../svg/HamburgerMenuIcon';
+
 import './Menu.scss';
+import Logo from '../svg/Logo';
 
 const NavItem = ({ title, link }) => {
     return (
@@ -18,7 +21,7 @@ const Menu = () => {
         <nav className="navbar navbar-expand-lg navbar-dark fixed-top" id="Menu">
             <div className="container-fluid">
                 <Link to="/" id="logo">
-                    <img height="40px" src="/images/logo.svg" alt="logo" />
+                    <Logo height={40} />
                 </Link>
 
                 <button
@@ -30,11 +33,7 @@ const Menu = () => {
                     aria-expanded="false"
                     aria-label="Toggle navigation"
                 >
-                    <img
-                        className="navbar-toggler-icon"
-                        src="/images/list.svg"
-                        alt="hamburger menu button"
-                    />
+                    <HamburgerMenuIcon height={16} width={16} color={'#020e17'} />
                 </button>
 
                 <div className="collapse navbar-collapse" id="navbarDropdown">
