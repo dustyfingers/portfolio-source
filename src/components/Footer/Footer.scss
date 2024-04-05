@@ -1,17 +1,19 @@
-@import "../../styles/colors.scss";
+@import '../../styles/colors.scss';
 // footer styles
 #Footer {
-  background-color: $primary;
-  .footer-text {
-    cursor: default;
-    font-size: 0.75rem;
+    background-color: $primary;
+    color: $light;
+    opacity: 0.75;
+    .footer-text {
+        cursor: default;
+        font-size: 0.75rem;
 
-    .linkedin-link {
-      color: $secondary !important;
+        .linkedin-link {
+            color: $secondary !important;
 
-      &:hover {
-        color: $success !important;
-      }
+            &:hover {
+                color: $success !important;
+            }
+        }
     }
-  }
 }
