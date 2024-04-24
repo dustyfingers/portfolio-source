@@ -39,7 +39,7 @@ const Menu = () => {
                     className="collapse navbar-collapse navbar-dropdown"
                     id="navbarDropdown"
                 >
-                    <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <ul className="navbar-nav ms-auto">
                         <NavItem title="Home" link="/" />
                         <NavItem title="Portfolio" link="/portfolio" />
                         <NavItem title="Resume" link="/resume" />
