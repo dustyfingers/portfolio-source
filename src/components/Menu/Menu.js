@@ -23,7 +23,6 @@ const Menu = () => {
                 <Link to="/" id="logo">
                     <Logo height={40} />
                 </Link>
-
                 <button
                     className="navbar-toggler"
                     type="button"

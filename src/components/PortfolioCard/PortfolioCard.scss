@@ -1,9 +1,7 @@
 @import '../../styles/colors.scss';
 
 .portfolio-card {
-    border: 2px solid $primary !important;
-    border-left-width: 0px !important;
-    border-right-width: 0px !important;
+    border: none !important;
     border-bottom: 2px solid $secondary !important;
     border-radius: 0px !important;
 
@@ -12,11 +10,10 @@
     }
 
     .portfolio-card-body {
-        background-color: $primary;
         cursor: default;
 
         .card-content {
-            color: $light;
+            color: $secondary;
         }
     }
 
