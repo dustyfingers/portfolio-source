@@ -19,17 +19,19 @@
     .navbar-dropdown {
         background: $primary;
         opacity: 0.75;
-        // max-width: 300px;
-        // display: block;
 
-        // fix text disappearing on dark bg
         li {
-            // color: $light !important;
-            border: 1px solid red;
+            a {
+                color: $secondary;
+            }
         }
         @include gt-sm {
             background: transparent;
-            color: unset;
+            li {
+                a {
+                    color: $primary;
+                }
+            }
         }
     }
 
