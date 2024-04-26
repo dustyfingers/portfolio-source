@@ -8,41 +8,32 @@ import './Portfolio.scss';
 const { projects } = resumeData;
 
 const Portfolio = () => (
-    <main className="container" id="PageContainer">
-        <section
-            id="PortfolioSection"
-            className="main-section d-flex flex-column align-items-center"
-        >
+    <main id="PageContainer">
+        <section className="portfolio-section d-flex flex-column align-items-center">
             <h1 className="display-1 text-center">My Portfolio</h1>
-            <div className="container">
-                <div className="row">
-                    {projects.map(
-                        (
-                            {
-                                title,
-                                desc,
-                                image,
-                                siteLink,
-                                repoLink,
-                                showSiteLink,
-                                showRepoLink,
-                            },
-                            index
-                        ) => (
-                            <div className="col-md-4 mt-4" key={`${title}-${uuid()}`}>
-                                <PortfolioCard
-                                    title={title}
-                                    description={desc}
-                                    image={image}
-                                    siteLink={siteLink}
-                                    repoLink={repoLink}
-                                    showSiteLink={showSiteLink}
-                                    showRepoLink={showRepoLink}
-                                />
-                            </div>
-                        )
-                    )}
-                </div>
+            <div className="projects-grid mx-3">
+                {projects.map(
+                    ({
+                        title,
+                        desc,
+                        image,
+                        siteLink,
+                        repoLink,
+                        showSiteLink,
+                        showRepoLink,
+                    }) => (
+                        <PortfolioCard
+                            title={title}
+                            description={desc}
+                            image={image}
+                            siteLink={siteLink}
+                            repoLink={repoLink}
+                            showSiteLink={showSiteLink}
+                            showRepoLink={showRepoLink}
+                            key={`${title}-${uuid()}`}
+                        />
+                    )
+                )}
             </div>
         </section>
     </main>

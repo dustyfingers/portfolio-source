@@ -1,3 +1,17 @@
-#PortfolioSection {
+@import '../../styles/colors.scss';
+@import '../../styles/media-queries.scss';
+
+.portfolio-section {
     padding-bottom: 2.5rem;
+
+    .projects-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+
+        @include gt-xs {
+            grid-template-columns: repeat(3, 1fr);
+            max-width: 1200px;
+        }
+    }
 }
