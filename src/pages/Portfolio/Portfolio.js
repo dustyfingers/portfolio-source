@@ -2,13 +2,14 @@ import React from 'react';
 import { v4 as uuid } from 'uuid';
 
 import PortfolioCard from '../../components/PortfolioCard/PortfolioCard';
+import PageContainer from '../../components/PageContainer/PageContainer';
 import resumeData from '../../data/data';
 import './Portfolio.scss';
 
 const { projects } = resumeData;
 
 const Portfolio = () => (
-    <main id="PageContainer">
+    <PageContainer>
         <section className="portfolio-section d-flex flex-column align-items-center">
             <h1 className="display-1 text-center">My Portfolio</h1>
             <div className="projects-grid mx-3">
@@ -36,7 +37,7 @@ const Portfolio = () => (
                 )}
             </div>
         </section>
-    </main>
+    </PageContainer>
 );
 
 export default Portfolio;
