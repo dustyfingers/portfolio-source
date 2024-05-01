@@ -11,7 +11,7 @@ const { projects } = resumeData;
 const Portfolio = () => (
     <PageContainer>
         <section className="portfolio-section d-flex flex-column align-items-center">
-            <h1 className="display-1 text-center">My Portfolio</h1>
+            <h1 className="display-1 text-center mb-5">My Portfolio</h1>
             <div className="projects-grid mx-3">
                 {projects.map(
                     ({
