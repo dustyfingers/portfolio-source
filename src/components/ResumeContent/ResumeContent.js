@@ -10,7 +10,7 @@ import resumeData from '../../data/data';
 
 import './ResumeContent.scss';
 
-const { contact, projects, skills, experience, education } = resumeData;
+const { contact, projects, skills, experience, education, name, title } = resumeData;
 
 const ResumeContent = () => {
     const [ref, percentage] = useScrollPercentage({ threshold: 0 });
@@ -68,9 +68,15 @@ const ResumeContent = () => {
                         ))}
                     </div>
                 </div>
-
+                {/* projects section */}
+                <div className="mb-5">
+                    <p className="display-5 text-center">Projects</p>
+                    {projects.map((project, idx) => (
+                        <ResumeProjectItem {...project} key={`project-item-${uuid()}`} />
+                    ))}
+                </div>
                 {/* skills section */}
-                <div className="d-flex flex-column align-items-center justify-content-center pb-5">
+                <div className="d-flex flex-column align-items-center justify-content-center mb-5">
                     <p className="display-5 text-center">Top Skills</p>
                     <div className="d-flex flex-wrap justify-content-evenly align-items-center skills w-75">
                         {skills.map((skill, idx) => (
@@ -78,23 +84,13 @@ const ResumeContent = () => {
                         ))}
                     </div>
                 </div>
-
                 {/* contact section */}
-                <div className="d-flex flex-column justify-content-center align-items-center p-5">
+                <div className="d-flex flex-column justify-content-center align-items-center">
                     <div className="d-flex py-2">
-                        {contact.map(({ ...props }, idx) => (
+                        {contact.map(({ ...props }) => (
                             <ContactIcon {...props} key={`contact-item-${uuid()}`} />
                         ))}
                     </div>
-                    {/* <a
-                        href="https://louies-resume.s3.us-east-2.amazonaws.com/Louie+Williford+-+Full+Stack+Software+Developer.pdf"
-                        target="_blank"
-                        rel="noreferrer"
-                        type="button"
-                        className="btn btn-lg cta-btn my-2 mx-3"
-                    >
-                        Download my Resume!
-                    </a> */}
                 </div>
             </div>
         </main>

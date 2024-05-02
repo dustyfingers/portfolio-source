@@ -16,7 +16,7 @@ const CtaLink = ({ title, link }) => {
 
 const Landing = () => {
     const initParticles = useCallback(async engine => await loadFull(engine), []);
-    const particlesLoaded = useCallback(container => console.log(container), []);
+    const particlesLoaded = useCallback(container => container, []);
     return (
         <main className="container" id="PageContainer">
             <section
@@ -30,9 +30,9 @@ const Landing = () => {
                         <p className="personal-summary">
                             I'm a full stack software engineer with a passion for learning
                             about cutting edge technology. When I'm not building
-                            user-oriented software solutions you can find me at the park
-                            with my beautiful family, in my home studio producing
-                            instrumentals, or at the gym practicing jiu jitsu!
+                            user-focused software, you can find me at the park with my
+                            beautiful family, in my home studio producing instrumentals,
+                            or at the gym practicing jiu jitsu!
                         </p>
                     </div>
                     <div>
@@ -41,7 +41,6 @@ const Landing = () => {
                         {/* <CtaLink title="Let's Work Together" link="/work-together" /> */}
                     </div>
                 </div>
-
                 <Particles
                     id="particle-canvas"
                     init={initParticles}
