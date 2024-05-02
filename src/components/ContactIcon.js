@@ -8,11 +8,11 @@ const ContactIcon = ({ link, name }) => {
     const determineIcon = () => {
         switch (name) {
             case 'linkedin':
-                return <LinkedInIcon />;
+                return <LinkedInIcon width={32} height={32} />;
             case 'github':
-                return <GithubIcon />;
+                return <GithubIcon width={32} height={32} />;
             case 'email':
-                return <EmailIcon />;
+                return <EmailIcon width={32} height={32} />;
         }
     };
     return (

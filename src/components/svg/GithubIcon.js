@@ -1,4 +1,4 @@
-const GithubIcon = ({ color, width, height }) => {
+const GithubIcon = ({ width, height }) => {
     return (
         <svg
             version="1.1"
@@ -7,6 +7,8 @@ const GithubIcon = ({ color, width, height }) => {
             x="0px"
             y="0px"
             viewBox="0 0 291.32 291.32"
+            height={height}
+            width={width}
         >
             <g>
                 <path
