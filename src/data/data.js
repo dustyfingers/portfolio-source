@@ -1,18 +1,20 @@
 const resumeData = {
+    name: 'Louie Williford',
+    title: 'Full Stack Software Engineer',
     contact: [
         {
+            name: 'email',
             link: "mailto:thereallouiew@gmail.com?subject=Let's%20work%20together!",
-            iconLink: '/images/contact-icons/email.svg',
             alt: 'email icon',
         },
         {
+            name: 'github',
             link: 'https://www.github.com/dustyfingers',
-            iconLink: '/images/contact-icons/github.svg',
             alt: 'github icon',
         },
         {
+            name: 'linkedin',
             link: 'https://www.linkedin.com/in/louie-williford/',
-            iconLink: '/images/contact-icons/linkedin.svg',
             alt: 'linkedin icon',
         },
     ],
