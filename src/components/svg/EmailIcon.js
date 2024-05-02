@@ -1,4 +1,4 @@
-const EmailIcon = ({ color, width, height }) => {
+const EmailIcon = ({ width, height }) => {
     return (
         <svg
             version="1.1"
@@ -7,6 +7,8 @@ const EmailIcon = ({ color, width, height }) => {
             x="0px"
             y="0px"
             viewBox="0 0 502.073 502.073"
+            height={height}
+            width={width}
         >
             <path
                 fill="#FFD15C"

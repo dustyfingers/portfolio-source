@@ -1,4 +1,4 @@
-const LinkedInIcon = ({ color, width, height }) => {
+const LinkedInIcon = ({ width, height }) => {
     return (
         <svg
             version="1.1"
@@ -7,6 +7,8 @@ const LinkedInIcon = ({ color, width, height }) => {
             x="0px"
             y="0px"
             viewBox="0 0 291.319 291.319"
+            height={height}
+            width={width}
         >
             <g>
                 <path
