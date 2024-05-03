@@ -16,9 +16,9 @@ const ContactIcon = ({ link, name }) => {
         }
     };
     return (
-        <div className="p-1 mx-1">
-            <a href={link}>{determineIcon(name)}</a>
-        </div>
+        <a className="p-1 mx-1" href={link}>
+            {determineIcon(name)}
+        </a>
     );
 };
 
