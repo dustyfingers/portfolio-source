@@ -1,40 +1,36 @@
-@import "../../styles/colors.scss";
+@import '../../styles/variables.scss';
 
 .portfolio-card {
-  border: 2px solid $primary !important;
-  border-left-width: 0px !important;
-  border-right-width: 0px !important;
-  border-bottom: 2px solid $secondary !important;
-  border-radius: 0px !important;
+    border: none !important;
+    border-bottom: 2px solid $secondary !important;
+    border-radius: 0px !important;
 
-  &:hover {
-    border-bottom-color: $success !important;
-  }
-
-  .portfolio-card-body {
-    background-color: $primary;
-    cursor: default;
-
-    .card-content {
-      color: $light;
-    }
-  }
-
-  .card-img-top {
-    max-height: 196px;
-    border-radius: 0%;
-    height: 200px;
-  }
-
-  .portfolio-btn {
-    color: $secondary !important;
-    background-color: $primary;
-    border: 1px solid $secondary !important;
-    border: none;
     &:hover {
-      background-color: $primary !important;
-      color: $success !important;
-      border-color: $success !important;
+        border-bottom-color: $success !important;
     }
-  }
+
+    .portfolio-card-body {
+        cursor: default;
+
+        .card-content {
+            color: $primary;
+        }
+    }
+
+    .card-img-top {
+        max-height: 196px;
+        border-radius: 0%;
+        height: 200px;
+    }
+
+    .portfolio-btn {
+        color: $secondary !important;
+        background-color: $primary;
+        border: 1px solid $secondary !important;
+        &:hover {
+            background-color: $primary !important;
+            color: $success !important;
+            border-color: $success !important;
+        }
+    }
 }

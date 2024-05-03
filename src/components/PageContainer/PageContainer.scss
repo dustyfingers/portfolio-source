@@ -1,0 +1,6 @@
+@import '../../styles/variables.scss';
+
+.page-container {
+    margin-top: calc(#{$navHeight} + 2rem);
+    margin-bottom: calc(#{$footerHeight} + 2rem);
+}

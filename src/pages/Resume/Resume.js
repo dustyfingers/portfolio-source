@@ -1,28 +1,14 @@
-import React, { Suspense } from 'react';
+import React from 'react';
 
-// resume components
+import PageContainer from '../../components/PageContainer/PageContainer';
 import ResumeContent from '../../components/ResumeContent/ResumeContent';
-import ResumeCanvas from '../../components/ResumeCanvas/ResumeCanvas';
-
-import './Resume.scss';
 
 const Resume = () => {
-
-  return (
-    <>
-      {/* TODO: fallback needs to be a LoadingWheel component */}
-      <Suspense fallback={null}>
-
-        <div id="ResumeContainer">
-
-          <ResumeCanvas />
-
-          <ResumeContent />
-          
-        </div>
-
-      </Suspense>
-    </>
-)};
+    return (
+        <PageContainer>
+            <ResumeContent />
+        </PageContainer>
+    );
+};
 
 export default Resume;

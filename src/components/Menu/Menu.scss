@@ -1,19 +1,46 @@
-@import "../../styles/colors.scss";
+@import '../../styles/variables.scss';
+@import '../../styles/media-queries.scss';
 
 #Menu {
-  background-color: $primary;
+    background-color: transparent;
 
-  .navbar-toggler {
-    color: $secondary;
-    border-color: $secondary;
-  }
-
-  .nav-link {
-    cursor: pointer;
-    color: $secondary;
-
-    &:hover {
-      color: $success;
+    .navbar-toggler {
+        color: $primary;
+        border-color: $primary;
+        padding: 0.25rem 0.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include gt-sm {
+            display: none;
+        }
     }
-  }
+
+    .navbar-dropdown {
+        background: $primary;
+        opacity: 0.75;
+
+        li {
+            a {
+                color: $secondary;
+            }
+        }
+        @include gt-sm {
+            background: transparent;
+            li {
+                a {
+                    color: $primary;
+                }
+            }
+        }
+    }
+
+    .nav-link {
+        cursor: pointer;
+        color: $primary;
+
+        &:hover {
+            color: $success;
+        }
+    }
 }

@@ -1,57 +1,44 @@
-import React, { useRef, createRef, useState, useEffect } from 'react';
+import React from 'react';
+import * as THREE from 'three';
 import { Canvas } from '@react-three/fiber';
-import { Stars, ScrollControls, Scroll } from '@react-three/drei';
+import { PerspectiveCamera, Html } from '@react-three/drei';
+import { Physics } from '@react-three/cannon';
 
 // custom three.js components
-import { LouCube } from '../../components/LouCube';
+import LouCube from '../LouCube';
+import ResumeContent from '../ResumeContent/ResumeContent';
+import EffectsRig from '../EffectsRig/EffectsRig';
 
 import './ResumeCanvas.scss';
+import Clump from '../Clump/Clump';
+import Pointer from '../Pointer/Pointer';
 
 const ResumeCanvas = () => {
-  // const [zoom, setZoom] = useState(75)
-  // const [top, createTop] = useState(createRef())
-
-
-  // const scrollArea = useRef()
-  // const onScroll = (e) => (top.current = e.target.scrollTop)
-  // useEffect(() => onScroll({ target: scrollArea.current }), [])
-
-  return (
-
-    <div id="ResumeCanvasContainer">
-
-      <Canvas id="ResumeCanvas" dpr={window.devicePixelRatio}>
-
-        {/* <ScrollControls> */}
-
-          <Stars
-            radius={100} // Radius of the inner sphere (default=100)
-            depth={50} // Depth of area where stars should fit (default=50)
-            count={5000} // Amount of stars (default=5000)
-            factor={2} // Size factor (default=4)
-            saturation={0} // Saturation 0-1 (default=0)
-            fade // Faded dots (default=false)
-          />
-          
-          <color attach="background" args={['#020e17']} />
-
-          <ambientLight intensity={1} />
-
-          {/* <directionalLight position={[0, 0, 5]} /> */}
-
-          {/* <LouCube position={[8,1,-2]} /> */}
-
-          {/* <div className="scrollArea" ref={scrollArea} onScroll={onScroll}>
-            <div style={{ height: `100vh` }} />
-          </div> */}
-
-        {/* </ScrollControls> */}
-
-      </Canvas>
-
-    </div>
-
-  );
+    return (
+        <>
+            <Canvas id="ResumeCanvas" dpr={window.devicePixelRatio}>
+                <PerspectiveCamera
+                    makeDefault
+                    fov={45}
+                    aspect={window.innerWidth / window.innerHeight}
+                    near={1}
+                    far={1000}
+                    position={new THREE.Vector3(0, 2, 14)}
+                />
+                {/* <Html center>
+                    <ResumeContent />
+                </Html> */}
+                <color attach="background" args={['blue']} />
+                <ambientLight intensity={0.1} />
+                <directionalLight color="red" position={[0, 0, 5]} />
+                <Physics gravity={[0, 2, 0]} iterations={40}>
+                    <Pointer />
+                    <Clump />
+                </Physics>
+                <EffectsRig />
+            </Canvas>
+        </>
+    );
 };
 
 export default ResumeCanvas;
