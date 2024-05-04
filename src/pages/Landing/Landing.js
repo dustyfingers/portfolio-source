@@ -6,6 +6,10 @@ import { loadFull } from 'tsparticles';
 import './Landing.scss';
 import particlesConfig from '../../data/particlesConfig';
 
+import landingData from '../../data/data';
+
+const { landingHeadline1, landingHeadline2, landingParagraph } = landingData;
+
 const CtaLink = ({ title, link }) => {
     return (
         <Link to={link}>
@@ -18,22 +22,16 @@ const Landing = () => {
     const initParticles = useCallback(async engine => await loadFull(engine), []);
     const particlesLoaded = useCallback(container => container, []);
     return (
-        <main className="container" id="PageContainer">
+        <div className="container landing-container d-flex flex-column align-items-center justify-content-center">
             <section
                 id="LandingSection"
                 className="d-flex align-items-center text-center"
             >
                 <div className="landing-cta-section mx-auto">
                     <div className="landing-content">
-                        <h1 className="display-1 hi-tagline">Hi!</h1>
-                        <h1 className="display-1 name-tagline">I'm Louie.</h1>
-                        <p className="personal-summary">
-                            I'm a full stack software engineer with a passion for learning
-                            about cutting edge technology. When I'm not building
-                            user-focused software, you can find me at the park with my
-                            beautiful family, in my home studio producing instrumentals,
-                            or at the gym practicing jiu jitsu!
-                        </p>
+                        <h1 className="display-1 hi-tagline">{landingHeadline1}</h1>
+                        <h1 className="display-1 name-tagline">{landingHeadline2}</h1>
+                        <p className="personal-summary">{landingParagraph}</p>
                     </div>
                     <div>
                         <CtaLink title="My Resume" link="/resume" />
@@ -41,14 +39,14 @@ const Landing = () => {
                         {/* <CtaLink title="Let's Work Together" link="/work-together" /> */}
                     </div>
                 </div>
-                <Particles
-                    id="particle-canvas"
-                    init={initParticles}
-                    loaded={particlesLoaded}
-                    options={particlesConfig}
-                />
             </section>
-        </main>
+            <Particles
+                id="particle-canvas"
+                init={initParticles}
+                loaded={particlesLoaded}
+                options={particlesConfig}
+            />
+        </div>
     );
 };
 

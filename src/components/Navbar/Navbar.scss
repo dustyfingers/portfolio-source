@@ -1,7 +1,7 @@
 @import '../../styles/variables.scss';
 @import '../../styles/media-queries.scss';
 
-#Menu {
+#Navbar {
     background-color: transparent;
 
     .navbar-toggler {
@@ -23,6 +23,7 @@
         li {
             a {
                 color: $secondary;
+                margin-right: 0.25rem;
             }
         }
         @include gt-sm {
@@ -30,6 +31,7 @@
             li {
                 a {
                     color: $primary;
+                    margin-right: 0;
                 }
             }
         }

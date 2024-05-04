@@ -1,9 +1,8 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { v4 as uuid } from 'uuid';
-import { motion } from 'framer-motion';
 
-import ResumeProjectItem from '../../components/ResumeProjectItem';
-import ExperienceItem from '../../components/ExperienceItem';
+import ProjectItem from '../../components/ProjectItem/ProjectItem';
+import ExperienceItem from '../../components/ExperienceItem/ExperienceItem';
 import ContactIcon from '../../components/ContactIcon';
 import Skill from '../../components/Skill';
 import resumeData from '../../data/data';
@@ -43,7 +42,7 @@ const ResumeContent = () => {
             <div className="mb-5">
                 <h3 className="text-center">Projects</h3>
                 {projects.map((project, idx) => (
-                    <ResumeProjectItem {...project} key={`project-item-${uuid()}`} />
+                    <ProjectItem {...project} key={`project-item-${uuid()}`} />
                 ))}
             </div>
             {/* skills section */}
