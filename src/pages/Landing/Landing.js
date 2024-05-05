@@ -7,6 +7,7 @@ import './Landing.scss';
 import particlesConfig from '../../data/particlesConfig';
 
 import landingData from '../../data/data';
+import { Typewriter } from 'react-simple-typewriter';
 
 const { landingHeadline1, landingHeadline2, landingParagraph } = landingData;
 
@@ -29,14 +30,17 @@ const Landing = () => {
             >
                 <div className="landing-cta-section mx-auto">
                     <div className="landing-content">
-                        <h1 className="display-1 hi-tagline">{landingHeadline1}</h1>
-                        <h1 className="display-1 name-tagline">{landingHeadline2}</h1>
+                        <h1 className="display-1 landing-headline-1">
+                            <Typewriter words={[landingHeadline1]} />
+                        </h1>
+                        <h1 className="display-1 landing-headline-2">
+                            <Typewriter words={[landingHeadline2]} />
+                        </h1>
                         <p className="personal-summary">{landingParagraph}</p>
                     </div>
                     <div>
                         <CtaLink title="My Resume" link="/resume" />
                         <CtaLink title="My Portfolio" link="/portfolio" />
-                        {/* <CtaLink title="Let's Work Together" link="/work-together" /> */}
                     </div>
                 </div>
             </section>

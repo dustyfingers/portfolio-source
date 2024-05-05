@@ -8,8 +8,17 @@ import Skill from '../../components/Skill';
 import resumeData from '../../data/data';
 
 import './ResumeContent.scss';
+import { Typewriter } from 'react-simple-typewriter';
 
 const { contact, projects, skills, experience, education, name, title } = resumeData;
+
+const SectionTitle = ({ title }) => {
+    return (
+        <h3 className="text-center section-title">
+            <Typewriter words={[title]} loop={0} />
+        </h3>
+    );
+};
 
 const ResumeContent = () => {
     return (
@@ -21,14 +30,14 @@ const ResumeContent = () => {
             </div>
             {/* experience section */}
             <div className="mb-5">
-                <h3 className="text-center">Experience</h3>
+                <SectionTitle title="Experience" />
                 {experience.map((item, idx) => (
                     <ExperienceItem {...item} key={`experience-item-${uuid()}`} />
                 ))}
             </div>
             {/* education section */}
             <div className="d-flex flex-column align-items-center justify-content-center mb-5">
-                <h3 className="text-center">Education</h3>
+                <SectionTitle title="Education" />
                 <div>
                     <p className="fs-4 text-center">
                         {education.school} - {education.program}
@@ -39,16 +48,16 @@ const ResumeContent = () => {
                 </div>
             </div>
             {/* projects section */}
-            <div className="mb-5">
-                <h3 className="text-center">Projects</h3>
+            <div className="projects-section mb-5 w-100 d-flex flex-column align-items-center">
+                <SectionTitle title="Projects" />
                 {projects.map((project, idx) => (
                     <ProjectItem {...project} key={`project-item-${uuid()}`} />
                 ))}
             </div>
             {/* skills section */}
             <div className="d-flex flex-column align-items-center justify-content-center mb-5">
-                <h3 className="text-center">Skills</h3>
-                <div className="d-flex flex-wrap justify-content-evenly align-items-center skills w-75">
+                <SectionTitle title="Skills" />
+                <div className="skills-content d-flex flex-wrap justify-content-center align-items-center">
                     {skills.map((skill, idx) => (
                         <Skill skill={skill} key={`skill-item-${uuid()}`} />
                     ))}
@@ -56,7 +65,7 @@ const ResumeContent = () => {
             </div>
             {/* contact section */}
             <div className="d-flex flex-column justify-content-center align-items-center">
-                <div className="d-flex py-2">
+                <div className="d-flex py-2 skills-content">
                     {contact.map(({ ...props }) => (
                         <ContactIcon {...props} key={`contact-item-${uuid()}`} />
                     ))}
