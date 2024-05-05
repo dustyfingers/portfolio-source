@@ -1,0 +1,13 @@
+@import '../../styles/variables.scss';
+@import '../../styles/media-queries.scss';
+
+.experience-item {
+    .top-item {
+        width: max-content;
+    }
+    .experience-list {
+        @include gt-sm {
+            max-width: 800px;
+        }
+    }
+}

@@ -1,6 +1,10 @@
-const resumeData = {
+const data = {
     name: 'Louie Williford',
     title: 'Full Stack Software Engineer',
+    landingHeadline1: 'Hi!',
+    landingHeadline2: "I'm Louie.",
+    landingParagraph:
+        "I'm a full stack software engineer with a passion for learning about cutting edge technology. When I'm not building user-focused software, you can find me at the park with my beautiful family, in my home studio producing instrumentals, or at the gym practicing jiu jitsu!",
     contact: [
         {
             name: 'email',
@@ -189,4 +193,4 @@ const resumeData = {
     },
 };
 
-export default resumeData;
+export default data;

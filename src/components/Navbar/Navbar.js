@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 import HamburgerMenuIcon from '../svg/HamburgerMenuIcon';
 
-import './Menu.scss';
+import './Navbar.scss';
 import Logo from '../svg/Logo';
 
 const NavItem = ({ title, link }) => {
@@ -16,9 +16,9 @@ const NavItem = ({ title, link }) => {
     );
 };
 
-const Menu = () => {
+const Navbar = () => {
     return (
-        <nav className="navbar navbar-expand-lg navbar-dark fixed-top" id="Menu">
+        <nav className="navbar navbar-expand-lg navbar-dark fixed-top" id="Navbar">
             <div className="container-fluid">
                 <Link to="/" id="logo">
                     <Logo height={40} />
@@ -50,4 +50,4 @@ const Menu = () => {
     );
 };
 
-export default Menu;
+export default Navbar;

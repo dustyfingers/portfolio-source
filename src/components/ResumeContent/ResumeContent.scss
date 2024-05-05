@@ -1,0 +1,12 @@
+@import '../../styles/variables.scss';
+@import '../../styles/media-queries.scss';
+
+#Resume {
+    .skills-content {
+        max-width: 800px;
+    }
+
+    .section-title {
+        height: 32px;
+    }
+}
