@@ -31,7 +31,7 @@ const ResumeContent = () => {
             {/* experience section */}
             <div className="mb-5">
                 <SectionTitle title="Experience" />
-                {experience.map((item, idx) => (
+                {experience.map(item => (
                     <ExperienceItem {...item} key={`experience-item-${uuid()}`} />
                 ))}
             </div>
@@ -50,7 +50,7 @@ const ResumeContent = () => {
             {/* projects section */}
             <div className="projects-section mb-5 w-100 d-flex flex-column align-items-center">
                 <SectionTitle title="Projects" />
-                {projects.map((project, idx) => (
+                {projects.map(project => (
                     <ProjectItem {...project} key={`project-item-${uuid()}`} />
                 ))}
             </div>
@@ -58,7 +58,7 @@ const ResumeContent = () => {
             <div className="d-flex flex-column align-items-center justify-content-center mb-5">
                 <SectionTitle title="Skills" />
                 <div className="skills-content d-flex flex-wrap justify-content-center align-items-center">
-                    {skills.map((skill, idx) => (
+                    {skills.map(skill => (
                         <Skill skill={skill} key={`skill-item-${uuid()}`} />
                     ))}
                 </div>

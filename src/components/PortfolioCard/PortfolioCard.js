@@ -23,6 +23,8 @@ const PortfolioCard = ({
                     {showSiteLink ? (
                         <a
                             href={siteLink}
+                            target="blank"
+                            rel="noopener noreferrer"
                             className="btn btn-primary ml-0 my-1 me-2 cta-btn"
                         >
                             Explore the Project
@@ -31,7 +33,12 @@ const PortfolioCard = ({
                         ''
                     )}
                     {showRepoLink ? (
-                        <a href={repoLink} className="btn btn-primary m-1 cta-btn">
+                        <a
+                            href={repoLink}
+                            target="blank"
+                            rel="noopener noreferrer"
+                            className="btn btn-primary m-1 cta-btn"
+                        >
                             See the Code
                         </a>
                     ) : (
