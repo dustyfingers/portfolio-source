@@ -1,5 +1,7 @@
 import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 
 // import pages and components
 import Landing from './pages/Landing/Landing';
@@ -25,6 +27,8 @@ const App = () => {
                     <Route path="/portfolio" element={<Portfolio />} />
                     <Route path="/resume" element={<Resume />} />
                 </Routes>
+                <Analytics />
+                <SpeedInsights />
                 <Footer />
             </div>
         </Router>
