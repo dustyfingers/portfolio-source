@@ -42,8 +42,10 @@ const data = {
         'Python',
     ],
     projects: [
+        // TODO: add piggyback studios, willis and simpson, extreme bodyworks,
+        // williford carptentry collective, myrnas tailor shop, stone & co, loot fool
         {
-            title: 'louiemadeit Beat Store (under construction!)',
+            title: 'Piggyback Studios Marketing Site',
             desc: "I designed, built, tested and deployed this application in it's entirety. The front end is built using React + Redux and Bootstrap 5, and is hosted using AWS Amplify. I built the backend with Node.js/Express + MongoDB, and AWS S3 for file storage and hosted it on Heroku.",
             image: '/images/project-images/beat-store-screencap.png',
             showSiteLink: true,
@@ -135,6 +137,18 @@ const data = {
         },
     ],
     experience: [
+        {
+            jobTitle: 'Lead Software Engineer, Founding Partner',
+            employer: 'Piggyback Studios',
+            bullets: [
+                'Coordinated with stakeholders, project managers and designers to build cross-platform, interactive 2D and 3D web experiences users leveraging tools like React Three Fiber, GLSL, Framer Motion and Vercel',
+                'Built and maintained a wide array of web projects including ecommerce stores, marketing sites, blogs, and interactive experiences working alongside a completely remote, international team',
+                'Tech Stack: HTML5/CSS3/JS(ES6+), React/Next.js, Typescript, Contentful CMS, Styled Components, React Three Fiber, Framer Motion, Ruby on Rails, PostgreSQL, Heroku, Netlify, Vercel',
+            ],
+            location: 'Remote',
+            from: 'Jan. 2024',
+            to: 'Current',
+        },
         {
             jobTitle: 'Software Engineer',
             employer: 'Graveflex',
