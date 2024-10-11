@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import { v4 as uuid } from 'uuid';
 
 import ProjectItem from '../../components/ProjectItem/ProjectItem';
@@ -10,7 +10,7 @@ import resumeData from '../../data/data';
 import './ResumeContent.scss';
 import { Typewriter } from 'react-simple-typewriter';
 
-const { contact, projects, skills, experience, education, name, title } = resumeData;
+const { contact, projects, experience, education, name, title, skills } = resumeData;
 
 const SectionTitle = ({ title }) => {
     return (
