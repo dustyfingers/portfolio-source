@@ -46,7 +46,6 @@ const data = {
     ],
     projects: [
         // TODO: add stone & co, loot fool
-        // TODO: add all project images
         {
             title: 'Piggyback Studios Marketing Site',
             desc: "I designed, built, tested and deployed this application in it's entirety using Next.js, CSS and a tad of Framer Motion.",
