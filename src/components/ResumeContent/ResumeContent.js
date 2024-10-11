@@ -10,7 +10,7 @@ import resumeData from '../../data/data';
 import './ResumeContent.scss';
 import { Typewriter } from 'react-simple-typewriter';
 
-const { contact, projects, experience, education, name, title } = resumeData;
+const { contact, projects, experience, education, name, title, skills } = resumeData;
 
 const SectionTitle = ({ title }) => {
     return (
@@ -21,10 +21,6 @@ const SectionTitle = ({ title }) => {
 };
 
 const ResumeContent = () => {
-    const skills = useMemo(() => {
-        // build skills section from reduction of exp experiences tech stack items
-        return experience.reduce(exp => exp);
-    }, []);
     return (
         <div id="Resume" className="container">
             {/* name/title section */}
