@@ -50,14 +50,14 @@ const data = {
         {
             title: 'Piggyback Studios Marketing Site',
             desc: "I designed, built, tested and deployed this application in it's entirety using Next.js, CSS and a tad of Framer Motion.",
-            image: '/images/project-images/beat-store-screencap.png',
+            image: '/images/project-images/pbs.png',
             showSiteLink: true,
             siteLink: 'https://www.piggybackstudios.co',
             tags: ['Full Stack Development', 'JavaScript', 'React', 'Next.js', 'CSS'],
         },
         {
             title: 'Willis + Simpson Electrical Marketing Site',
-            desc: "I designed, built, tested and deployed this application in it's entirety using Next.js, CSS and a tad of Framer Motion.",
+            desc: "I built, tested and deployed this application in it's entirety using Next.js and Tailwind.",
             image: '/images/project-images/wse.png',
             showSiteLink: true,
             siteLink: 'https://www.willisandsimpsonelectrical.com',
@@ -72,8 +72,8 @@ const data = {
         },
         {
             title: "Myrna's Tailor Shop Marketing Site",
-            desc: "I designed, built, tested and deployed this application in it's entirety using Next.js, CSS and a tad of Framer Motion.",
-            image: '/images/project-images/beat-store-screencap.png',
+            desc: "I designed, built, tested and deployed this application in it's entirety using Next.js, Tailwind and a tad of Framer Motion.",
+            image: '/images/project-images/mtsm.png',
             showSiteLink: true,
             siteLink: 'https://www.myrnastailorshop.com',
             tags: [
@@ -87,7 +87,7 @@ const data = {
         },
         {
             title: 'Extreme Bodyworks Gym Marketing Site',
-            desc: "I designed, built, tested and deployed this application in it's entirety using Next.js, CSS and a tad of Framer Motion.",
+            desc: "I built, tested and deployed this application in it's entirety using Next.js and Tailwind.",
             image: '/images/project-images/ebw.png',
             showSiteLink: true,
             siteLink: 'https://www.extremebodyworksgym.com',
@@ -102,8 +102,8 @@ const data = {
         },
         {
             title: 'LaRock Painting and Handyman Marketing Site',
-            desc: "I designed, built, tested and deployed this application in it's entirety using Next.js, CSS and a tad of Framer Motion.",
-            image: '/images/project-images/beat-store-screencap.png',
+            desc: "I designed, built, tested and deployed this application in it's entirety using Next.js, Tailwind and a tad of GSAP and Framer Motion.",
+            image: '/images/project-images/lph.png',
             showSiteLink: true,
             siteLink: 'https://www.larockpaintingandhandyman.com',
             tags: [
@@ -117,8 +117,8 @@ const data = {
         },
         {
             title: 'Williford Carpentry Collective Shop',
-            desc: "I designed, built, tested and deployed this application in it's entirety using Next.js, CSS and a tad of Framer Motion.",
-            image: '/images/project-images/wse.png',
+            desc: "I designed, built, tested and deployed this application in it's entirety using Next.js, Tailwind and PostgreSQL.",
+            image: '/images/project-images/wcc.png',
             showSiteLink: true,
             siteLink: 'https://www.willifordcarpentrycollective.com',
             tags: [
